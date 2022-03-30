@@ -1,0 +1,171 @@
+
+body{
+
+    font-family: 'Comfortaa', cursive;
+
+}
+#encabezado{
+
+    background-color: black;
+    height: 90px;
+    
+
+}
+.menuLogo{
+
+font-size: 35px;
+color: white;
+margin-right: 10px;
+
+
+}
+
+.btn-Registrar{
+
+  
+    margin-left: 20px;
+   border-radius: 30px 30px 30px 30px;
+   padding:3px 30px;
+   border: none;
+   background-color: white;
+}
+.centrar-contenido{
+
+    
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        align-content: stretch;
+    
+
+    
+}
+.contenidoEncabezadoizquierda{
+
+
+margin-left: 20px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: center;
+      
+   
+
+ 
+
+}
+.contenidoEncabezadoderecha{
+
+
+
+    margin-right: 20px;
+
+}
+.imgLogo{
+
+    height: 50px;
+
+
+}
+.nombreLogo{
+
+    font-size: 25px;
+    margin-bottom: 0px !important;
+    margin-left: 10px;
+    color: white;
+}
+.trabajaConNosotros{
+    margin-top: 80px;
+    font-size: 40px;
+
+
+
+
+}
+.klipartz{
+
+    
+    width: 305px;
+    
+    
+}
+.klipartzContenedor{
+
+    
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: stretch;
+        align-content: stretch;
+    
+}
+.finalEncabezado{
+
+    background-color: black;
+    padding: 7px;
+
+}
+.contenidofinalEncabezadoizquierda{
+    margin-top: 25px;
+    margin-left: 20px;
+    display: flex;
+    /* flex-direction: row; */
+    /* flex-wrap: nowrap; */
+    /* justify-content: flex-start; */
+    align-items: center;
+    
+}
+.textoFinalEncabezado{
+
+    margin-left: 20px;
+
+
+    color: white;
+}
+.aliniacionTexto{
+
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      
+        align-items: center;
+        align-content: stretch;
+        margin-left: 15px;
+        margin-bottom: 20px;
+ 
+
+}
+.imgLogoFinal{
+
+    height: 100px;
+}
+.nombreLogoFinal{
+    font-size: 40px;
+    color: white;
+
+
+}
+.logoRedes{
+
+
+    height: 40px;
+}
+.PlayApple{
+
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        align-content: stretch;
+        margin-top: 60px;
+        margin-bottom: 40px;
+
+
+}
