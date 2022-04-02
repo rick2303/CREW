@@ -1,101 +1,105 @@
-
-body{
+body {
 
     font-family: 'Roboto';
 
 }
-#encabezado{
+
+#encabezado {
 
     background-color: #EE4040;
     height: 90px;
     font-family: 'Comfortaa', cursive;
 
 }
-.menuLogo{
 
-font-size: 35px;
-color: white;
-margin-right: 10px;
-cursor: pointer;
+.menuLogo {
+
+    font-size: 35px;
+    color: white;
+    margin-right: 10px;
+    cursor: pointer;
 
 }
 
-.btn-Registrar{
-   margin-left: 20px;
-   border-radius: 30px 30px 30px 30px;
-   padding:3px 30px;
-   border: none;
-   background-color: white;
-}
-.centrar-contenido{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        align-items: center;
-        align-content: stretch;
-}
-.contenidoEncabezadoizquierda{
-margin-left: 20px;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        align-items: center;
+.btn-Registrar {
+    margin-left: 20px;
+    border-radius: 30px 30px 30px 30px;
+    padding: 3px 30px;
+    border: none;
+    background-color: white;
 }
 
-.contenidoEncabezadoderecha{
+.centrar-contenido {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: stretch;
+}
+
+.contenidoEncabezadoizquierda {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.contenidoEncabezadoderecha {
     margin-right: 20px;
 }
 
-.imgLogo{
+.imgLogo {
     height: 50px;
     cursor: pointer;
 }
 
-.nombreLogo{
+.nombreLogo {
     font-size: 25px;
     margin-bottom: 0px !important;
     margin-left: 10px;
     color: white;
 }
 
-.pedido{
+.pedido {
     margin-top: 15px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.entregando{
+.entregando {
     margin-top: 20px;
     width: 11rem;
 }
 
-.entregaContainer{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: center;
-        align-content: stretch;
+.entregaContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
 }
 
-.alfiler{
+.alfiler {
     width: 2.4rem;
 }
 
-.imagenes{
+.imagenes {
     width: 23.3rem;
-    padding:0.3rem;
+    padding: 0.3rem;
     height: 300px;
     cursor: pointer;
 }
 
-.celular{
+.celular {
     width: 16rem;
     height: 31rem;
     margin-right: 4rem;
 }
-.contain{
+
+.contain {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -103,7 +107,8 @@ margin-left: 20px;
     align-items: stretch;
     align-content: stretch;
 }
-.containerPublicidad{
+
+.containerPublicidad {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -112,19 +117,19 @@ margin-left: 20px;
     align-content: stretch;
 }
 
-.descargaApp{
+.descargaApp {
 
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 19.6px;
-line-height: 16px;
-text-align: center;
-letter-spacing: -0.333333px;
-margin-top: 4rem;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19.6px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: -0.333333px;
+    margin-top: 4rem;
 }
 
-#direccion{
+#direccion {
     width: 85%;
     font-size: 1rem;
     padding: 10px;
@@ -134,100 +139,280 @@ margin-top: 4rem;
     margin-bottom: 10px;
     box-sizing: border-box;
 }
-.finalEncabezado{
+
+.finalEncabezado {
 
     background-color: black;
     padding: 7px;
 
 }
-.footer{
+
+.footer {
     display: flex;
     /* flex-direction: row; */
     /* flex-wrap: nowrap; */
     /* justify-content: flex-start; */
     align-items: center;
-    
+
 }
-.textoFinalEncabezado{
+
+.textoFinalEncabezado {
     margin-left: 20px;
     color: white;
 }
-.imagenesComercio{
+
+.imagenesComercio {
     width: 9rem;
     cursor: pointer;
 }
-.comercios{
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-evenly;
-	align-items: stretch;
-	align-content: stretch;
+
+.comercios {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    align-content: stretch;
     margin-top: 1rem;
     margin-bottom: 1.2rem;
-    
+
 }
-.alineacionTexto{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
-        align-content: stretch;
-        margin-left: 15px;
-        margin-bottom: 20px;
+
+.alineacionTexto {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: stretch;
+    margin-left: 15px;
+    margin-bottom: 20px;
 }
-.imgLogoFinal{
+
+.imgLogoFinal {
     width: 5rem;
 }
-.nombreLogoFinal{
+
+.nombreLogoFinal {
     font-size: 30px;
     color: white;
 
 
 }
-.logoApple{
+
+.logoApple {
     margin-left: 4rem;
-   width: 7rem;
-   height: 2rem;
-   cursor: pointer;
+    width: 7rem;
+    height: 2rem;
+    cursor: pointer;
 }
-.logoAndroid{
+
+.logoAndroid {
     width: 8rem;
     height: 3.2rem;
     margin-left: 3.5rem;
     cursor: pointer;
 }
 
-.logoRedes{
+.logoRedes {
     width: 3rem;
     cursor: pointer;
 }
-.PlayApple{
+
+.PlayApple {
     display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-evenly;
-	align-items: center;
-	align-content: stretch;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: stretch;
     margin-top: 3rem;
     margin-bottom: 40px;
 }
 
-.return{
-    margin-top: 8px;
+.return {
+    margin-top: 9px;
     width: 8%;
     margin-left: 90%;
     cursor: pointer;
 }
 
-#formulario{
+.formulario {
     width: 100%;
     margin-top: 9px;
     padding: 0.5rem;
+    background-color: #F0F0F0;
+    border: none;
 }
-.btn-formulario{
+
+.btn-formulario {
     background-color: #EE4040;
     color: white;
     border: none;
-    padding: 0.4rem;
+    width: 100%;
+    margin-top: 1.5rem !important;
+    padding: 0.8rem;
+    border-radius: 0.4rem;
+}
+
+.footer2 {
+    margin-top: 7rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    align-content: stretch;
+}
+
+
+.padre {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: baseline;
+    align-content: stretch;
+}
+
+.contenerEncabezadoCuerpo {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.barralateral {
+    padding: 0px;
+    background-color: #E5E5E5;
+    height: 100%;
+    position: absolute;
+
+    z-index: 2;
+    display: none;
+
+
+
+}
+
+.pantallanegra {
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(12, 7, 7, 0.84);
+    display: none;
+
+
+}
+
+.Iniciar-Sesion {
+
+    height: 90px;
+    background-color: #EE4040;
+    color: white;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+
+}
+
+.cerrar {
+    color: white;
+    float: right;
+    padding: 20px;
+}
+
+.logoBarra {
+    margin-top: 27.3rem;
+}
+
+.loginClientes {
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: flex-end;
+
+}
+
+.registrarClientes {
+    width: 100%;
+
+}
+
+.login-Clientes {
+
+    margin-bottom: 10px;
+    width: 100%;
+
+}
+
+.modal-content {
+
+    width: 80% !important;
+
+}
+
+.imputLoginClientes {
+
+    width: 100%;
+    height: 50px;
+    border-color: black;
+    margin-top: 9px;
+
+}
+
+.btnContinuar {
+    padding: 10px;
+    width: 100%;
+    background-color: #EE4040;
+    color: white;
+    border: none;
+    border-radius: 6px;
+}
+
+.modal-header {
+
+    border-bottom: 0px !important;
+}
+
+@media (max-width: 580.98px) {
+    .imgLogo {
+        height: 35px;
+        margin-bottom: 3px black solid;
+
+    }
+
+    .btn-Registrar {
+        margin-left: 20px;
+        padding: 3px 13px;
+    }
+
+    .nombreLogo {
+        font-size: 17px;
+        margin-bottom: 0px !important;
+        margin-left: 10px;
+        color: white;
+    }
+
+    #barralateral {
+        width: 100%;
+    }
+
+    .pantallanegra {
+        display: none;
+    }
+
+
+
+}
+
+.modal-dialog-centered {
+
+    justify-content: space-around;
+
 }

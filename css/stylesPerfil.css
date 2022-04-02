@@ -1,0 +1,31 @@
+
+#encabezado {
+
+    background-color: #EE4040;
+    height: 90px;
+    font-family: 'Comfortaa', cursive;
+
+}
+
+.perfilFoto{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    align-content: stretch;
+}
+
+.panel{
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#btn-cerrarSesion{
+    width: 10rem;
+    border-radius: 30px;
+    padding: 10px;
+    border: none;
+    background-color: #EE4040;
+    color: white;
+}

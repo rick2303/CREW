@@ -16,129 +16,294 @@
 </head>
 
 <body>
+
+
+  <div class="contenerEncabezadoCuerpo">
+    <!-- barra lateral-->
+    <div class="container-fluid">
+      <div class="row">
+  
+        <div class="barralateral col-4" id="barralateral">
+  
+          <div class="Iniciar-Sesion">
+            <div style="margin-left:20px ;">Iniciar Sesion
+            </div>
+            <div style="margin-right: 20px;" onclick="cerrar()">
+              <a><img src="img/letra-x.png" alt="" style="width: 20px;"></a>
+            </div>
+          </div>
+          <div class="col-12" style="margin-left: 2rem; margin-top: 1.4rem;" onclick="" data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop2">
+            <b style="cursor: pointer;">Iniciar Sesion</b>
+          </div>
+          <div class="col-12" style="margin-top: 17px;">
+            <a href="indexMotorista.html" style="text-decoration: none; color: black; margin-left: 2rem;"><b>Registrate
+                para hacer entregas</b></a>
+          </div>
+          <div class="col-12" style="margin-top: 17px;">
+            <a href="indexClientes.html" style="text-decoration: none; color: black; margin-left: 2rem;"><b>Ver
+                comercios</b></a>
+          </div>
+          <div class="col-12" style="padding: 30px;">¿No tienes cuenta? <a
+              style="cursor: pointer; text-decoration: underline;" data-bs-toggle="modal"
+              data-bs-target="#staticBackdropRegistrar"><b>Registrate</b></a></div>
+  
+  
+  
+          <div class="aliniacionTexto logoBarra">
+            <div style="margin-left: 20px; margin-top: 7px;"><img class="logoRedes" src="img/logo.png" alt=""></div>
+            <div>
+              <p style="margin-bottom: 0; color: black; margin-left: 10px; ">@CrewHN</p>
+            </div>
+          </div>
+  
+        </div>
+        <div class="pantallanegra" id="pantallanegra">
+          <p onclick="cerrar()" class="cerrar"> cerrar</p>
+        </div>
+      </div>
+    </div>
+  
     <!-- ---------- encabezado ------------------>
     <div id="encabezado" class="centrar-contenido">
-
-        <div class="contenidoEncabezadoizquierda">
-            <i class="fa-solid fa-bars menuLogo"></i>
-            <img class="imgLogo" src="img/logo.png" alt="">
-            <h5 class="nombreLogo"><b>CREW</b></h5>
-        </div>
-        <div class="contenidoEncabezadoderecha">
-            <form action="registro.html">
-                <button class="btn-Registrar"><b>Registrate</b></button>
-            </form>
-        </div>
+  
+      <div class="contenidoEncabezadoizquierda">
+        <i onclick="barralateral()" id="onclickBarraLateral" class="fa-solid fa-bars menuLogo"></i>
+        <img class="imgLogo" src="img/logo.png" alt="">
+        <h5 class="nombreLogo"><b>CREW</b></h5>
+      </div>
+      <div class="contenidoEncabezadoderecha">
+          <button class="btn-Registrar" data-bs-toggle="modal" data-bs-target="#staticBackdropRegistrar"><b>Registrate</b></button>
+      </div>
     </div>
-
+  
     <!-- -------------- Cuerpo--------------->
     <div class="container">
-
-        <div class="row">
-            <div class="entregaContainer col-12">
-                <div class=""><img src="img/servicio-de-entrega.png" alt="" class="entregando"></div>
-            </div>
-            <div class="col-12">
-                <div class="pedido col-12">
-                    <h4 style="text-align: center; font-size: 27px;">¡Haz tu pedido ahora, fácil y rápido!</h4>
-                </div>
-                <p class="pedido" style="text-align: center; font-size: 1.2rem;">¡Pide a domicilio tu comida,<br>
-                    supermercado, medicamentos o lo que necesites!</p>
-            </div>
-            <div>
-                <div class=" col-12">
-                    <img class="alfiler" src="img/alfiler.png" alt="">
-                    <input id="direccion" type="text" placeholder="Introduzca la direccion de la entrega">
-                </div>
-            </div>
-            <div class="entregaContainer col-12">
-                <img src="img/proporciona-comida.jpg" alt="" class="imagenes">
-                <h3>Proporciona comida a tus empleados</h3>
-                <img src="img/ver-comercios1.jpg" alt="" class="imagenes">
-                <h3>Ver comercios</h3>
-                <img src="img/Reparte-crew.jpg" alt="" class="imagenes">
-                <h3>Reparte con Crew</h3>
-            </div>
-            <br>
-            <p class="descargaApp">¡Descarga nuestra aplicacion Crew en tu dispotivo movil!
-            </p>
-            <div class="pedido contain col-12">
-
-                <div class="containerPublicidad">
-                    <img src="img/p1.1.png" alt="" class="logoApple">
-                    <img src="img/p2.1.png" alt="" class="logoAndroid">
-                </div>
-                <img src="img/IphoneX.png" alt="" class="celular">
-            </div>
-            <div class="col-12">
-                <div class="entregaContainer col-12">
-                    <h3 style="font-weight: 400; margin-top: 1.4rem;"><b>Comercios</b></h3>
-                </div>
-
-                <div class="comercios col-12">
-                    <img src="img/comida1.png" alt="" class="imagenesComercio">
-                    <img src="img/farmacia2.png" alt="" class="imagenesComercio">
-                </div>
-                <div style="margin-bottom: 9rem" class="comercios col-12">
-                    <img src="img/bebida1.png" alt="" class="imagenesComercio">
-                    <img src="img/supermercado1.png" alt="" class="imagenesComercio">
-                </div>
-            </div>
+  
+      <div class="row">
+  
+        <div class="entregaContainer col-12">
+          <div class=""><img src="img/servicio-de-entrega.png" alt="" class="entregando"></div>
         </div>
+        <div class="col-12">
+          <div class="pedido col-12">
+            <h4 style="text-align: center; font-size: 27px;">¡Haz tu pedido ahora, fácil y rápido!</h4>
+          </div>
+          <p class="pedido" style="text-align: center; font-size: 1.2rem;">¡Pide a domicilio tu comida,<br>
+            supermercado, medicamentos o lo que necesites!</p>
+        </div>
+        <div>
+          <div class=" col-12">
+            <img class="alfiler" src="img/alfiler.png" alt="">
+            <input id="direccion" type="text" placeholder="Introduzca la direccion de la entrega">
+          </div>
+        </div>
+        <div class="entregaContainer col-12">
+          <img src="img/proporciona-comida.jpg" alt="" class="imagenes">
+          <h3>Proporciona comida a tus empleados</h3>
+          <img src="img/ver-comercios1.jpg" alt="" class="imagenes">
+          <h3>Ver comercios</h3>
+          <img src="img/Reparte-crew.jpg" alt="" class="imagenes">
+          <h3>Reparte con Crew</h3>
+        </div>
+        <br>
+        <p class="descargaApp">¡Descarga nuestra aplicacion Crew en tu dispotivo movil!
+        </p>
+        <div class="pedido contain col-12">
+  
+          <div class="containerPublicidad">
+            <img src="img/p1.1.png" alt="" class="logoApple">
+            <img src="img/p2.1.png" alt="" class="logoAndroid">
+          </div>
+          <img src="img/IphoneX.png" alt="" class="celular">
+        </div>
+        <div class="col-12">
+          <div class="entregaContainer col-12">
+            <h3 style="font-weight: 400; margin-top: 1.4rem;"><b>Comercios</b></h3>
+          </div>
+  
+          <div class="comercios col-12">
+            <img src="img/comida1.png" alt="" class="imagenesComercio">
+            <img src="img/farmacia2.png" alt="" class="imagenesComercio">
+          </div>
+          <div style="margin-bottom: 9rem" class="comercios col-12">
+            <img src="img/bebida1.png" alt="" class="imagenesComercio">
+            <img src="img/supermercado1.png" alt="" class="imagenesComercio">
+          </div>
+        </div>
+      </div>
     </div>
-
+  
     <!-----------footer---------->
     <div class="finalEncabezado">
-
-
-        <div class="footer">
-
-            <img class="imgLogoFinal" src="img/logo.png" alt="">
-            <h5 class="nombreLogoFinal" style="margin-top: 20px; margin-left: 5px;">CREW</h5>
+  
+      <div class="footer">
+        <img class="imgLogoFinal" src="img/logo.png" alt="">
+        <h5 class="nombreLogoFinal" style="margin-top: 20px; margin-left: 5px;">CREW</h5>
+      </div>
+  
+      <div style="margin-top: 30px;">
+  
+        <h3 style="margin-left: 20px;" class="textoFinalEncabezado">Trabaja con nosotros</h3>
+        <a href="indexMotorista.html" style="text-decoration: none;">
+          <p style="margin-left: 20px; margin-bottom: 0px;" class="textoFinalEncabezado">Motorista</p>
+        </a>
+        <p style="margin-left: 20px;  margin-bottom: 0px;" class="textoFinalEncabezado">Comercio</p>
+        <h3 style="margin-left: 20px; margin-top: 20px;" class="textoFinalEncabezado">Contactos</h3>
+        <p style="margin-left: 20px;  margin-bottom: 0px;" class="textoFinalEncabezado">Acerca de nosotros</p>
+        <p style="margin-left: 20px;  margin-bottom: 0px;" class="textoFinalEncabezado">Preguntas frecuentes</p>
+        <h3 style="margin-left: 20px; margin-top: 20px;" class="textoFinalEncabezado">Siguenos en nuestras redes
+          sociales</h3>
+  
+        <div class="alineacionTexto">
+          <div style="margin-left: 20px; margin-top: 7px;"><img class="logoRedes" src="img/twitter (2).png" alt=""></div>
+          <div>
+            <p style="margin-bottom: 0; color: white; margin-left: 10px; ">@CrewHN</p>
+          </div>
         </div>
-
-        <div style="margin-top: 30px;">
-
-            <h3 style="margin-left: 20px;" class="textoFinalEncabezado">Trabaja con nosotros</h3>
-            <p style="margin-left: 20px; margin-bottom: 0px;" class="textoFinalEncabezado">Motorista</p>
-            <p style="margin-left: 20px;  margin-bottom: 0px;" class="textoFinalEncabezado">Comercio</p>
-            <h3 style="margin-left: 20px; margin-top: 20px;" class="textoFinalEncabezado">Contactos</h3>
-            <p style="margin-left: 20px;  margin-bottom: 0px;" class="textoFinalEncabezado">Acerca de nosotros</p>
-            <p style="margin-left: 20px;  margin-bottom: 0px;" class="textoFinalEncabezado">Preguntas frecuentes</p>
-            <h3 style="margin-left: 20px; margin-top: 20px;" class="textoFinalEncabezado">Siguenos en nuestras redes
-                sociales</h3>
-
-            <div class="alineacionTexto">
-                <div style="margin-left: 20px; margin-top: 7px;"><img class="logoRedes" src="img/twitter (2).png"
-                        alt=""></div>
-                <div>
-                    <p style="margin-bottom: 0; color: white; margin-left: 10px; ">@CrewHN</p>
-                </div>
-            </div>
-
-            <div class="alineacionTexto">
-                <div style="margin-left: 20px; margin-top: 7px;"><img class="logoRedes" src="img/instagram.png" alt="">
-                </div>
-                <div>
-                    <p style="margin-bottom: 0; color: white; margin-left: 10px;">somoscrew</p>
-                </div>
-            </div>
-
-            <div class="alineacionTexto">
-                <div style="margin-left: 20px; margin-top: 7px; margin-bottom: 7px;"> <img class="logoRedes"
-                        src="img/facebook.png" alt=""> </div>
-                <div>
-                    <p style="margin-bottom: 0; color: white; margin-left: 10px;">somoscrew</p>
-                </div>
-            </div>
+  
+        <div class="alineacionTexto">
+          <div style="margin-left: 20px; margin-top: 7px;"><img class="logoRedes" src="img/instagram.png" alt="">
+          </div>
+          <div>
+            <p style="margin-bottom: 0; color: white; margin-left: 10px;">somoscrew</p>
+          </div>
         </div>
-
-        <div class="PlayApple">
-            <img src="img/p1.1.png" alt="" class="logoApple">
-            <img src="img/p2.1.png" alt="" class="logoAndroid" style="margin-right: 3.5rem;">
+  
+        <div class="alineacionTexto">
+          <div style="margin-left: 20px; margin-top: 7px; margin-bottom: 7px;"> <img class="logoRedes"
+              src="img/facebook.png" alt=""> </div>
+          <div>
+            <p style="margin-bottom: 0; color: white; margin-left: 10px;">somoscrew</p>
+          </div>
         </div>
-
+      </div>
+  
+      <div class="PlayApple">
+        <img src="img/p1.1.png" alt="" class="logoApple">
+        <img src="img/p2.1.png" alt="" class="logoAndroid" style="margin-right: 3.5rem;">
+      </div>
+  
     </div>
+  
+    <!-- Modal -->
+    <div class="modal fade " id="staticBackdropRegistrar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered ">
+        <div class="modal-content">
+          <div class="modal-header">
+  
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div>
+              <h4 style="font-family: 'Comfortaa', cursive;"> Unete ahora</h4>
+            </div>
+  
+            <div class="login-Clientes">
+              <div class="registrarClientes">
+                <input placeholder="Nombre" class="formulario" type="text" id="nombre">
+              </div>
+              <div class="registrarClientes">
+                <input placeholder="Correo electronico" class="formulario" type="text" id="correo">
+              </div>
+              <div class="registrarClientes"> 
+                <input placeholder="Contraseña" class="formulario" type="password" id="password">
+              </div>
+              <div style="width: 100%; margin-top: 20px;">
+                <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="btnContinuar" onclick="agregaCliente()">Continuar</button></div>
+              <div class="container" style="margin-right: 30px;">
+                <div class="row">
+                  <div class="col-12" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
+                    <p style="font-size: x-small;">¿Ya tienes cuenta? <a style="color: black;"><b>Inicia sesion</b></a></p>
+                  </div>
+                  <div class="row">
+                    <footer class="footer2 col-12 ">
+                        <p style="font-size: 11.3px;">Al registrarte, aceptas nuestras <a href="notfound.html" style="color: black;"><b style="font-size: 11px;" >Condiciones de servicio y Política de privacidad</b></a></p>
+                      </footer>
+                </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  
+    <!--Modal Iniciar sesion-->
+  
+    <!-- Modal -->
+    <div class="modal fade " id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered ">
+        <div class="modal-content">
+          <div class="modal-header">
+  
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div style="margin-bottom: 20px;">
+              <h4 style="font-family: 'Comfortaa', cursive;">Iniciar Sesion</h4>
+            </div>
+  
+            <div class="loginClientes">
+              <div class="login-Clientes">
+                 <input placeholder=" Correo electronico" class="imputLoginClientes "
+                  type="text" id="usuarioLogin">
+                </div>
+              <div class="login-Clientes">
+                 <input placeholder=" ........." class="imputLoginClientes "
+                  type="password" id="passwordLogin">
+                </div>
+              <div style="width: 100%;"><button class="btnContinuar" onclick="loginCliente()">Ingresar</button></div>
+              <div style="margin-top: 2px;">
+                <div class="row">
+                  <div class="col-12" data-bs-toggle="modal" data-bs-target="#staticBackdropRegistrar">
+                    <a style="color: #6D6C6C; margin-right: 3rem;">¿No tienes cuenta? Registrate</a>
+                  </div>
+                  <div style="height: 15rem; margin-bottom: 5px;">
+                  </div>
+              
+                </div>
+              </div>
+  
+  
+            </div>
+          </div>
+          <div class="modal-footer">
+            <hr>
+            <hr>
+            <hr>
+            <hr>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!--agregado con exito o fallo-->
+  
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+  
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id="modal-bopy">
+  
+          </div>
+          <div class="modal-footer" id="cerrarRegistrar">
+  
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
