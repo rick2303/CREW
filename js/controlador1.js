@@ -37,11 +37,11 @@ function  agregaCliente() {
      if(clientes!=""){
 
         console.log('no vaciooo');
-        var aux=false;
+        var rep=false;
         for (let i = 0; i < clientes.length; i++) {
             if (clientes[i].CorreoElectronico==clienteInfo.CorreoElectronico) {
                 console.log('repetido')
-                aux=true;
+                rep=true;
                 document.getElementById('modal-bopy').innerHTML =`
                 <h5 style="color: red" class="modal-title" id="exampleModalLabel">Al parecer usted ya tiene una cuenta registrada,por favor,intente de nuevo</h5>        
                 `
@@ -52,14 +52,14 @@ function  agregaCliente() {
                 break;
                 
             }else{
-            aux=false
+            rep=false
 
             }
             
         }
 
     }
-    if(aux==false ||  clientes==""){
+    if(rep==false ||  clientes==""){
 
         console.log(' agregado con exito');
         console.log(clientes);

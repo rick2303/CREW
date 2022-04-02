@@ -1,0 +1,44 @@
+body{
+    font-family: 'Comfortaa';
+}
+
+.centrar{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: stretch;
+	align-content: stretch;
+}
+
+.lineaInferior{
+    border-bottom: 1px solid black;
+}
+
+.logos{
+    width: 5rem;
+}
+
+.centrarLogos{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+}
+
+.btn-utilidad{
+    width: 16rem;
+    border-radius: 9px;
+    padding: 10px;
+    border: none;
+    background-color: #EE4040;
+    color: white;
+}
+.logosf{
+    width: 9rem;
+}
+.logosS{
+    width: 11rem;
+}
