@@ -48,7 +48,9 @@ function  agregaMotorista() {
         Apellido:document.getElementById('apellido').value,
         CorreoElectronico:document.getElementById('correo').value,
         Password:document.getElementById('password').value,
-        NumeroTelefono:document.getElementById('numero_Telefonico').value
+        NumeroTelefono:document.getElementById('numero_Telefonico').value,
+        HistorialPedido :[],
+        PedidosActivos :null
 
 
 
@@ -125,6 +127,23 @@ function  agregaMotorista() {
      */
  
     
+
+
+
+    
+     
+               
+ 
+    
+
+
+  
+
+
+
+
+    
+    
 }
 //Login motorista motorista
 function loginMotorista() {
@@ -132,7 +151,9 @@ function loginMotorista() {
        if (motoristas[i].CorreoElectronico==document.getElementById('usuarioLogin').value && motoristas[i].Password==document.getElementById('passwordLogin').value) {
            console.log('encontrado');
            localstorageLogueado.setItem('motoristasLogueado', JSON.stringify(motoristas[i]));
-           location.assign("http://localhost/crew/motoristaLogueado.html");
+          
+           location.assign("http://localhost/CREWGITHUB/CREW/motoristaLogueado.html");
+         
            document.getElementById('usuarioLogin').value=null;
            document.getElementById('passwordLogin').value=null;
          
@@ -147,4 +168,3 @@ function loginMotorista() {
 
     
 }
-
