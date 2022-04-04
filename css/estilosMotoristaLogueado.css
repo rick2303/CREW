@@ -1,0 +1,49 @@
+.motoristaFotoNombre{
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: stretch;
+
+}
+.lineaInferior{
+border-bottom: 1px solid black;
+
+
+
+
+}
+.panel{
+
+
+margin-bottom: 20px;
+}
+.estiloPedidoDetalle{
+
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: stretch;
+
+
+}
+.tomarPedidoEstilo{
+
+
+display: flex;flex-direction: row;flex-wrap: nowrap;justify-content: center; margin-top: 50px;
+}
+.btnTomarPedidoEstilo{
+
+padding:10px 70px;
+
+align-self: center;
+border: none;
+background: #EE4040;
+color: white;
+border-radius: 15px;
+}
