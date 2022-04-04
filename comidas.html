@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comida-Crew</title>
+    <link rel="stylesheet" href="css/stylesComercios.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+    </style>
+    <script src="https://kit.fontawesome.com/1ae81e383d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!--Encabezado-->
+    <div>
+        <div class="col-12 centrar mt-3">
+            <h3 style="font-family: 'Comfortaa';">Comida</h3>
+        </div>
+        <div>
+            <div class="lineaInferior"></div>
+        </div>
+    </div>
+    <!--Comercios de comida-->
+    <div class="col-12 centrarLogos">
+        <div style="margin-top: 3rem;">
+            <img src="img/bglogo.png" alt="" class="logos">
+        </div>
+        <div style="margin-top: 0.4rem;">
+            <button id="bg" class="btn-utilidad" class="modal fade" data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop" onclick="mostrarComida()">Burguer King</button>
+        </div>
+    </div>
+    <div class="col-12 centrarLogos">
+        <div style="margin-top: 3rem;">
+            <img src="img/pizzaLogo.png" alt="" class="logos">
+        </div>
+        <div style="margin-top: 0.4rem;">
+            <button id="pizhut" class="btn-utilidad" class="modal fade" data-bs-toggle="modal" data-bs-target="#staticBackdrop1" onclick="mostrarComida()">Pizza Hut</button>
+        </div>
+    </div>
+    <div class="col-12 centrarLogos">
+        <div style="margin-top: 3rem;">
+            <img src="img/mclogo.png" alt="" class="logos">
+        </div>
+        <div style="margin-top: 0.4rem;"><button id="mcdons" class="btn-utilidad" class="modal fade" data-bs-toggle="modal" data-bs-target="#staticBackdrop2" onclick="mostrarComida()">Mc Donald's</button></div>
+    </div>
+    <!--Boton de retorno-->
+    <div style="margin-top: 40%;">
+        <a href="comercios.html"><button style=" width: 8rem; margin-left: 10px;" class="btn-utilidad"><b>Ver
+                    comercios</b></button></a>
+    </div>
+
+    <!--Modal de comidas -  Pasarlo al Js para generarlo automatico con JSON-->
+    <!-- Modal BurguerKing -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen-xl-down">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div style="display: flex; justify-content: space-evenly; ">
+                        <button class="btn-verOrden">VER ORDEN</button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <img class="imagenBanner" src="img/bannerbg.png" alt="">
+                    <div>
+                        <div class="col-12 centrar mt-1" style="justify-content: space-around;align-items:center ;">
+                            <img class="logo-miniatura" src="img/bglogo.png" alt="">
+                            <h3 style="font-family: 'Comfortaa'; margin-bottom: 0;"><b> Burguer King</b></h3>
+                            <!--De manera temporal estrellas iran aqui puestas manualmente-->
+                            <div>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="lineaInferior"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <h6
+                                style="font-family: 'Comfortaa'; margin-bottom: 0; margin-left: 12px; margin-top: 10px;">
+                                <b>Pie de manzana</b>
+                            </h6>
+                        </div>
+                        <div class="col-12 centrar mt-1" style="justify-content: space-around;align-items:center ;">
+                            <div>
+                                <p style="margin-left: 12px;">Crujiente pastel relleno de trozos de manzana calientes
+                                    con un toque de canela.</p>
+                            </div>
+                            <div class="col-6">
+                                <img class="imagenesMedianas" src="img/pieManzanaBg.png" alt="">
+                            </div>
+                        </div>
+                        <div style="margin-left: 16px;">
+                            <h6>L. 75.00 <i class="fa-solid fa-circle-plus ml-1"></i></h6>
+                        </div>
+                        <div>
+                            <div class="lineaInferior"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <h6
+                                style="font-family: 'Comfortaa'; margin-bottom: 0; margin-left: 12px; margin-top: 10px;">
+                                <b>Nuggets</b>
+                            </h6>
+                        </div>
+                        <div class="col-12 centrar mt-1" style="justify-content: space-around;align-items:center ;">
+                            <div>
+                                <p style="margin-left: 12px;">Acompaña tus combos favoritos con nuestros exquisitos
+                                    nuggets, son tiernos y jugosos por dentro y crujientes por fuera. </p>
+                            </div>
+                            <div class="col-6">
+                                <img class="imagenesMedianas" src="img/nuggetBg.png" alt="">
+                            </div>
+                        </div>
+                        <div style="margin-left: 16px;">
+                            <h6>L. 110.00 <i class="fa-solid fa-circle-plus ml-1"></i></h6>
+                        </div>
+                        <div>
+                            <div class="lineaInferior"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <h6
+                                style="font-family: 'Comfortaa'; margin-bottom: 0; margin-left: 12px; margin-top: 10px;">
+                                <b>Bacon King Jr.</b>
+                            </h6>
+                        </div>
+                        <div class="col-12 centrar mt-1" style="justify-content: space-around;align-items:center ;">
+                            <div>
+                                <p style="margin-left: 12px;">Como una versión más pequeña del original, el Bacon King
+                                    Jr. presenta dos empanadas de carne a la parrilla cubiertas con tocino ahumado,
+                                    queso americano, salsa de tomate y mayonesa cremosa.</p>
+                            </div>
+                            <div class="col-6">
+                                <img class="imagenesMedianas" src="img/baconBurguerBg.png" alt="">
+                            </div>
+                        </div>
+                        <div style="margin-left: 16px;">
+                            <h6>L. 225.00 <i class="fa-solid fa-circle-plus ml-1"></i></h6>
+                        </div>
+                        <div>
+                            <div class="lineaInferior"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-direcciones">Atras</button>
+                    <button type="button" class="btn-direcciones">Siguiente</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal Pizza Hut -->
+    <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen-xl-down">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div style="display: flex; justify-content: space-evenly; ">
+                        <button class="btn-verOrden">VER ORDEN</button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <img class="imagenBanner" src="img/pizzaBanner.jpg" alt="">
+                    <div>
+                        <div class="col-12 centrar mt-1" style="justify-content: space-around;align-items:center ;">
+                            <img class="logo-miniatura" src="img/pizzaLogo.png" alt="">
+                            <h3 style="font-family: 'Comfortaa'; margin-bottom: 0;"><b> Pizza Hut</b></h3>
+                            <!--De manera temporal estrellas iran aqui puestas manualmente-->
+                            <div>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="lineaInferior"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <h6
+                                style="font-family: 'Comfortaa'; margin-bottom: 0; margin-left: 12px; margin-top: 10px;">
+                                <b>Pizza Gigante</b>
+                            </h6>
+                        </div>
+                        <div class="col-12 centrar mt-1" style="justify-content: space-around;align-items:center ;">
+                            <div>
+                                <p style="margin-left: 12px;">Cualquier pizza gigante, cualquier especialidad. </p>
+                            </div>
+                            <div class="col-6">
+                                <img class="imagenesMedianas" src="img/pizzaGigante.png" alt="">
+                            </div>
+                        </div>
+                        <div style="margin-left: 16px;">
+                            <h6>L. 199.00 <i class="fa-solid fa-circle-plus ml-1"></i></h6>
+                        </div>
+                        <div>
+                            <div class="lineaInferior"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <h6
+                                style="font-family: 'Comfortaa'; margin-bottom: 0; margin-left: 12px; margin-top: 10px;">
+                                <b>Hot Wing 6 pzs</b>
+                            </h6>
+                        </div>
+                        <div class="col-12 centrar mt-1" style="justify-content: space-around;align-items:center ;">
+                            <div>
+                                <p style="margin-left: 12px;">Acompaña tus combos favoritos con nuestros exquisitos
+                                    nuggets, son tiernos y jugosos por dentro y crujientes por fuera. </p>
+                            </div>
+                            <div class="col-6">
+                                <img class="imagenesMedianas" src="img/hotwings.png" alt="">
+                            </div>
+                        </div>
+                        <div style="margin-left: 16px;">
+                            <h6>L. 169.00 <i class="fa-solid fa-circle-plus ml-1"></i></h6>
+                        </div>
+                        <div>
+                            <div class="lineaInferior"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <h6
+                                style="font-family: 'Comfortaa'; margin-bottom: 0; margin-left: 12px; margin-top: 10px;">
+                                <b>Hut Pack</b>
+                            </h6>
+                        </div>
+                        <div class="col-12 centrar mt-1" style="justify-content: space-around;align-items:center ;">
+                            <div>
+                                <p style="margin-left: 12px;">Una pizza gigante, 8 pechurricas, un refresco 2L</p>
+                            </div>
+                            <div class="col-6">
+                                <img class="imagenesMedianas" src="img/hutPack.png" alt="">
+                            </div>
+                        </div>
+                        <div style="margin-left: 16px;">
+                            <h6>L. 339.00 <i class="fa-solid fa-circle-plus ml-1"></i></h6>
+                        </div>
+                        <div>
+                            <div class="lineaInferior"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-direcciones">Atras</button>
+                    <button type="button" class="btn-direcciones">Siguiente</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+     <!-- Modal McDonals -->
+     <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+     <div class="modal-dialog modal-fullscreen-xl-down">
+         <div class="modal-content">
+             <div class="modal-header">
+                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                 <div style="display: flex; justify-content: space-evenly; ">
+                     <button class="btn-verOrden">VER ORDEN</button>
+                 </div>
+             </div>
+             <div class="modal-body">
+                 <img class="imagenBanner" src="img/mcbanner.jpg" alt="">
+                 <div>
+                     <div class="col-12 centrar mt-1" style="justify-content: space-around;align-items:center ;">
+                         <img class="logo-miniatura" src="img/mclogo.png" alt="">
+                         <h3 style="font-family: 'Comfortaa'; margin-bottom: 0;"><b>McDonald's</b></h3>
+                         <!--De manera temporal estrellas iran aqui puestas manualmente-->
+                         <div>
+                             <i class="fa-solid fa-star"></i>
+                             <i class="fa-solid fa-star"></i>
+                             <i class="fa-solid fa-star"></i>
+                             <i class="fa-solid fa-star"></i>
+                             <i class="fa-solid fa-star-half-stroke"></i>
+                         </div>
+                     </div>
+                     <div>
+                         <div class="lineaInferior"></div>
+                     </div>
+                 </div>
+                 <div>
+                     <div>
+                         <h6
+                             style="font-family: 'Comfortaa'; margin-bottom: 0; margin-left: 12px; margin-top: 10px;">
+                             <b>McMuffin de pollo</b>
+                         </h6>
+                     </div>
+                     <div class="col-12 centrar mt-1" style="justify-content: space-around;align-items:center ;">
+                         <div>
+                             <p style="margin-left: 12px;">Pan muffun inglés, mayonesa, una torta de pechuga de pollo empanizada y queso cheddar amarillo. </p>
+                         </div>
+                         <div class="col-6">
+                             <img class="imagenesMedianas" src="img/mcmuffinPollo.jpg" alt="">
+                         </div>
+                     </div>
+                     <div style="margin-left: 16px;">
+                         <h6>L. 108.00 <i class="fa-solid fa-circle-plus ml-1"></i></h6>
+                     </div>
+                     <div>
+                         <div class="lineaInferior"></div>
+                     </div>
+                 </div>
+                 <div>
+                     <div>
+                         <h6
+                             style="font-family: 'Comfortaa'; margin-bottom: 0; margin-left: 12px; margin-top: 10px;">
+                             <b>Cajita Feliz™ de quesoburguesa</b>
+                         </h6>
+                     </div>
+                     <div class="col-12 centrar mt-1" style="justify-content: space-around;align-items:center ;">
+                         <div>
+                             <p style="margin-left: 12px;">Cajita Feliz incluye una deliciosa Quesoburguesa, una papa kid, soda o bebida natural acompañada con un puré de manzana o yogurt de fresa, y un juguete de la promoción vigente.</p>
+                         </div>
+                         <div class="col-6">
+                             <img class="imagenesMedianas" src="img/cajitaFeliz.jpg" alt="">
+                         </div>
+                     </div>
+                     <div style="margin-left: 16px;">
+                         <h6>L. 169.00 <i class="fa-solid fa-circle-plus ml-1"></i></h6>
+                     </div>
+                     <div>
+                         <div class="lineaInferior"></div>
+                     </div>
+                 </div>
+                 <div>
+                     <div>
+                         <h6
+                             style="font-family: 'Comfortaa'; margin-bottom: 0; margin-left: 12px; margin-top: 10px;">
+                             <b>Duo Crispy</b>
+                         </h6>
+                     </div>
+                     <div class="col-12 centrar mt-1" style="justify-content: space-around;align-items:center ;">
+                         <div>
+                             <p style="margin-left: 12px;">
+                                Disfruta de 2 McMenús de Pollo Crispy de 2 piezas cada uno con soda y papas a precio especial.</p>
+                         </div>
+                         <div class="col-6">
+                             <img class="imagenesMedianas" src="img/duocrispy.jpg" alt="">
+                         </div>
+                     </div>
+                     <div style="margin-left: 16px;">
+                         <h6>L. 289.00 <i class="fa-solid fa-circle-plus ml-1"></i></h6>
+                     </div>
+                     <div>
+                         <div class="lineaInferior"></div>
+                     </div>
+                 </div>
+             </div>
+             <div class="modal-footer">
+                 <button type="button" class="btn-direcciones">Atras</button>
+                 <button type="button" class="btn-direcciones">Siguiente</button>
+             </div>
+         </div>
+     </div>
+
+ </div>
+    <!--Scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="js/controlador1.js"></script>
+
+</body>
+
+</html>
