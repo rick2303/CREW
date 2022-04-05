@@ -107,3 +107,33 @@ body{
 	margin-left: 16px;
 	object-fit: cover;
 }
+
+
+
+.btn-pagar{
+		width: 6rem;
+		border-radius: 9px;
+		border: none;
+		background-color: #EE4040;
+		color: white;
+		margin-right: auto;
+		
+}
+
+#encabezado {
+
+    background-color: #EE4040;
+    height: 90px;
+    font-family: 'Comfortaa';
+	
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-items: center;
+		align-content: stretch;
+}
+
+.lineaInferior{
+    border-bottom: 1px solid black;
+}

@@ -416,3 +416,17 @@ body {
     justify-content: space-around;
 
 }
+
+.centrar{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.lineaInferior{
+    border-bottom: 1px solid black;
+}
+
