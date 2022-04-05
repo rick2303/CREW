@@ -1,0 +1,50 @@
+body{
+
+    margin: 0;
+}
+.encabezadoAdmin{
+
+    background-color: #C4C4C4;
+    margin: 0 !important;
+    height: 45px;
+}
+.opcionesAdmin{
+
+    background-color: #C4C4C4;
+    padding: 20px;
+    margin: 40px 20px;
+    width: 30%;
+
+}
+.contenedorboton{
+
+   
+        /*IMPORTANTE*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+      
+      
+}
+.btnSolicitudesMotorista{
+    background-color: #C4C4C4;
+    padding: 10px;
+    border: none;
+
+}
+
+.estiloInputAgregandoProducto{
+
+
+    margin-top: 40px !important;
+}
+.estiloInputAgregandoProductoInputs{
+
+
+
+    background-color: #C4C4C4;
+    padding: 10px;
+    border: 0px;
+    width: 400px;
+}
