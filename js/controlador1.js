@@ -59,8 +59,6 @@ function  agregaCliente() {
     };
 
      if(clientes!=""){
-
-        console.log('no vacio');
         var rep=false;
         for (let i = 0; i < clientes.length; i++) {
             if (clientes[i].CorreoElectronico==clienteInfo.CorreoElectronico) {
@@ -83,9 +81,10 @@ function  agregaCliente() {
         }
 
     }
-    if(rep==false ||  clientes==""){
 
-        console.log(' agregado con exito');
+    if(rep==false ||  clientes==""){
+        if(validacionCorreo(clienteInfo.CorreoElectronico)){
+            console.log(' agregado con exito');
         console.log(clientes);
         clientes.push(clienteInfo);
         localstorage.setItem('clientes', JSON.stringify(clientes));
@@ -101,7 +100,8 @@ function  agregaCliente() {
         document.getElementById('cerrarRegistrar').innerHTML=`
         <button  type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         `
-
+        }
+        
     }
 
 }
@@ -127,6 +127,16 @@ function loginCliente() {
     
 }
 
+function validacionCorreo(correo) {
+    var expReg= /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+    var valido = expReg.test(correo);
+    if(valido){
+        return true;
+    }else{
+        console.log('no valido');
+        return false;
+    }
+}
 
 function mostrarComida(){
 }
@@ -351,3 +361,42 @@ var comercios = [
         ]
     }
 ];
+
+var ordenes = [
+    {
+        nombre: 'Juan Perez',
+        producto: 'Hut pack',
+        cantidad: 1,
+        precio: 339.00
+    },
+    {
+        nombre: 'Maria Rivera',
+        prodcuto: 'Mix licuado de Sandia',
+        cantidad: 2,
+        precio: 65.00
+    }
+];
+
+
+
+function verOrden(){
+    var tabla = document.getElementById('tabla');
+    var total = 0;
+    for(var i = 0; i < ordenes.length; i++){
+        var fila = tabla.insertRow(i);
+        var celdaNombre = fila.insertCell(0);
+        var celdaProducto = fila.insertCell(1);
+        var celdaCantidad = fila.insertCell(2);
+        var celdaPrecio = fila.insertCell(3);
+        celdaNombre.innerHTML = ordenes[i].nombre;
+        celdaProducto.innerHTML = ordenes[i].producto;
+        celdaCantidad.innerHTML = ordenes[i].cantidad;
+        celdaPrecio.innerHTML = ordenes[i].precio;
+        total += ordenes[i].precio;
+    }
+    var fila = tabla.insertRow(i);
+    var celdaTotal = fila.insertCell(0);
+    celdaTotal.innerHTML = 'Total';
+    var celdaTotalPrecio = fila.insertCell(1);
+    celdaTotalPrecio.innerHTML = total;
+}

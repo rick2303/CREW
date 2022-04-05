@@ -8,20 +8,20 @@ clienteNombre:"Josue"
 
 },
 {
-    nombreEmpreza:"bigos",
-    descripcionPedido:"bigos grande",
-    totalCoste:"123lps",
-    clienteNombre:"carlos"
+nombreEmpreza:"bigos",
+descripcionPedido:"bigos grande",
+totalCoste:"123lps",
+clienteNombre:"carlos"
     
-    },
+},
 
-    {
-        nombreEmpreza:"burger",
-        descripcionPedido:"burger grande",
-        totalCoste:"123lps",
-        clienteNombre:"amanda"
+{
+nombreEmpreza:"burger",
+descripcionPedido:"burger grande",
+totalCoste:"123lps",
+clienteNombre:"amanda"
         
-        },
+},
 
 
 ];
@@ -86,15 +86,30 @@ function renderizarPedidosDisponibles() {
         document.getElementById('descripcionPedidosDisponibles').innerHTML+=`
   
         <div class="col-12"  onclick="tomarIndicePedidosDisponibles(${i})">
-        <div class="row " style="padding: 20px;">
-            <div class="col-6">   <img src="img/Rectangle 75.png" alt=""></div>
-            <div class="col-6">
-                <p style="margin-bottom: 0rem;">${pedidosDisponibles[i].nombreEmpreza}</p>
-                <p style="margin-bottom: 0rem;">${pedidosDisponibles[i].descripcionPedido} </p>
-            
-            </div>
-        </div>
-    </div>
+
+
+        
+
+
+
+        <div class="estiloPedidoDetalle  estiloParaCadaPedidoDisponible" style="margin-bottom: 10px; margin-top: 10px;"  >
+                    <div ><img src="img/Rectangle 75.png" alt=""></div>
+                    <div style="margin-left: 10px;" >
+                        <p style="margin-bottom: 0rem;">${pedidosDisponibles[i].nombreEmpreza}</p>
+                        <p style="margin-bottom: 0rem;"> ${pedidosDisponibles[i].descripcionPedido}</p>
+                    
+                    </div>
+                  
+                </div> 
+
+
+
+
+
+
+
+
+      
         `
     }
   
@@ -121,9 +136,9 @@ function detallePedidoSeleccionado() {
     myModalInfoPedidoSeleccionado.show();
 document.getElementById('detallePedido').innerHTML =`
 
-<div class="estiloPedidoDetalle " style="padding: 20px; margin-top: 40px;"  >
+<div class="estiloPedidoDetalle  estiloParaCadaPedidoDisponible" style="margin-bottom: 30px; margin-top: 40px;"  >
                     <div ><img src="img/Rectangle 75.png" alt=""></div>
-                    <div style="margin-left: 10px;">
+                    <div style="margin-left: 10px;" >
                         <p style="margin-bottom: 0rem;">${pedidosDisponibles[indice].descripcionPedido}</p>
                         <p style="margin-bottom: 0rem;"> ${pedidosDisponibles[indice].nombreEmpreza}</p>
                     
@@ -136,7 +151,7 @@ document.getElementById('detallePedido').innerHTML =`
                 </div> 
 
 
-                <div class="estiloPedidoDetalle " style="padding: 20px;">
+                <div class="estiloPedidoDetalle " style="margin-bottom: 30px;">
                     <div ><img src="img/Rectangle 75.png" alt=""></div>
                     <div style="margin-left: 10px;">
                         <p style="margin-bottom: 0rem;">Centro comercial aeroplaza</p>
@@ -147,7 +162,7 @@ document.getElementById('detallePedido').innerHTML =`
                 </div>
 
                 
-                <div class="estiloPedidoDetalle " style="padding: 20px; ">
+                <div class="estiloPedidoDetalle " style="margin-bottom: 30px; ">
                     <div ><img src="img/Rectangle 75.png" alt=""></div>
                     <div style="margin-left: 10px;">
                         <p style="margin-bottom: 0rem;">${pedidosDisponibles[indice].clienteNombre}</p>
@@ -201,21 +216,22 @@ existenciaPedido();
 renderizarPedidosDisponibles();
 document.getElementById('estilosmodalPediosActivos').innerHTML=`
 
-<div class="estiloPedidoDetalle " style="padding: 20px; margin-top: 40px;"  >
-<div ><img src="img/Rectangle 75.png" alt=""></div>
-<div style="margin-left: 10px;">
-    <p style="margin-bottom: 0rem;">${infoMotor[0].PedidosActivos.nombreEmpreza}</p>
-    <p style="margin-bottom: 0rem;"> ${infoMotor[0].PedidosActivos.descripcionPedido}</p>
-
-</div>
-<div style="margin-left:20px;" >
-    <p style="margin-bottom: 0rem;"> ${infoMotor[0].PedidosActivos.totalCoste}</p>
- 
-
-</div>
 
 
-</div> 
+
+<div class="estiloPedidoDetalle  estiloParaCadaPedidoDisponible" style="margin-bottom: 30px; margin-top: 40px;"  >
+                    <div ><img src="img/Rectangle 75.png" alt=""></div>
+                    <div style="margin-left: 10px;" >
+                        <p style="margin-bottom: 0rem;">${infoMotor[0].PedidosActivos.nombreEmpreza}</p>
+                        <p style="margin-bottom: 0rem;"> ${infoMotor[0].PedidosActivos.descripcionPedido}</p>
+                    
+                    </div>
+                    <div style="margin-left:20px;" >
+                        <p style="margin-bottom: 0rem;">  ${infoMotor[0].PedidosActivos.totalCoste}</p>
+                     
+                    
+                    </div>
+                </div> 
 <div style="margin:30px;">
 <label><input name="opcion" va lue="1" type="radio">Tomada</label><br>
 <label ><input name="opcion"  value="2" type="radio">En camino</label><br>
