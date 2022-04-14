@@ -44,17 +44,37 @@ function  agregaMotorista() {
 
 
     const motoristaInfo={
-        Nombre:document.getElementById('nombre').value,
-        Apellido:document.getElementById('apellido').value,
-        CorreoElectronico:document.getElementById('correo').value,
-        Password:document.getElementById('password').value,
-        NumeroTelefono:document.getElementById('numero_Telefonico').value,
-        HistorialPedido :[],
-        PedidosActivos :null
-
-
-
+        nombre:document.getElementById('nombre').value,
+        apellido:document.getElementById('apellido').value,
+        correoElectronico:document.getElementById('correo').value,
+        contrasena:document.getElementById('password').value,
+        numeroDeTelefono:document.getElementById('numero_Telefonico').value,
+        historalPedidos :[],
+        pedidosActivos :null
     };
+
+//HACIENDO CON BASE DATOS
+axios({
+    method:'POST',
+    url:'.../backend/api/motoristas.php',
+  
+    responseType:'json',
+    data:motoristaInfo,
+  
+}).then(res=>{
+    console.log(res.data);
+
+}).catch(error=>{
+ 
+
+
+});
+
+
+
+//
+
+
 
      //comprobando usuario repetido
      if(motoristas!=""){
