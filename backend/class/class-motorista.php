@@ -195,6 +195,12 @@ public function guardarMotorista(){
     fwrite($archivo,json_encode($motorista));
     fclose($archivo); 
 }
+public static function obtenerMotoristas(){//nos ayuda a usarlo sin instanciarlo 
+    $contenidoArhivo=file_get_contents('../data/motoristas.json');
+    echo $contenidoArhivo;
+
+}
+
 
 
   

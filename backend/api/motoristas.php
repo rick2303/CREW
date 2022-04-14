@@ -11,7 +11,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
     case 'POST': //guardar
         
         $_POST=json_decode(file_get_contents('php://input'),true);
-        $motorista =new Motorista($_POST["nombre"],$_POST["apellido"],$_POST["correoElectronico"],$_POST["numeroDeTelefono"],$_POST["historalPedidos"],$_POST["pedidosActivos"]);
+        $motorista =new Motorista($_POST["nombre"],$_POST["apellido"],$_POST["correoElectronico"],$_POST["numeroDeTelefono"],$_POST["historalPedidos"],$_POST["pedidosActivos"],$_POST["contrasena"]);
         $motorista->guardarMotorista();
         //echo"guardar el usuario ".$_POST['nombre'];
         $resultado["mensaje"]= "GUARDAR USUARIO,INFORMACION". json_encode($_POST);
@@ -20,12 +20,14 @@ switch ($_SERVER['REQUEST_METHOD']) {
         break;
 
      case 'GET':
-   
-    if (isset($_GET['id'])) {
-      
-    }else {
+   if (isset($_GET['id'])) {
        
+    }else {
+        Motorista::obtenerMotoristas();
+        //$resultado["mensaje"]=  "retornar todos os usuarios";
+       // echo json_encode($resultado);
     }
+   
     break;
     case 'PUT':
 
