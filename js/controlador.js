@@ -1,5 +1,7 @@
 
  var motoristas=[];
+
+ var indiceMotoristaLogueado = window.localStorage;
 function barralateral() {
    
     document.getElementById('barralateral').style.display='block';
@@ -14,16 +16,31 @@ function cerrar() {
 }
 
 
+function cargar(params) {
+    
+}
+// cargar usuarios
+
+function cargarMotoristas() {
+    console.log("holap")
+    axios({
+        method:'GET',
+        url:'http://localhost/CREWGIThUB/CREW/backend/api/motoristas.php',
+        responseType:'json',
+    }).then(res=>{
+        
+        motoristas=res.data;
+        console.log(motoristas)
+
+     
+    }).catch(error=>{
+        console.log(error);
 
 
+    });
+}
 
-//local storage
-
-
-
-//
-
-//
+cargarMotoristas();
 //agregando motorista
 
 function  agregaMotorista() {
@@ -39,23 +56,6 @@ function  agregaMotorista() {
         historalPedidos :[],
         pedidosActivos :null
     };
-
-//HACIENDO CON BASE DATOS
-
-
-axios({
-    method:'GET',
-    url:'http://localhost/CREWGIThUB/CREW/backend/api/motoristas.php',
-  
-    responseType:'json',
-   
-  
-}).then(res=>{
-    motoristas=res.data;
-    
-
-
-
      //comprobando usuario repetido
      if(motoristas!=""){
 
@@ -100,25 +100,16 @@ axios({
 
         axios({
             method:'POST',
+            
             url:'http://localhost/CREWGIThUB/CREW/backend/api/motoristas.php',
           
             responseType:'json',
             data:motoristaInfo,
           
-        }).then(res=>{
-           
-        
-        
-        
-        }).catch(error=>{
-         
-        
-        
+        }).then(res=>{    
+            cargarMotoristas();
+        }).catch(error=>{  
         });
-
-
-
-
         //
         document.getElementById('nombre').value=null;
         document.getElementById('apellido').value=null;
@@ -135,49 +126,18 @@ axios({
         `
 
     }
-    
-
-
-
-
-}).catch(error=>{
- 
-
-
-});
-
-
-
-
-
-
-   
- 
-    
-
-
-
-    
-     
-               
- 
-    
-
-
   
-
-
-
-
-    
-    
 }
 //Login motorista motorista
-function loginMotorista() {
+function btnIngresar() {
+console.log("si esta funcionando");console.log(motoristas);
+
     for (let i = 0; i < motoristas.length; i++) {
-       if (motoristas[i].CorreoElectronico==document.getElementById('usuarioLogin').value && motoristas[i].Password==document.getElementById('passwordLogin').value) {
+       if (motoristas[i].correoElectronico==document.getElementById('usuarioLogin').value && motoristas[i].contrasena==document.getElementById('passwordLogin').value) {
            console.log('encontrado');
-           localstorageLogueado.setItem('motoristasLogueado', JSON.stringify(motoristas[i]));
+           indiceMotoristaLogueado.setItem('indiceMotorista', JSON.stringify(i));
+      
+    
           
            location.assign("http://localhost/CREWGITHUB/CREW/motoristaLogueado.html");
          

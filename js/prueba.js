@@ -25,25 +25,49 @@ clienteNombre:"amanda"
 
 
 ];
-console.log(pedidosDisponibles);
+var obteniendoIndice = window.localStorage;
+var indiceMotorista=JSON.parse(obteniendoIndice.getItem('indiceMotorista'));
+var motoristaLogueado;
+
+console.log(indiceMotorista);
+
+function cargarInfoMotorista() {
   
 
-var infoMotor =[];
-infoMotor.push( JSON.parse(localstorageLogueado.getItem('motoristasLogueado')));
-console.log(infoMotor);
-localstorageLogueadoInfo =JSON.parse(localstorageLogueado.getItem('motoristasLogueado'));
+
+        axios({
+            method:'GET',
+            url:'http://localhost/CREWGIThUB/CREW/backend/api/motoristas.php'+ `?id=${indiceMotorista}`,
+            responseType:'json'
+        }).then(res=>{
+            
+            motoristaLogueado=res.data;
+            console.log("prueba motorista",motoristaLogueado.nombre);
+            inicio();
+        }).catch(error=>{
+          
+    
+    
+        });
+    
+
+    
+
+     
+}
+cargarInfoMotorista();
 
 
 function inicio() {
     document.getElementById('motoristaFotoNombre').innerHTML=`
     <div style="padding: 20px; " ><img style="height: 70px;" src="img/image 38.png" alt=""></div>
-    <div  style="padding: 20px; font-weight:bold;">${infoMotor[0].Nombre}</div>
+    <div  style="padding: 20px; font-weight:bold;">${motoristaLogueado.nombre}</div>
         
            
            `;
     
 }
-inicio();
+
 
 //funcion para ver si hay pedidos
 
