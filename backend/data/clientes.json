@@ -1,0 +1,32 @@
+[
+    {
+        "nombre": "Juan Perez",
+        "correoElectronico": "jperez@gmail.com",
+        "verOrden": [],
+        "contraseña": "12345"
+    },
+    {
+        "nombre": "Maria Rivera",
+        "correoElectronico": "riveraMaria3@gmail.com",
+        "verOrden": [],
+        "contraseña": "54321"
+    },
+    {
+        "nombre": "Andre Gonzalez",
+        "correoElectronico": "andreGonzales@gmail.com",
+        "verOrden": [],
+        "contraseña": "Gonzales123"
+    },
+    {
+        "nombre": "Jose Aguilar",
+        "correoElectronico": "Aguilar32@gmail.com",
+        "verOrden": [],
+        "contraseña": "joseAguilar"
+    },
+    {
+        "nombre": "Marcio Perez",
+        "correoElectronico": "marcio_perez@gmail.com",
+        "verOrden": [],
+        "contraseña": "abdul123"
+    }
+]
