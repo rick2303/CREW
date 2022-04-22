@@ -200,6 +200,13 @@ public static function obtenerMotoristas(){//nos ayuda a usarlo sin instanciarlo
     echo $contenidoArhivo;
 
 }
+public static function obtenerMotorista($indice){//nos ayuda a usarlo sin instanciarlo 
+    $contenidoArhivo=file_get_contents('../data/motoristas.json');
+    $motoristas=json_decode($contenidoArhivo,true);
+   echo json_encode($motoristas[$indice]);
+    
+
+}
 
 
 

@@ -21,7 +21,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
 
      case 'GET':
    if (isset($_GET['id'])) {
-       
+    Motorista::obtenerMotorista($_GET['id']);
     }else {
         Motorista::obtenerMotoristas();
         //$resultado["mensaje"]=  "retornar todos os usuarios";
