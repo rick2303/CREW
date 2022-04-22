@@ -1,5 +1,5 @@
 
-
+ var motoristas=[];
 function barralateral() {
    
     document.getElementById('barralateral').style.display='block';
@@ -14,10 +14,7 @@ function cerrar() {
 }
 
 
-var motoristas=[
 
-
-];
 
 
 //local storage
@@ -25,17 +22,7 @@ var motoristas=[
 
 
 //
-var localstorage = window.localStorage;
-var localstorageLogueado = window.localStorage;
 
-if (localstorage.getItem('motoristas') == null) {
-    localstorage.setItem('motoristas', JSON.stringify(motoristas));
-} else {
-
-    motoristas = JSON.parse(localstorage.getItem('motoristas'))
-
-
-}
 //
 //agregando motorista
 
@@ -44,17 +31,30 @@ function  agregaMotorista() {
 
 
     const motoristaInfo={
-        Nombre:document.getElementById('nombre').value,
-        Apellido:document.getElementById('apellido').value,
-        CorreoElectronico:document.getElementById('correo').value,
-        Password:document.getElementById('password').value,
-        NumeroTelefono:document.getElementById('numero_Telefonico').value,
-        HistorialPedido :[],
-        PedidosActivos :null
-
-
-
+        nombre:document.getElementById('nombre').value,
+        apellido:document.getElementById('apellido').value,
+        correoElectronico:document.getElementById('correo').value,
+        contrasena:document.getElementById('password').value,
+        numeroDeTelefono:document.getElementById('numero_Telefonico').value,
+        historalPedidos :[],
+        pedidosActivos :null
     };
+
+//HACIENDO CON BASE DATOS
+
+
+axios({
+    method:'GET',
+    url:'http://localhost/CREWGIThUB/CREW/backend/api/motoristas.php',
+  
+    responseType:'json',
+   
+  
+}).then(res=>{
+    motoristas=res.data;
+    
+
+
 
      //comprobando usuario repetido
      if(motoristas!=""){
@@ -62,7 +62,8 @@ function  agregaMotorista() {
         console.log('no vaciooo');
         var aux=false;
         for (let i = 0; i < motoristas.length; i++) {
-            if (motoristas[i].CorreoElectronico==motoristaInfo.CorreoElectronico) {
+            if (motoristas[i].correoElectronico==motoristaInfo.correoElectronico) {
+                console.log("correo",motoristas[i].correoElectronico)
                 console.log('repetido')
                 aux=true;
                 document.getElementById('modal-bopy').innerHTML =`
@@ -90,9 +91,35 @@ function  agregaMotorista() {
 
         console.log(' agregado con exito');
         console.log(motoristas);
-        motoristas.push(motoristaInfo);
-        localstorage.setItem('motoristas', JSON.stringify(motoristas));
+      
+      
         console.log(motoristas);
+
+
+        //preticion para agregarlo
+
+        axios({
+            method:'POST',
+            url:'http://localhost/CREWGIThUB/CREW/backend/api/motoristas.php',
+          
+            responseType:'json',
+            data:motoristaInfo,
+          
+        }).then(res=>{
+           
+        
+        
+        
+        }).catch(error=>{
+         
+        
+        
+        });
+
+
+
+
+        //
         document.getElementById('nombre').value=null;
         document.getElementById('apellido').value=null;
         document.getElementById('correo').value=null;
@@ -108,23 +135,23 @@ function  agregaMotorista() {
         `
 
     }
-    /*
-         if(motoristas==""){
+    
 
-        console.log('vaciooo');
-        motoristas.push(motoristaInfo);
-        console.log(motoristas);
-        document.getElementById('nombre').value=null;
-        document.getElementById('apellido').value=null;
-        document.getElementById('correo').value=null;
-        document.getElementById('password').value=null
-        document.getElementById('numero_Telefonico').value=null;
-        document.getElementById('modal-bopy').innerHTML =`
-        <h5 style="color: green" class="modal-title" id="exampleModalLabel">Sus datos han sido enviados correctamente</h5>
-        
-        `
-    }
-     */
+
+
+
+}).catch(error=>{
+ 
+
+
+});
+
+
+
+
+
+
+   
  
     
 
