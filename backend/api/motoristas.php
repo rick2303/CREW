@@ -30,7 +30,15 @@ switch ($_SERVER['REQUEST_METHOD']) {
    
     break;
     case 'PUT':
+     
 
+
+        $_PUT=json_decode(file_get_contents('php://input'),true);
+        $motorista= new Motorista($_PUT["nombre"],$_PUT["apellido"],$_PUT["correoElectronico"],$_PUT["numeroDeTelefono"],$_PUT["historalPedidos"],$_PUT["pedidosActivos"],$_PUT["contrasena"]);
+        $motorista->actualizarMotorista($_GET['id']);
+        $resultado["mensaje"]= "ACTUALIZAR UN USUARIO con el id:". $_GET['id'].
+     "Informacion actualizar" . json_encode($_PUT);
+     echo json_encode($resultado);
     break;
 
     case 'DELETE':

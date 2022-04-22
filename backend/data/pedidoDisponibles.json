@@ -16,7 +16,26 @@
         
         
         
+        },
+        
+        {
+    
+
+                "empresa":"burger king",
+                "productoNombre": "producto2",
+                "descipcion":"Una burger grande",
+                "precio": 4,
+                "cantidad": 2,
+                "direccion":"kenedy "
+                
+               
+               
+               
+        
+        
+        
         }
+
 
 
 ]

@@ -207,6 +207,33 @@ public static function obtenerMotorista($indice){//nos ayuda a usarlo sin instan
     
 
 }
+public function actualizarMotorista($indice){
+
+    $contenidoArhivo=file_get_contents('../data/motoristas.json');
+    $motoristas=json_decode($contenidoArhivo,true);
+
+   
+    $motorista=array(
+        'nombre'=>$this->nombre,
+        'apellido'=>$this->apellido,
+        'correoElectronico'=>$this->correoElectronico,
+        'numeroDeTelefono'=>$this->numeroDeTelefono,
+        'historalPedidos'=>$this->historalPedidos,
+        'pedidosActivos'=>$this->pedidosActivos,
+        'contrasena'=>$this->contrasena
+
+
+    );
+    $motoristas[$indice]=$motorista;
+    $archivo= fopen("../data/motoristas.json","w");
+    fwrite($archivo,json_encode($motoristas));
+    fclose($archivo); 
+   
+
+
+
+
+}
 
 
 
