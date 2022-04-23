@@ -6,9 +6,12 @@
     var indiceMotorista=JSON.parse(obteniendoIndice.getItem('indiceMotorista'));
     var motoristaLogueado;
     var pedidosDisponibles;
+    var historalPedidosAUX=[];
     
     console.log(indiceMotorista);
     //obteniendo info de motoristas
+
+    
     function cargarInfoMotorista() {
       
     
@@ -25,6 +28,8 @@
                 existenciaPedidoActivo();
                 if(motoristaLogueado.pedidosActivos!=null){
                 renderizarPedidoActivo();
+               
+              
 
                 }
 
@@ -324,12 +329,51 @@ cargarPedidosDisponibles();
     })
     
     function btnPedidoEntregado() {
-     console.log(indice)
-     infoMotor[0].HistorialPedido.push(infoMotor[0].PedidosActivos);
-        infoMotor[0].PedidosActivos=null;
-        existenciaPedidoActivo();
-        console.log(infoMotor[0].HistorialPedido);
-        console.log(infoMotor[0].PedidosActivos);
+   
+
+
+    historalPedidosAUX.push(motoristaLogueado.pedidosActivos);
+   
+
+
+    
+    //modificando y agregando el pedido entregado al historial
+    let usuarioPedidoTomado ={
+        nombre:motoristaLogueado.nombre,
+        apellido:motoristaLogueado.apellido,
+        correoElectronico:motoristaLogueado.correoElectronico,
+        numeroDeTelefono:motoristaLogueado.numeroDeTelefono,
+        historalPedidos:historalPedidosAUX,
+        pedidosActivos:null,
+        contrasena:motoristaLogueado.contrasena,
+    
+    
+        };
+      
+        console.log("creando objeto en el boton pedidoentregado",usuarioPedidoTomado)
+        
+
+        axios({
+            method:'PUT',
+            url:'http://localhost/CREWGIThUB/CREW/backend/api/motoristas.php'+ `?id=${indiceMotorista}`,
+            responseType:'json',
+            data:usuarioPedidoTomado
+        }).then(res=>{
+            cargarInfoMotorista();
+            existenciaPedidoActivo();
+            
+        }).catch(error=>{
+           
+    
+    
+        });
+
+
+
+
+
+ 
+    
         modalPediosDisponibles.hide();
     
     }
