@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Supermercado-Crew</title>
-    <link rel="stylesheet" href="css/stylesComercios.css">
+    <title>Comida-Crew</title>
+    <link rel="stylesheet" href="../css/stylesComercios.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <style>
@@ -13,39 +14,42 @@
     </style>
     <script src="https://kit.fontawesome.com/1ae81e383d.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <!--Encabezado-->
     <div>
         <div class="col-12 centrar mt-3">
-            <h3 style="font-family: 'Comfortaa';">Supermercados</h3>
+            <h3 style="font-family: 'Comfortaa';">Farmacias</h3>
         </div>
         <div>
             <div class="lineaInferior"></div>
         </div>
     </div>
-    <!--Comercios de supermercados-->
+    <!--Comercios de farmacias-->
     <div class="col-12 centrarLogos">
         <div style="margin-top: 3rem;">
-            <img src="img/coloniaLogo.png" alt="" class="logosS">
+            <img src="../img/kielsaLogo2.png" alt="" class="logosf">
         </div>
-        <div style="margin-top: 0.4rem;"> <button  id="supermercadoLaColonia" class="btn-utilidad" class="modal fade"
-        data-bs-toggle="modal" data-bs-target="#superLaColonia">La colonia</button></div>
+        <div style="margin-top: 0.4rem;"><button id="farmaciaKielsa" class="btn-utilidad" class="modal fade"
+                data-bs-toggle="modal" data-bs-target="#farmKielsa">Farmacia Kielsa</button></div>
     </div>
     <div class="col-12 centrarLogos">
         <div style="margin-top: 3rem;">
-            <img src="img/paizLogo.png" alt="" class="logosS">
+            <img src="../img/simanBanner.jpg" alt="" class="logosf">
         </div>
-        <div style="margin-top: 0.4rem;"> <button id="supermercadoPaiz" class="btn-utilidad" class="modal fade"
-        data-bs-toggle="modal" data-bs-target="#superPaiz">Supermercado Paiz</button></div>
+        <div style="margin-top: 0.4rem;"><button id="farmaciaSiman" class="btn-utilidad" class="modal fade"
+            data-bs-toggle="modal" data-bs-target="#farmSiman">Farmacia Siman</button></div>
     </div>
-    <!--Boton de retorno-->
-    <div style="margin-top: 80%;">
-        <a href="comercios.html"><button style=" width: 8rem; margin-left: 10px;"class="btn-utilidad"><b>Ver comercios</b></button></a>
+    <div class="col-12 centrarLogos">
+        <div style="margin-top: 3rem;">
+            <img src="../img/ahorroLogo.png" alt="" class="logosf">
+        </div>
+        <div style="margin-top: 0.4rem;"><button id="farmaciaKielsa" class="btn-utilidad" class="modal fade"
+            data-bs-toggle="modal" data-bs-target="#farmAhorro">Farmacia del Ahorro</button></div>
     </div>
-
-    <!--Modal de Supermercados -  Pasarlo al Js para generarlo automatico con JSON-->
-     <!--Supermercado la colonia -->
-     <div class="modal fade" id="superLaColonia" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    <!--Modal de Farmacias -  Pasarlo al Js para generarlo automatico con JSON-->
+     <!--Farmacia Kielsa -->
+     <div class="modal fade" id="farmKielsa" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
      aria-labelledby="staticBackdropLabel" aria-hidden="true">
      <div class="modal-dialog modal-fullscreen-xl-down">
          <div class="modal-content">
@@ -58,20 +62,20 @@
                 </div>
              </div>
              <div class="modal-body">
-                <img style="object-fit: cover; width: 20rem;" src="img/coloniaLogo.png" alt="">
+                <img style="object-fit: cover; width: 22rem;" src="../img/kielsaBanner.png" alt="">
                  <div>
                      <div class="col-12 centrar mt-1" style="justify-content: space-around;align-items:center ;">
                          <img class="logo-miniatura" style="margin-left: 10px; border-radius: 22px;"
-                             src="img/coloniaLogo2.jfif" alt="">
+                             src="../img/kielsaLogo2.png" alt="">
                          <h3 style="font-family: 'Comfortaa'; margin-bottom: 0;  font-size: 1.2rem !important;"><b>
-                                 La colonia</b></h3>
+                                 Farmacia Kielsa</b></h3>
                          <!--De manera temporal estrellas iran aqui puestas manualmente-->
                          <div>
                              <i class="fa-solid fa-star"></i>
                              <i class="fa-solid fa-star"></i>
                              <i class="fa-solid fa-star"></i>
                              <i class="fa-solid fa-star"></i>
-                             <i class="fa-solid fa-star-half-stroke"></i>
+                             <i class="fa-regular fa-star"></i>
                          </div>
                      </div>
                      <div>
@@ -82,19 +86,19 @@
                      <div>
                          <h6
                              style="font-family: 'Comfortaa'; margin-bottom: 0; margin-left: 12px; margin-top: 10px;">
-                             <b>Mantequilla</b>
+                             <b>Alcohol clinico</b>
                          </h6>
                      </div>
                      <div class="col-12 centrar mt-1" style="justify-content: space-around;align-items:center ;">
                          <div>
-                             <p style="margin-left: 12px;">Mantequilla Amarilla Dos Pinos 62.5 Gr</p>
+                             <p style="margin-left: 12px;">Farinter alcohol clinico 250 ml</p>
                          </div>
                          <div class="col-6">
-                             <img style="width: 8rem; margin-left: 25px;" src="img/mantequilla.jpg" alt="">
+                             <img style="width: 8rem; margin-left: 25px;" src="../img/alcholoClinico.jpg" alt="">
                          </div>
                      </div>
                      <div style="margin-left: 16px;">
-                         <h6>L. 22.90 <i class="fa-solid fa-circle-plus ml-1"></i></h6>
+                         <h6>L. 42.00 <i class="fa-solid fa-circle-plus ml-1"></i></h6>
                      </div>
                      <div>
                          <div class="lineaInferior"></div>
@@ -104,19 +108,20 @@
                      <div>
                          <h6
                              style="font-family: 'Comfortaa'; margin-bottom: 0; margin-left: 12px; margin-top: 10px;">
-                             <b>Pasta Dental</b>
+                             <b>Mascarilla KN95</b>
                          </h6>
                      </div>
                      <div class="col-12 centrar mt-1" style="justify-content: space-around;align-items:center ;">
                          <div>
-                             <p style="margin-left: 12px;">Pasta Dental Colgate Total Anti Sarro 150 ml</p>
+                             <p style="margin-left: 12px;">Paquete de mascarillas kn95 
+                                und x10</p>
                          </div>
                          <div class="col-6">
-                             <img style="width: 8rem; margin-left: 25px;" src="img/pastaDental.jpg" alt="">
+                             <img style="width: 8rem; margin-left: 25px;" src="../img/mascarillasKn95.jpg" alt="">
                          </div>
                      </div>
                      <div style="margin-left: 16px;">
-                         <h6>L. 136.90 <i class="fa-solid fa-circle-plus ml-1"></i></h6>
+                         <h6>L. 175.00 <i class="fa-solid fa-circle-plus ml-1"></i></h6>
                      </div>
                      <div>
                          <div class="lineaInferior"></div>
@@ -133,8 +138,8 @@
  </div>
 
 
-    <!--Supermercado Paiz -->
-    <div class="modal fade" id="superPaiz" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    <!--Farmacia Siman -->
+    <div class="modal fade" id="farmSiman" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen-xl-down">
             <div class="modal-content">
@@ -147,13 +152,13 @@
                     </div>
                 </div>
                 <div class="modal-body">
-                    <img style="object-fit: cover; width: 20rem; margin-left: 10px;" src="img/paizLogo.png" alt="">
+                    <img style="object-fit: cover; width: 22rem;" src="../img/simanBanner.jpg" alt="">
                     <div>
                         <div class="col-12 centrar mt-1" style="justify-content: space-around;align-items:center ;">
-                            <img class="logo-miniatura" style="margin-left: 20px; border-radius: 22px;"
-                                src="img/paizLogo.png" alt="">
+                            <img class="logo-miniatura" style="margin-left: 10px; border-radius: 22px;"
+                                src="../img/simanBanner.jpg" alt="">
                             <h3 style="font-family: 'Comfortaa'; margin-bottom: 0;  font-size: 1.2rem !important;"><b>
-                                   Supermercado Paiz</b></h3>
+                                    Farmacia Siman</b></h3>
                             <!--De manera temporal estrellas iran aqui puestas manualmente-->
                             <div>
                                 <i class="fa-solid fa-star"></i>
@@ -171,19 +176,19 @@
                         <div>
                             <h6
                                 style="font-family: 'Comfortaa'; margin-bottom: 0; margin-left: 12px; margin-top: 10px;">
-                                <b>Cereal Crunch</b>
+                                <b>Calmol Gotas x30ml</b>
                             </h6>
                         </div>
                         <div class="col-12 centrar mt-1" style="justify-content: space-around;align-items:center ;">
                             <div>
-                                <p style="margin-left: 12px;">CRUNCH Cereal Caja 330g</p>
+                                <p style="margin-left: 12px;">Medicamento para niños con dolor y fiebre.</p>
                             </div>
                             <div class="col-6">
-                                <img style="width: 8rem; margin-left: 25px;" src="img/cerealCrunch.png" alt="">
+                                <img style="width: 8rem; margin-left: 25px;" src="../img/calmolGotas.jpg" alt="">
                             </div>
                         </div>
                         <div style="margin-left: 16px;">
-                            <h6>L. 71.00<i class="fa-solid fa-circle-plus ml-1"></i></h6>
+                            <h6>L. 146.59 <i class="fa-solid fa-circle-plus ml-1"></i></h6>
                         </div>
                         <div>
                             <div class="lineaInferior"></div>
@@ -193,19 +198,19 @@
                         <div>
                             <h6
                                 style="font-family: 'Comfortaa'; margin-bottom: 0; margin-left: 12px; margin-top: 10px;">
-                                <b>Gaseosa Tropical</b>
+                                <b>Dolo-Neurobion</b>
                             </h6>
                         </div>
                         <div class="col-12 centrar mt-1" style="justify-content: space-around;align-items:center ;">
                             <div>
-                                <p style="margin-left: 12px;">Gaseosa Tropical De Banana -3000 ml</p>
+                                <p style="margin-left: 12px;">Caja de 10 tabletas dolo-neurobion .</p>
                             </div>
                             <div class="col-6">
-                                <img style="width: 8rem; margin-left: 25px;" src="img/gaseosaTropical1.jpg"alt="">
+                                <img style="width: 8rem; margin-left: 25px;" src="../img/doloNeurobion.png" alt="">
                             </div>
                         </div>
                         <div style="margin-left: 16px;">
-                            <h6>L. 45.80 <i class="fa-solid fa-circle-plus ml-1"></i></h6>
+                            <h6>L. 132.50 <i class="fa-solid fa-circle-plus ml-1"></i></h6>
                         </div>
                         <div>
                             <div class="lineaInferior"></div>
@@ -220,7 +225,93 @@
         </div>
 
     </div>
+    <!-- Modal FarmaciaDelAhorro -->
+    <div class="modal fade" id="farmAhorro" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen-xl-down">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div style="display: flex; justify-content: space-evenly; ">
+                        <!--llamando a modal ver orden-->
+                        <button class="btn-verOrden" id="visualizacionOrden" class="btn-utilidad" class="modal fade" data-bs-toggle="modal"
+                        data-bs-target="#orden">VER ORDEN</button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <img style="object-fit: cover; width: 22rem;" src="../img/ahorroLogo.png" alt="">
+                    <div>
+                        <div class="col-12 centrar mt-1" style="justify-content: space-around;align-items:center ;">
+                            <img style="width: 3rem;" src="../img/ahorroLogo2.png" alt="">
+                            <h3 style="font-family: 'Comfortaa'; margin-bottom: 0 ; font-size: 1.2rem !important;"><b>Farmcia del ahorro</b></h3>
+                            <!--De manera temporal estrellas iran aqui puestas manualmente-->
+                            <div>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="lineaInferior"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <h6
+                                style="font-family: 'Comfortaa'; margin-bottom: 0; margin-left: 12px; margin-top: 10px;">
+                                <b>Tabcin</b>
+                            </h6>
+                        </div>
+                        <div class="col-12 centrar mt-1" style="justify-content: space-around;align-items:center ;">
+                            <div>
+                                <p style="margin-left: 12px;">Tabcin Gripe Flema y congestion en capsulas</p>
+                            </div>
+                            <div class="col-6">
+                                <img class="imagenesMedianas" src="../img/tabcin.jpg" style="border-radius: 22px;"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div style="margin-left: 16px;">
+                            <h6>L. 28.12 <i class="fa-solid fa-circle-plus ml-1"></i></h6>
+                        </div>
+                        <div>
+                            <div class="lineaInferior"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <h6
+                                style="font-family: 'Comfortaa'; margin-bottom: 0; margin-left: 12px; margin-top: 10px;">
+                                <b>Tosan Jarabe </b>
+                            </h6>
+                        </div>
+                        <div class="col-12 centrar mt-1" style="justify-content: space-around;align-items:center ;">
+                            <div>
+                                <p style="margin-left: 12px;">Frasco de 120 ml, Jarabe para la tos</p>
+                            </div>
+                            <div class="col-6">
+                                <img class="imagenesMedianas" style="width: 9rem;border-radius: 22px;" src="../img/torsanJarabe.jpg"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div style="margin-left: 16px;">
+                            <h6>L. 132.50 <i class="fa-solid fa-circle-plus ml-1"></i></h6>
+                        </div>
+                        <div>
+                            <div class="lineaInferior"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-direcciones">Atras</button>
+                    <button type="button" class="btn-direcciones">Siguiente</button>
+                </div>
+            </div>
+        </div>
 
+    </div>
     <!--Modal Ver orden-->
  <div class="modal fade" id="orden" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
  aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -265,6 +356,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-    <script src="js/controlador1.js"></script>
+    <script src="..js/controladorClientes.js"></script>
+    <!--Boton de retorno-->
+    <div style="margin-top: 40%;">
+        <a href="comercios.html"><button style=" width: 8rem; margin-left: 10px;" class="btn-utilidad"><b>Ver
+                    comercios</b></button></a>
+    </div>
 </body>
+
 </html>
