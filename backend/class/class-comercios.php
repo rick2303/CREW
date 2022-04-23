@@ -1,6 +1,6 @@
 <?php  
 
-    class comercios{
+    class Comercio{
         private $restaurantes;
         private $bebidas;
         private $supermercados;
@@ -13,6 +13,52 @@
             $this->bebidas = $bebidas;
             $this->supermercados = $supermercados;
             $this->farmacias = $farmacias;
+        }
+
+        public function guardarComercio(){
+                $contenidoArchivo= file_get_contents("../../data/comercios.json");
+                $comercios = json_decode($contenidoArchivo, true);
+                $comercios[]=array(
+                        "restaurantes"=>$this->restaurantes,
+                        "bebidas"=>$this->bebidas,
+                        "supermercados"=>$this->supermercados,
+                        "farmacias"=>$this->farmacias
+                );
+                $archivo = fopen("../../data/comercios.json", "w"); //w para sustituir el contenido
+                fwrite($archivo, json_encode($comercios));
+        }
+        public static function obtenerComercios(){
+            $contenidoArchivo = file_get_contents("../data/comercios.json");
+            echo $contenidoArchivo;
+        }
+        public static function obtenerComercio($indice){
+            $contenidoArchivo = file_get_contents("../../data/comercios.json");
+            $comercios = json_decode($contenidoArchivo, true);
+            echo json_encode($comercios[$indice]);
+        }
+        public function actualizarComercio($indice){
+            $contenidoArchivo = file_get_contents("../../data/comercios.json");
+            $comercios = json_decode($contenidoArchivo, true);
+            //$comercio = $comercios[$indice];
+            $comercio = array(
+                "restaurantes"=>$this->restaurantes,
+                "bebidas"=>$this->bebidas,
+                "supermercados"=>$this->supermercados,
+                "farmacias"=>$this->farmacias
+            );
+            $comercios[$indice] = $comercio;
+            $archivo = fopen("../../data/comercios.json", "w");
+            fwrite ($archivo, json_encode($comercios));
+            fclose($archivo);
+        
+        }
+        public static function eliminarComercio($indice){
+            $contenidoArchivo = file_get_contents("../../data/comercios.json");
+            $comercios = json_decode($contenidoArchivo, true);
+            array_splice($comercios, $indice, 1);
+            $archivo = fopen("../../data/comercios.json", "w");
+            fwrite ($archivo, json_encode($comercios));
+            fclose($archivo);
         }
         /**
          * Get the value of restaurantes

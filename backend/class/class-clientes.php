@@ -126,6 +126,22 @@ public static function obtenerCliente($indice){
     
 
 }
+
+// public function actualizarCliente($indice){
+//     $contenidoArchivo = file_get_contents("../../data/clientes.json");
+//     $cliente = json_decode($contenidoArchivo, true);
+//     $cliente = array(
+//         "nombre"=>$this->nombre,
+//         "correoElectronico"=>$this->correoElectronico,
+//         "verOrden"=>$this->verOrden,
+//         "contrasena"=>$this->contrasena
+//     );
+//     $clientes[$indice] = $cliente;
+//     $archivo = fopen("../../data/clientes.json", "w");
+//     fwrite ($archivo, json_encode($clientes));
+//     fclose($archivo);
+
+// }
 }
 
 
