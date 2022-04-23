@@ -12,17 +12,13 @@ function cerrar() {
 }
 
 
-var localstorage = window.localStorage;
-var localstorageLogueado = window.localStorage;
-
-if (localstorage.getItem('clientes') == null) {
-    localstorage.setItem('clientes', JSON.stringify(clientes));
-} else {
-
-    clientes = JSON.parse(localstorage.getItem('clientes'))
-
-
-}
+// var localstorage = window.localStorage;
+// var localstorageLogueado = window.localStorage;
+// if (localstorage.getItem('clientes') == null) {
+//     localstorage.setItem('clientes', JSON.stringify(clientes));
+// } else {
+//     clientes = JSON.parse(localstorage.getItem('clientes'))
+// }
 
 function  agregaCliente() {
     const clienteInfo={
