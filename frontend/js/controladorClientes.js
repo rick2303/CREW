@@ -334,7 +334,7 @@ var ordenes = [
                  </div>
              </div>
              <div style="margin-left: 16px;">
-                 <h6>L. 339.00 <i class="fa-solid fa-circle-plus ml-1"></i></h6>
+                 <h6>L. 339.00 <i class="fa-solid fa-circle-plus ml-1" onclick="orden()"></i></h6>
              </div>
              <div>
                  <div class="lineaInferior"></div>
@@ -437,8 +437,8 @@ var ordenes = [
         url: '../../backend/api/comercios.php'+ `?id=${0}`,
         responseType: 'json'
     }).then(function(response){
-        var restaurante = response.data;
-        console.log(restaurante.restaurantes[0].nombre);
+        var restaurante = response.restaurante.burguer_King[0].nombre;
+        console.log(restaurante);
     }).catch(function(error){
         console.log(error);
     });
@@ -446,13 +446,10 @@ var ordenes = [
 
 
  function ordenar() { 
-    var modalToggle = document.getElementById('ordenElementos') // relatedTarget'
-    var myModal;
-myModal.show(modalToggle)
 document.getElementById('ordenElementos').innerHTML = `
 <div>
 <div class="col-12 centrar mt-1">
-    <h3 style="font-family: 'Comfortaa'; margin-bottom: 0;"><b> Detalles</b></h3><br>
+    <h3 style="font-family: 'Comfortaa'; margin-bottom: 0;"><b> Nuevo</b></h3><br>
 </div>
 <div>
     <br>
