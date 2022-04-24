@@ -1,15 +1,13 @@
 [
     {
-        "restaurantes": [
+        "categoria": "restaurantes",
+        "empresas": [
             {
-                "restaurante0": [
+                "nombreEmpresa": "Burger King",
+                "imagenBanner": "../img/bannerbg.jpg",
+                "imagenLogo": "../img/bglogo.png",
+                "productos": [
                     {
-                        "nombreEmpresa": "BurgerKing",
-                        "imagenBanner": "../img/bannerbg.jpg",
-                        "imagenLogo": "../img/bglogo.png"
-                        
-                    },
-                    {   
                         "nombre": "Pie de manzana",
                         "imagen": "../img/pieManzanaBg.png",
                         "descripcion": "Delicioso pie de manzana con una deliciosa salsa de manzana",
@@ -28,20 +26,17 @@
                         "precio": 225.00
                     }
                 ]
-                
             },
             {
-                "restaurante1": [
-                    {
-                        "nombreEmpresa": "mcDonalds",
-                        "imagenBanner": "../img/mcBanner.jpg",
-                        "imagenLogo": "../img/bglogo.png"
-                    },
+                "nombreEmpresa": "mcDonalds",
+                "imagenBanner": "../img/mcBanner.jpg",
+                "imagenLogo": "../img/bglogo.png",
+                "productos": [
                     {
                         "nombre": "McMuffin de pollo",
                         "imagen": "../img/mcmuffinPollo.jpg",
-                        "descripcion": "Pan muffun inglés, mayonesa, una torta de pechuga de pollo empanizada y queso cheddar amarillo." ,
-                        "precio":  108.00
+                        "descripcion": "Pan muffun inglés, mayonesa, una torta de pechuga de pollo empanizada y queso cheddar amarillo.",
+                        "precio": 108.00
                     },
                     {
                         "nombre": "Cajita Feliz",
@@ -50,7 +45,7 @@
                         "precio": 169.00
                     },
                     {
-                        "nombre":"Duo Crispy",
+                        "nombre": "Duo Crispy",
                         "imagen": "../img/duoCrispy.jpg",
                         "descripcion": "Disfruta de 2 McMenús de Pollo Crispy de 2 piezas cada uno con soda y papas a  un precio especial.",
                         "precio": 289.00
@@ -58,12 +53,10 @@
                 ]
             },
             {
-                "restaurante2": [
-                    {
-                        "nombreEmpresa": "Pizza Hut",
-                        "imagenBanner": "../img/pizzaBanner.jpg",
-                        "imagenLogo": "../img/pizzaLogo.png"
-                    },
+                "nombreEmpresa": "Pizza Hut",
+                "imagenBanner": "../img/pizzaBanner.jpg",
+                "imagenLogo": "../img/pizzaLogo.png",
+                "productos": [
                     {
                         "nombre": "Pizza Gigante",
                         "imagen": "../img/pizzaGigante.png",
@@ -75,7 +68,6 @@
                         "imagen": "../img/hotwings.png",
                         "descripcion": "Nuestras tradicionales alitas de pollo, con sabor a salsa buffalo, acompañadas con aderezo ranchero.",
                         "precio": 169.00
-
                     },
                     {
                         "nombre": "Hut pack",
@@ -88,51 +80,49 @@
         ]
     },
     {
-        "bebidas": [
+        "categoria": "bebidas",
+        "empresas": [
             {
-                "bebidas0": [
+                "nombresEmpresa": "Espresso Americano",
+                "imagenBanner": "../img/expressoBanner.jpg",
+                "imagenLogo": "../img/expressoLogo.png",
+                "productos": [
                     {
-                        "nombreEmpresa": "Espresso Americano",
-                        "imagenBanner": "../img/expressoBanner.jpg",
-                        "imagenLogo": "../img/expressoLogo.png"
-                    },
-                    { 
-                        "nombre":"Granitas Frutales",
+                        "nombre": "Granitas Frutales",
                         "imagen": "../img/granitasFrutales.png",
                         "descripcion": "Disfruta de una deliciosa y refrescante granita de tu sabor favorita de fruta.",
-                        "precio":  45.00
+                        "precio": 45.00
                     },
                     {
-                        "nombre":"Latte",
+                        "nombre": "Latte",
                         "imagen": "../img/latte.png",
                         "descripcion": "La perfecta combinación de espresso y leche, con un sabor suave coronado con espuma.",
-                        "precio":  55.00
+                        "precio": 55.00
                     },
                     {
                         "nombre": "Cheseecake",
                         "imagen": "../img/cheseecake.png",
                         "descripcion": "Porcion de un delicioso pastel a base de queso crema sobre una corteza de galleta cubierto con una crema ácida y glas de arandano y frutas.",
-                        "precio":  75.00
+                        "precio": 75.00
                     }
-                ],
-
-                "bebidas1" : [
-                    {
-                        "nombreEmpresa": "Buhos Liqour Store",
-                        "imagenBanner": "../img/bannerBuhos.jpg",
-                        "imagenLogo": "../img/buhosLogo.png"
-                    },
+                ]
+            },
+            {
+                "nombreEmpresa": "Buhos Liqour Store",
+                "imagenBanner": "../img/bannerBuhos.jpg",
+                "imagenLogo": "../img/buhosLogo.png",
+                "productos": [
                     {
                         "nombre": "Four loko",
                         "imagen": "../img/fourLoko.png",
                         "descripcion": "Bebida hecha a base delicor de malta, de frutas.",
-                        "precio":  85.00
+                        "precio": 85.00
                     },
                     {
                         "nombre": "Tequila",
                         "imagen": "../img/tequila.jpg",
                         "descripcion": "Tequilla Jose Cuervo Especial silver 750 ml",
-                        "precio":  485.00
+                        "precio": 485.00
                     },
                     {
                         "nombre": "Whisky",
@@ -140,138 +130,135 @@
                         "descripcion": "Blended Scratch Whisky 750 ml",
                         "precio": 950.00
                     }
-                ],
-                "bebidas2": [
-                    {
-                        "nombreEmpresa": "Smothie Store",
-                        "imagenBanner": "../img/smothieBanner.jpg",
-                        "imagenLogo": "../img/smothieLogo.png"
-                    },
+                ]
+            },
+            {
+                "nombreEmpresa": "Smothie Store",
+                "imagenBanner": "../img/smothieBanner.jpg",
+                "imagenLogo": "../img/smothieLogo.png",
+                "productos": [
                     {
                         "nombre": "Mix licuado de Sandia",
                         "imagen": "../img/licuadorSandia.jpg",
                         "descripcion": "Refrescante combinacion de sandia, banano, y jugo de naranja",
-                        "precio":  65.00
+                        "precio": 65.00
                     },
                     {
                         "nombre": "Ensalada de frutas",
                         "imagen": "../img/ensaladaFrutas.jpg",
                         "descripcion": "Combinacion de frutas rebanadas ",
-                        "precio":  68.00
+                        "precio": 68.00
                     },
                     {
                         "nombre": "Piña loca",
                         "imagen": "../img/pinaLoca.png",
                         "descripcion": "Contiene naranja, coco, piña",
-                        "precio":  72.00
+                        "precio": 72.00
                     }
                 ]
             }
         ]
     },
     {
-        "supermercados": [
+        "categoria": "supermercados",
+        "empresas": [
             {
-                "supermercado0":[
-                    {
-                        "nombreEmpresa": "La Colonia",
-                        "imagenBanner": "../img/coloniaLogo.jpg",
-                        "imagenLogo": "../img/coloniaLogo2.png"
-                    },
+                "nombreEmpresa": "La Colonia",
+                "imagenBanner": "../img/coloniaLogo.jpg",
+                "imagenLogo": "../img/coloniaLogo2.png",
+                "productos": [
                     {
                         "nombre": "Mantequilla",
                         "imagen": "../img/mantequilla.jpg",
                         "descripcion": "Mantequilla Amarilla Dos Pinos 62.5 Gr",
-                        "precio":  22.90
+                        "precio": 22.90
                     },
                     {
                         "nombre": "Pasta dental",
                         "imagen": "../img/pastaDental.jpg",
                         "descripcion": "Pasta Dental Colgate Total Anti Sarro 150 ml",
-                        "precio":  136.90
+                        "precio": 136.90
                     }
-                ],
-                "supermercado1": [
-                    {
-                        "nombreEmpresa": "Supermercado Paiz",
-                        "imagenBanner": "../img/paizLogo.png",
-                        "imagenLogo": "../img/paizLogo.png"
-                    },
+                ]
+            },
+            {
+                "nombreEmpresa": "Supermercado Paiz",
+                "imagenBanner": "../img/paizLogo.png",
+                "imagenLogo": "../img/paizLogo.png",
+                "productos": [
                     {
                         "nombre": "Cereal Crunch",
                         "imagen": "../img/cerealCrunch.jpg",
                         "descripcion": "CRUNCH Cereal Caja 330g",
-                        "precio":  71.00
+                        "precio": 71.00
                     },
                     {
                         "nombre": "Gaseosa Tropical",
                         "imagen": "../img/gaseosaTropical.jpg",
                         "descripcion": "Gaseosa Tropical De Banana - 3000 ml",
-                        "precio":  45.80
+                        "precio": 45.80
                     }
                 ]
             }
         ]
     },
-
     {
-        "farmacias": [
+        "categoria": "Supermercados",
+        "empresas": [
             {
-                "farmacia0":[
-                    {
-                        "nombreEmpresa": "Farmacia Kielsa",
-                        "imagenBanner": "../img/kielsaBanner.jpg",
-                        "imagenLogo": "../img/kielsaLogo2.png"
-                    },
+                "nombreEmpresa": "Farmacia Kielsa",
+                "imagenBanner": "../img/kielsaBanner.jpg",
+                "imagenLogo": "../img/kielsaLogo2.png",
+                "productos": [
                     {
                         "nombre": "Alcohol clinico",
                         "imagen": "../img/alcoholClinico.jpg",
                         "descripcion": "Farinter alcohol clinico 250 ml",
-                        "precio":  42.00
+                        "precio": 42.00
                     },
                     {
                         "nombre": "Mascarillas kn95",
                         "imagen": "../img/mascarillasKn95.jpg",
                         "descripcion": "Paquete de mascarillas kn95 und x10",
-                        "precio":  175.00
+                        "precio": 175.00
                     }
-                ],
-                "farmacia1": [
-                    {
-                        "nombreEmpresa": "Farmacia Siman",
-                        "imagenBanner": "../img/simanBanner.jpg",
-                        "imagenLogo": "../img/simanBanner.png"
-                    },
+                ]
+            },
+            {
+                "nombreEmpresa": "Farmacia Siman",
+                "imagenBanner": "../img/simanBanner.jpg",
+                "imagenLogo": "../img/simanBanner.png",
+                "productos": [
                     {
                         "nombre": "Calmol Gotas x30 ml",
                         "imagen": "../img/calmolGotas.jpg",
                         "descripcion": "Medicamento para niños con dolor y fiebre",
-                        "precio":  146.59
+                        "precio": 146.59
                     },
                     {
                         "nombre": "Dolo-Neuorobion",
                         "imagen": "../img/doloNeuorobion.png",
                         "descripcion": "Caja de 10 tabletas dolo-neurobion",
-                        "precio":  132.50
-                    } 
-                ],
-                "farmacia2": [
-                    {
-                        "nombreEmpresa": "Farmacia del Ahorro",
-                        "imagenBanner": "../img/ahorroLogo.jpg",
-                        "imagenLogo": "../img/ahorroLogo2.png"
-                    },
+                        "precio": 132.50
+                    }
+                ]
+            },
+            {
+                "nombreEmpresa": "Farmacia del Ahorro",
+                "imagenBanner": "../img/ahorroLogo.jpg",
+                "imagenLogo": "../img/ahorroLogo2.png",
+                "productos": [
                     {
                         "nombre": "Tabcin",
                         "imagen": "../img/tabcin.jpg",
                         "descripcion": "Tabcin Gripe Flema y congestion en capsulas",
-                        "precio":  28.12
+                        "precio": 28.12
                     },
                     {
                         "nombre": "Torsan Jarabe",
                         "imagen": "../img/torsanJarabe.jpg",
                         "descripcion": "Frasco de 120 ml, Jarabe para la tos",
-                        "precio":  132.50
+                        "precio": 132.50
                     }
                 ]
             }
