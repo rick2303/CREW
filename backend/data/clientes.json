@@ -15,7 +15,7 @@
         "nombre": "Maria Rivera",
         "correoElectronico": "riveraMaria3@gmail.com",
         "verOrden": [{
-            "prodcuto": "Mix licuado de Sandia",
+            "producto": "Mix licuado de Sandia",
             "cantidad": 2,
             "precio": 65.00
         }
