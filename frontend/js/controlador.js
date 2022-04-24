@@ -139,7 +139,7 @@ console.log("si esta funcionando");console.log(motoristas);
       
     
           
-           location.assign("http://localhost/CREWGITHUB/CREW/motoristaLogueado.html");
+           location.assign("http://localhost/CREWGITHUB/CREW/frontend/motoristas/motoristaLogueado.html");
          
            document.getElementById('usuarioLogin').value=null;
            document.getElementById('passwordLogin').value=null;

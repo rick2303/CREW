@@ -1,35 +1,17 @@
+
 [
-
-        {
-
-                "empresa":"Pizza hat",
-                "productoNombre": "producto1",
-                "descipcion":"Una pizza grande",
-                "precio": 4,
-                "cantidad": 2,
-                "direccion":"villa adela"
-        
-        
-        },
-        
-        {
-    
-
-                "empresa":"burger king",
-                "productoNombre": "producto2",
-                "descipcion":"Una burger grande",
-                "precio": 4,
-                "cantidad": 2,
-                "direccion":"kenedy "
-                
-               
-               
-               
-        
-        
-        
-        }
-
-
-
-]
+    {"empresa":"burger king",
+    "productoNombre":"producto2",
+    "descipcion":"Una burger grande",
+    "precio":4,
+    "cantidad":2,
+    "direccion":"kenedy "}
+ 
+    ,{"empresa":"pizza hat",
+        "productoNombre":"producto1",
+        "descipcion":"Una pizza grande",
+        "precio":4,
+        "cantidad":2,
+        "direccion"
+        :"kenedy "}
+    ]
