@@ -198,6 +198,7 @@ function agregaCliente() {
     ];
 
 
+<<<<<<< HEAD
     //Temporal hasta que sepa como hacerlo
     function mostrarComida() {
         document.getElementById('burgerKing').innerHTML = `
@@ -478,6 +479,8 @@ function agregaCliente() {
             console.log(error);
         });
     } mostrarComida2();
+=======
+>>>>>>> cd9c88278e4ee84df7fe216650aff823ea3fa5ba
 
 
     function ordenar() {
