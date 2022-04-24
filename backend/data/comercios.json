@@ -2,9 +2,12 @@
     {
         "restaurantes": [
             {
-                "burguer_king": [
+                "restaurante0": [
                     {
-                        "nombreEmpresa:": "BurgerKing"
+                        "nombreEmpresa": "BurgerKing",
+                        "imagenBanner": "../img/bannerbg.jpg",
+                        "imagenLogo": "../img/bglogo.png"
+                        
                     },
                     {   
                         "nombre": "Pie de manzana",
@@ -28,9 +31,11 @@
                 
             },
             {
-                "mcDonalds": [
+                "restaurante1": [
                     {
-                        "nombreEmpresa:": "mcDonalds"
+                        "nombreEmpresa": "mcDonalds",
+                        "imagenBanner": "../img/mcBanner.jpg",
+                        "imagenLogo": "../img/bglogo.png"
                     },
                     {
                         "nombre": "McMuffin de pollo",
@@ -53,9 +58,11 @@
                 ]
             },
             {
-                "pizzaHut": [
+                "restaurante2": [
                     {
-                        "nombreEmpresa:": "Pizza Hut"
+                        "nombreEmpresa": "Pizza Hut",
+                        "imagenBanner": "../img/pizzaBanner.jpg",
+                        "imagenLogo": "../img/pizzaLogo.png"
                     },
                     {
                         "nombre": "Pizza Gigante",
@@ -83,9 +90,11 @@
     {
         "bebidas": [
             {
-                "expressoAmericano": [
+                "bebidas0": [
                     {
-                        "nombreEmpresa:": "Espresso Americano"
+                        "nombreEmpresa": "Espresso Americano",
+                        "imagenBanner": "../img/expressoBanner.jpg",
+                        "imagenLogo": "../img/expressoLogo.png"
                     },
                     { 
                         "nombre":"Granitas Frutales",
@@ -107,9 +116,11 @@
                     }
                 ],
 
-                "buhosLiqourStore" : [
+                "bebidas1" : [
                     {
-                        "nombreEmpresa:": "Buhos Liqour Store"
+                        "nombreEmpresa": "Buhos Liqour Store",
+                        "imagenBanner": "../img/bannerBuhos.jpg",
+                        "imagenLogo": "../img/buhosLogo.png"
                     },
                     {
                         "nombre": "Four loko",
@@ -130,9 +141,11 @@
                         "precio": 950.00
                     }
                 ],
-                "smothieStore": [
+                "bebidas2": [
                     {
-                        "nombreEmpresa:": "Smothie Store"
+                        "nombreEmpresa": "Smothie Store",
+                        "imagenBanner": "../img/smothieBanner.jpg",
+                        "imagenLogo": "../img/smothieLogo.png"
                     },
                     {
                         "nombre": "Mix licuado de Sandia",
@@ -159,9 +172,11 @@
     {
         "supermercados": [
             {
-                "laColonia":[
+                "supermercado0":[
                     {
-                        "nombreEmpresa:": "La Colonia"
+                        "nombreEmpresa": "La Colonia",
+                        "imagenBanner": "../img/coloniaLogo.jpg",
+                        "imagenLogo": "../img/coloniaLogo2.png"
                     },
                     {
                         "nombre": "Mantequilla",
@@ -176,9 +191,11 @@
                         "precio":  136.90
                     }
                 ],
-                "supermecadoPaiz": [
+                "supermercado1": [
                     {
-                        "nombreEmpresa:": "Supermercado Paiz"
+                        "nombreEmpresa": "Supermercado Paiz",
+                        "imagenBanner": "../img/paizLogo.png",
+                        "imagenLogo": "../img/paizLogo.png"
                     },
                     {
                         "nombre": "Cereal Crunch",
@@ -200,9 +217,11 @@
     {
         "farmacias": [
             {
-                "farmaciaKielsa":[
+                "farmacia0":[
                     {
-                        "nombreEmpresa:": "Farmacia Kielsa"
+                        "nombreEmpresa": "Farmacia Kielsa",
+                        "imagenBanner": "../img/kielsaBanner.jpg",
+                        "imagenLogo": "../img/kielsaLogo2.png"
                     },
                     {
                         "nombre": "Alcohol clinico",
@@ -217,9 +236,11 @@
                         "precio":  175.00
                     }
                 ],
-                "farmaciaSiman": [
+                "farmacia1": [
                     {
-                        "nombreEmpresa:": "Farmacia Siman"
+                        "nombreEmpresa": "Farmacia Siman",
+                        "imagenBanner": "../img/simanBanner.jpg",
+                        "imagenLogo": "../img/simanBanner.png"
                     },
                     {
                         "nombre": "Calmol Gotas x30 ml",
@@ -234,9 +255,11 @@
                         "precio":  132.50
                     } 
                 ],
-                "farmaciaDelAhorro": [
+                "farmacia2": [
                     {
-                        "nombreEmpresa:": "Farmacia del Ahorro"
+                        "nombreEmpresa": "Farmacia del Ahorro",
+                        "imagenBanner": "../img/ahorroLogo.jpg",
+                        "imagenLogo": "../img/ahorroLogo2.png"
                     },
                     {
                         "nombre": "Tabcin",
