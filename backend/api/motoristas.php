@@ -17,7 +17,6 @@ switch ($_SERVER['REQUEST_METHOD']) {
         $resultado["mensaje"]= "GUARDAR USUARIO,INFORMACION". json_encode($_POST);
         echo json_encode($resultado);
         break;
-        break;
 
      case 'GET':
    if (isset($_GET['id'])) {

@@ -84,7 +84,7 @@ cargarPedidosDisponibles();
     
     function inicio() {
         document.getElementById('motoristaFotoNombre').innerHTML=`
-        <div style="padding: 20px; " ><img style="height: 70px;" src="img/image 38.png" alt=""></div>
+        <div style="padding: 20px; " ><img style="height: 70px;" src="http://localhost/CREWGITHUB/CREW/frontend/img/image%2038.png"></div>
         <div  style="padding: 20px; font-weight:bold;">${motoristaLogueado.nombre}</div>
             
                
@@ -138,7 +138,7 @@ cargarPedidosDisponibles();
             <div class="col-12"  onclick="tomarIndicePedidosDisponibles(${i})">
             
             <div class="estiloPedidoDetalle  estiloParaCadaPedidoDisponible" style="margin-bottom: 10px; margin-top: 10px;"  >
-                        <div ><img src="img/Rectangle 75.png" alt=""></div>
+                        <div ><img src=" " alt=""></div>
                         <div style="margin-left: 10px;" >
                             <p style="margin-bottom: 0rem;">${pedidosDisponibles[i].empresa}</p>
                             <p style="margin-bottom: 0rem;"> ${pedidosDisponibles[i].descipcion}</p>
@@ -276,21 +276,6 @@ cargarPedidosDisponibles();
 
 
     });
-
-
-
- 
-    
-   
-    
-    
-    ////
-    
-    
-    
- 
-    
-    
     }
 
     function renderizarPedidoActivo() {
