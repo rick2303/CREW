@@ -472,7 +472,7 @@ function agregaCliente() {
             url: '../../backend/api/comercios.php' + `?id=${0}`,
             responseType: 'json'
         }).then(function (response) {
-            var restaurante = response.restaurante.burguer_King[0].nombre;
+            var restaurante = response.data.restaurantes[0].burguer_king[0].nombre;
             console.log(restaurante);
         }).catch(function (error) {
             console.log(error);

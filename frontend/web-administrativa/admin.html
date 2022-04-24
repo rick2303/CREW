@@ -14,511 +14,66 @@
     <div class="encabezadoAdmin"><p style="margin: 0px; text-align: center;">Admin Crew</p></div>
 
     <div>
-        <div class="opcionesAdmin" data-bs-toggle="modal" data-bs-target="#modalAñadiendoEmpreza"  >Administrar empresas</div>
+        <div class="opcionesAdmin" data-bs-toggle="modal" data-bs-target="#administrarEmpresas"  >Administrar empresas</div>
         <div class="opcionesAdmin" data-bs-toggle="modal" data-bs-target="#modalAdministrarProductosDeLasEmpresas">Administrar productos de las empresas</div>
         <div class="opcionesAdmin"  data-bs-toggle="modal" data-bs-target="#modalAdministrarMotoristas">Administrar motoristas</div>
         <div class="opcionesAdmin" data-bs-toggle="modal" data-bs-target="#modalVerOrdenenes">Ver ordenes</div>
     </div>
-
-    <!-- modalAdministrarMotoristas -->
-   <!-- Full screen modal -->
-
-
-   <div class="modal fade" id="modalAdministrarMotoristas" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel" style="display: none;" aria-hidden="true">
-    <div class="modal-dialog modal-fullscreen">
-      <div class="modal-content">
-        <div class="modal-header" style="background-color: #C4C4C4;">
-          <h3 class="modal-title h4" id="exampleModalFullscreenLabel">
-              <i class="fa-solid fa-circle" style="font-size: 12px; margin-right: 7px;"></i>Administrar motorista</h3>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-         
-             
-          <div class="container">
-              <div class="row">
-                  <div class="col-6"><b>Nombre motorista</b></div>
-                  <div class="col-6"><b>Tipo motorista</b></div>
-
-
-              </div>
-
-              <div class="row " style="margin-top: 40px;" id="infoMotorista">
-                <div class="col-6">Ricardo</div>
-                <div class="col-6">Moto</div>
-
-
-            </div>
-
-            <div class="contenedorboton">
-                <div>
-                <button class="btnSolicitudesMotorista" data-bs-toggle="modal" data-bs-target="#modaLSolicitudesMotoristas">Ver solicitudes motorista</button>
-            </div>
-        </div>
+    <div class="modal fade" id="administrarEmpresas" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel" style="display: none;" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header" style="background-color: #C4C4C4;">
+            <h3 class="modal-title h4" id="exampleModalFullscreenLabel">
+                <i class="fa-solid fa-circle" style="font-size: 12px; margin-right: 7px;"></i>Solicitudes Motoristas</h3>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-         
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
+          <div class="modal-body">
+           <p>Seleccione la empresa a relaizar opcion</p>
 
-
-  <!-- modaLSolicitudesMotoristas -->
-   <!-- Full screen modal -->
-
-
-   <div class="modal fade" id="modaLSolicitudesMotoristas" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel" style="display: none;" aria-hidden="true">
-    <div class="modal-dialog modal-fullscreen">
-      <div class="modal-content">
-        <div class="modal-header" style="background-color: #C4C4C4;">
-          <h3 class="modal-title h4" id="exampleModalFullscreenLabel">
-              <i class="fa-solid fa-circle" style="font-size: 12px; margin-right: 7px;"></i>Solicitudes Motoristas</h3>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-         
-             
-          <div class="container">
-              <div class="row">
-                  <div class="col-4"><b>Nombre motorista</b></div>
-                  <div class="col-4"><b>Tipo motorista</b></div>
-
-
-              </div>
-
-              <div class="row " style="margin-top: 40px;" id="infoMotorista">
-                <div class="col-4">Ricardo</div>
-                <div class="col-4">Moto</div>
-                <div class="col-4">
-                    <div class="row">
-                        <div class="col-6"><button class="btnSolicitudesMotorista">Ver solicitudes motorista</button></div>
-                        <div class="col-6"><button class="btnSolicitudesMotorista">Ver solicitudes motorista</button></div>
-                    </div>
-
-
-                </div>
-
-
-            </div>
-
-          </div>
-         
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-    <!-- modalVerOrdenenes -->
-   <!-- Full screen modal -->
-
-
-   <div class="modal fade" id="modalVerOrdenenes" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel" style="display: none;" aria-hidden="true">
-    <div class="modal-dialog modal-fullscreen">
-      <div class="modal-content">
-        <div class="modal-header" style="background-color: #C4C4C4;">
-          <h3 class="modal-title h4" id="exampleModalFullscreenLabel">
-              <i class="fa-solid fa-circle" style="font-size: 12px; margin-right: 7px;"></i>Ordenes disponibles </h3>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-         
-             
-          <div class="container">
-              <div class="row">
-                  <div class="col-4"><b>Disponibles</b></div>
-                  <div class="col-4">2</div>
-
-
-              </div>
-
-              <div class="row " style="margin-top: 40px;" id="infoMotorista">
-               
-                  
-                        <div class="col-6">
-                            <div class="estiloPedidoDetalle  estiloParaCadaPedidoDisponible"  >
-                            <div ><img src="../img/Rectangle 75.png" alt=""></div>
-                            <div style="margin-left: 10px;" >
-                                <p style="margin-bottom: 0rem; text-align: center;">cafe</p>
-                                <p style="margin-bottom: 0rem;"> cafe</p>
-                            
-                            </div>
-                          
-                        </div> 
-                    </div>
-                        <div class="col-6">
-                            
-                            <div ><button data-bs-toggle="modal" data-bs-target="#modalMotoristasDisponibles"  class="btnSolicitudesMotorista">Asignar Pedido</button></div>
-                        </div>
-                  
-
-
-                </div>
-
-              
-
-
-
-            </div>
-
-          </div>
-         
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-     <!-- modalMotoristasDisponibles -->
-   <!-- Full screen modal -->
-
-
-   <div class="modal fade" id="modalMotoristasDisponibles" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel" style="display: none;" aria-hidden="true">
-    <div class="modal-dialog modal-fullscreen">
-      <div class="modal-content">
-        <div class="modal-header" style="background-color: #C4C4C4;">
-          <h3 class="modal-title h4" id="exampleModalFullscreenLabel">
-              <i class="fa-solid fa-circle" style="font-size: 12px; margin-right: 7px;"></i>Motorista Disponibles </h3>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-         
-            <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col"><b>#</b></th>
-                    <th scope="col"><b>Nombre</b></th>
-                    <th scope="col"><b>Estado</b></th>
-                    <th scope="col"><b>Accion</b></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td><button class="btnSolicitudesMotorista">Asignar Pedido</button></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td><button class="btnSolicitudesMotorista">Asignar Pedido</button></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td><button class="btnSolicitudesMotorista">Asignar Pedido</button></td>
-                  </tr>
-                </tbody>
-              </table>
-         
-
-          </div>
-         
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-     <!-- modalAdministrarProductosDeLasEmpresas -->
-   <!-- Full screen modal -->
-
-
-   <div class="modal fade" id="modalAdministrarProductosDeLasEmpresas" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel" style="display: none;" aria-hidden="true">
-    <div class="modal-dialog modal-fullscreen">
-      <div class="modal-content">
-        <div class="modal-header" style="background-color: #C4C4C4;">
-          <h3 class="modal-title h4" id="exampleModalFullscreenLabel">
-              <i class="fa-solid fa-circle" style="font-size: 12px; margin-right: 7px;"></i>Administrar productos de las empresas </h3>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-         <p style="margin-left: 2.3rem;">Seleccione la empresa a administrar sus productos</p>
-    
-         <div class="container">
+           <div class="container">
              <div class="row">
-                 <div class="col-3">
-
-                    <div><b>Comida</b></div>
-                    <div data-bs-toggle="modal" data-bs-target="#modalBurger" style="cursor: pointer;">Burger king</div>
-                   
-                 </div>
-                 <div class="col-3">
-                    <div><b>Farmacias</b></div>
-                   
-                 </div>
-                 <div class="col-3">
-                    <div ><b>Bebida</b> </div>
-                   
-                 </div>
-                 <div class="col-3">
-                    <div><b>Supermercados</b></div>
-                  
-                 </div>
+               <div class="col-3">Comidas</div>
+               <div class="col-3">Bebidas</div>
+               <div class="col-3">Farmacias</div>
+               <div class="col-3">Super</div>
              </div>
-         </div>
-
-          </div>
-         
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-
-  
-     <!-- modalAdministrarProductosDeLasEmpresas -->
-   <!-- Full screen modal -->
-
-
-   <div class="modal fade" id="modalBurger" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel" style="display: none;" aria-hidden="true">
-    <div class="modal-dialog modal-fullscreen">
-      <div class="modal-content">
-        <div class="modal-header" style="background-color: #C4C4C4;">
-          <h3 class="modal-title h4" id="exampleModalFullscreenLabel">
-              <i class="fa-solid fa-circle" style="font-size: 12px; margin-right: 7px;"></i>asdasdas </h3>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-         <p>Seleccione la empresa a admistrizar sus productos</p>
-         <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Codigo</th>
-                <th scope="col">Nombre Producto</th>
-                <th scope="col">Marca</th>
-                <th scope="col">unidad</th>
-                <th scope="col">Costo de compras</th>
-                <th scope="col">Costo de ventas</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-               <td>323</td>
-               <td>Super burger</td>
-               <td>Burger king</td>
-               <td>56</td>
-               <td>123.lps</td>
-               <td>150.lps</td>
-              </tr>
-              <tr>
-                
-              </tr>
-              <tr>
-                
-            
-              </tr>
-            </tbody>
-          </table>
-     
-
-          </div>
-          <div class="container">
-              <div class="row">
-                  <div class="col-4"> <button class="btnSolicitudesMotorista" data-bs-toggle="modal" data-bs-target="#modalAgregandoProducto">Añadir</button></div>
-                  <div class="col-4"> <button class="btnSolicitudesMotorista">Modificar</button></div>
-                  <div class="col-4"> <button class="btnSolicitudesMotorista">Eliminar</button></div>
-              </div>
-          </div>
-         
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-
-  <!-- modalAgregandoProducto -->
-   <!-- Full screen modal -->
-
-
-   <div class="modal fade" id="modalAgregandoProducto" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel" style="display: none;" aria-hidden="true">
-    <div class="modal-dialog modal-fullscreen">
-      <div class="modal-content">
-        <div class="modal-header" style="background-color: #C4C4C4;">
-          <h3 class="modal-title h4" id="exampleModalFullscreenLabel">
-              <i class="fa-solid fa-circle" style="font-size: 12px; margin-right: 7px;"></i></h3>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-
-            <div class="container">
-                <div class="row estiloInputAgregandoProducto" >
-                    <div class="col-6">Codigo</div>
-                    <div class="col-6"><input class="estiloInputAgregandoProductoInputs" type="text"></div>
-                </div>
-
-                <div class="row estiloInputAgregandoProducto">
-                    <div class="col-6">Nombre producto</div>
-                    <div class="col-6"><input class="estiloInputAgregandoProductoInputs" type="text"></div>
-                </div>
-
-                <div class="row estiloInputAgregandoProducto">
-                    <div class="col-6">Marca</div>
-                    <div class="col-6"><input class="estiloInputAgregandoProductoInputs" type="text"></div>
-                </div>
-
-                <div class="row estiloInputAgregandoProducto">
-                    <div class="col-6">Unidad</div>
-                    <div class="col-6"><input class="estiloInputAgregandoProductoInputs" type="text"></div>
-                </div>
-
-                <div class="row estiloInputAgregandoProducto">
-                    <div class="col-6">Costo de compra</div>
-                    <div class="col-6"><input class="estiloInputAgregandoProductoInputs" type="text"></div>
-                </div>
-
-                <div class="row estiloInputAgregandoProducto">
-                    <div class="col-6">Costo de venta</div>
-                    <div class="col-6"><input class="estiloInputAgregandoProductoInputs" type="text"></div>
-                </div>
-                
-               
-                
-            </div>
-            <div class="contenedorboton">
-                <div>
-                <button class="btnSolicitudesMotorista" >Agregar Producto  </button>
-            </div>
-        </div>
-     
-
-          </div>
-          
-          
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-    <!-- modalAdministrarEmpresas -->
-   <!-- Full screen modal -->
-
-
-   <div class="modal fade" id="modalAdministrarEmpresas" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel" style="display: none;" aria-hidden="true">
-    <div class="modal-dialog modal-fullscreen">
-      <div class="modal-content">
-        <div class="modal-header" style="background-color: #C4C4C4;">
-          <h3 class="modal-title h4" id="exampleModalFullscreenLabel">
-              <i class="fa-solid fa-circle" style="font-size: 12px; margin-right: 7px;"></i>Administrar productos de las empresas </h3>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-         <p>Seleccione la empresa a admistrizar sus productos</p>
-    
-         <div class="container">
-             <div class="row">
-                 <div class="col-3">
-
-                    <div><b>Comida</b></div>
-                    <div data-bs-toggle="modal" data-bs-target="#modalBurger">Burger king</div>
-                   
-                 </div>
-                 <div class="col-3">
-                    <div><b>Farmacias</b></div>
-                   
-                 </div>
-                 <div class="col-3">
-                    <div ><b>Bebida</b> </div>
-                   
-                 </div>
-                 <div class="col-3">
-                    <div><b>Supermercados</b></div>
-                  
-                 </div>
-             </div>
-         </div>
-
-          </div>
-         
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- modalAñadiendoEmpreza -->
-   <!-- Full screen modal -->
-
-
-   <div class="modal fade" id="modalAñadiendoEmpreza" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel" style="display: none;" aria-hidden="true">
-    <div class="modal-dialog modal-fullscreen">
-      <div class="modal-content">
-        <div class="modal-header" style="background-color: #C4C4C4;">
-          <h3 class="modal-title h4" id="exampleModalFullscreenLabel">
-              <i class="fa-solid fa-circle" style="font-size: 12px; margin-right: 7px;"></i>Admistar empresar </h3>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <div class="container" >
-                <div class="row">
-                    <div class="col-3">
-   
-                       <div><b>Comida</b></div>
-                       <div data-bs-toggle="modal" data-bs-target="#modalBurger">Burger king</div>
-                      
-                    </div>
-                    <div class="col-3">
-                       <div><b>Farmacias</b></div>
-                      
-                    </div>
-                    <div class="col-3">
-                       <div ><b>Bebida</b> </div>
-                      
-                    </div>
-                    <div class="col-3">
-                       <div><b>Supermercados</b></div>
-                     
-                    </div>
-                </div>
-            </div>
-     
-        <div class="container" style="margin-top: 20%;">
+           </div>
+           <div class="container">
             <div class="row">
-                <div class="col-4"> <button class="btnSolicitudesMotorista" data-bs-toggle="modal" data-bs-target="#modalAgregandoProducto">Añadir</button></div>
-                <div class="col-4"> <button class="btnSolicitudesMotorista">Modificar</button></div>
-                <div class="col-4"> <button class="btnSolicitudesMotorista">Eliminar</button></div>
+
+              <div class="col-3" >
+                <div class="row" id="comidas">
+                  
+
+
+
+
+                </div>
+
+
+
+              </div>
+              <div class="col-3">Bebidas</div>
+              <div class="col-3">Farmacias</div>
+              <div class="col-3">Super</div>
             </div>
-        </div>
-         
           </div>
+               
           
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+           
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
   crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> 
+  <script src="../js/controladorAdmin.js"></script>
 </body>
 </html>
