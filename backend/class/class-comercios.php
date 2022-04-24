@@ -5,14 +5,15 @@
         private $bebidas;
         private $supermercados;
         private $farmacias;
+        private $empresas;
 
 
-        public function __construct($restaurantes, $bebidas, $supermercados, $farmacias)
-        {
+        public function __construct($restaurantes, $bebidas, $supermercados, $farmacias, $empresas){
             $this->restaurantes = $restaurantes;
             $this->bebidas = $bebidas;
             $this->supermercados = $supermercados;
             $this->farmacias = $farmacias;
+            $this->empresas = $empresas;
         }
 
         public static function obtenerComercios(){
@@ -101,6 +102,26 @@
         public function setFarmacias($farmacias)
         {
                 $this->farmacias = $farmacias;
+
+                return $this;
+        }
+
+        /**
+         * Get the value of empresas
+         */ 
+        public function getEmpresas()
+        {
+                return $this->empresas;
+        }
+
+        /**
+         * Set the value of empresas
+         *
+         * @return  self
+         */ 
+        public function setEmpresas($empresas)
+        {
+                $this->empresas = $empresas;
 
                 return $this;
         }
