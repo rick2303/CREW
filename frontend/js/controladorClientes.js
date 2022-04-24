@@ -1,24 +1,25 @@
 
 function barralateral() {
-   
-    document.getElementById('barralateral').style.display='block';
-    document.getElementById('pantallanegra').style.display='block';
+
+    document.getElementById('barralateral').style.display = 'block';
+    document.getElementById('pantallanegra').style.display = 'block';
 
 }
 function cerrar() {
-    document.getElementById('barralateral').style.display='none';
-    document.getElementById('pantallanegra').style.display='none';
-  
+    document.getElementById('barralateral').style.display = 'none';
+    document.getElementById('pantallanegra').style.display = 'none';
+
 }
+
 function cargarClientes() {
     axios({
-        method:'GET',
-        url:'../../backend/api/clientes.php',
-        responseType:'json',
-    }).then(res=>{    
-        clientes=res.data;
+        method: 'GET',
+        url: '../../backend/api/clientes.php',
+        responseType: 'json',
+    }).then(res => {
+        clientes = res.data;
         console.log(clientes)
-    }).catch(error=>{
+    }).catch(error => {
         console.log(error);
     });
 }
@@ -26,146 +27,180 @@ function cargarClientes() {
 cargarClientes();
 var indiceClienteLogueado = window.localStorage;
 var obteniendoIndice = window.localStorage;
-
-function  agregaCliente() {
-
-    const clienteInfo={
-        nombre:document.getElementById('nombre').value,
-        correoElectronico:document.getElementById('correo').value,
-        contrasena:document.getElementById('password').value,
-        verOrden :[],
+function agregaCliente() {
+    const clienteInfo = {
+        Nombre: document.getElementById('nombre').value,
+        CorreoElectronico: document.getElementById('correo').value,
+        Password: document.getElementById('password').value
     };
-     if(clientes!=""){
-        var aux=false;
+
+    if (clientes != "") {
+        var rep = false;
         for (let i = 0; i < clientes.length; i++) {
-            if (clientes[i].correoElectronico==clienteInfo.correoElectronico) {
-                console.log("correo",clientes[i].correoElectronico)
+            if (clientes[i].CorreoElectronico == clienteInfo.CorreoElectronico) {
                 console.log('repetido')
-                aux=true;
-                document.getElementById('modal-bopy').innerHTML =`
-                <h5 style="color: red" class="modal-title" id="exampleModalLabel">Al parecer usted ya tiene una cuenta registrada,por favor,intente de nuevo</h5>          
-                `
-                document.getElementById('cerrarRegistrar').innerHTML=`        
-                <button data-bs-toggle="modal" data-bs-target="#staticBackdropRegistrar" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                `
-                break;   
-            }else{
-            aux=false
-            } 
+                rep = true;
+                document.getElementById('modal-body').innerHTML = `
+        <h5 style="color: red" class="modal-title" id="exampleModalLabel">Al parecer usted ya tiene una cuenta registrada,por favor,intente de nuevo</h5>        
+        `
+                document.getElementById('cerrarRegistrar').innerHTML = `
+       
+        <button data-bs-toggle="modal" data-bs-target="#staticBackdropRegistrar" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        `
+                break;
+
+            } else {
+                rep = false
+
+            }
+
+        }
+
+    }
+
+    if (rep == false || clientes == "") {
+        if (validacionCorreo(clienteInfo.CorreoElectronico)) {
+            console.log(' agregado con exito');
+            console.log(clientes);
+            clientes.push(clienteInfo);
+            localstorage.setItem('clientes', JSON.stringify(clientes));
+            console.log(clientes);
+
+            document.getElementById('nombre').value = null;
+            document.getElementById('correo').value = null;
+            document.getElementById('password').value = null
+
+            document.getElementById('modal-bopy').innerHTML = `
+<h5 style="color: green" class="modal-title" id="exampleModalLabel">Sus datos han sido enviados correctamente</h5>
+
+`
+            document.getElementById('cerrarRegistrar').innerHTML = `
+<button  type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+`
+
         }
     }
-    if(aux==false ||  clientes==""){
-        console.log(' agregado con exito');
-
-        axios({
-            method:'POST',         
-            url:'../../backend/api/clientes.php',       
-            responseType:'json',
-            data:clienteInfo,
-          
-        }).then(res=>{    
-            cargarClientes();
-        }).catch(error=>{  
-        });
-        document.getElementById('nombre').value=null;
-        document.getElementById('correo').value=null;
-        document.getElementById('password').value=null
-
-        document.getElementById('modal-bopy').innerHTML =`
-        <h5 style="color: green" class="modal-title" id="exampleModalLabel">Sus datos han sido enviados correctamente</h5>
-        
-        `
-        document.getElementById('cerrarRegistrar').innerHTML=`
-        <button  type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        `
-    }
 }
 
-function loginCliente() {
-    console.log("si esta funcionando");console.log(clientes);
+    // var localstorage = window.localStorage;
+    // var localstorageLogueado = window.localStorage;
+    // if (localstorage.getItem('clientes') == null) {
+    //     localstorage.setItem('clientes', JSON.stringify(clientes));
+    // } else {
+    //     clientes = JSON.parse(localstorage.getItem('clientes'))
+    // }
 
-    for (let i = 0; i < clientes.length; i++) {
-       if (clientes[i].correoElectronico==document.getElementById('usuarioLogin').value && clientes[i].contrasena==document.getElementById('passwordLogin').value) {
-           console.log('encontrado');
-           indiceClienteLogueado.setItem('indiceCliente', JSON.stringify(i));
-           location.assign("../../frontend/clientes/clienteLogueado.html");
-         
-           document.getElementById('usuarioLogin').value=null;
-           document.getElementById('passwordLogin').value=null;
-           break;
-       }else{
-        console.log('no encontrado')
-       }
-        
+
+
+    function loginCliente() {
+        console.log("si esta funcionando"); console.log(clientes);
+
+        for (let i = 0; i < clientes.length; i++) {
+            if (clientes[i].correoElectronico == document.getElementById('usuarioLogin').value && clientes[i].contrasena == document.getElementById('passwordLogin').value) {
+                console.log('encontrado');
+                indiceClienteLogueado.setItem('indiceCliente', JSON.stringify(i));
+                location.assign("../../frontend/clientes/clienteLogueado.html");
+
+                document.getElementById('usuarioLogin').value = null;
+                document.getElementById('passwordLogin').value = null;
+                break;
+            } else {
+
+            }
+
+        }
+
     }
-    
-}
 
-var indiceCliente=JSON.parse(obteniendoIndice.getItem('indiceCliente'));
-var indiceComercio = JSON.parse(obteniendoIndice.getItem('indiceComercio'));
+    function loginCliente() {
+        for (let i = 0; i < clientes.length; i++) {
+            if (clientes[i].CorreoElectronico == document.getElementById('usuarioLogin').value && clientes[i].Password == document.getElementById('passwordLogin').value) {
+                console.log('encontrado');
+                localstorageLogueado.setItem('clientesLogueado', JSON.stringify(clientes[i]));
+                location.assign("http://localhost/crew/clienteLogueado.html");
+                document.getElementById('usuarioLogin').value = null;
+                document.getElementById('passwordLogin').value = null;
 
-var clienteLogueado;
 
-function inicio() {
-    document.getElementById('perfilFoto').innerHTML=`
+                break;
+            } else {
+
+
+                console.log('no encontrado')
+            }
+
+        }
+
+    }
+
+    var indiceCliente = JSON.parse(obteniendoIndice.getItem('indiceCliente'));
+    var indiceComercio = JSON.parse(obteniendoIndice.getItem('indiceComercio'));
+
+    var clienteLogueado;
+
+    function inicio() {
+        document.getElementById('perfilFoto').innerHTML = `
     <div style="padding: 20px; " ><img style="height: 70px; border-radius: 8rem" src="../img/fotoperfil.jpg" alt=""></div>
     <div  style="padding: 20px; font-weight:bold;">${clienteLogueado.nombre}</div>  
            `;
-    
-}
 
-function cargarInfoCliente() {
+    }
+
+    function cargarInfoCliente() {
         axios({
-            method:'GET',
-            url:'../../backend/api/clientes.php'+ `?id=${indiceCliente}`,
-            responseType:'json'
-        }).then(res=>{
-            
-            clienteLogueado=res.data;
-            console.log("prueba cliente",clienteLogueado.nombre);
+            method: 'GET',
+            url: '../../backend/api/clientes.php' + `?id=${indiceCliente}`,
+            responseType: 'json'
+        }).then(res => {
+
+            clienteLogueado = res.data;
+            console.log("prueba cliente", clienteLogueado.nombre);
             inicio();
             existenciaPedidoActivo();
-        }).catch(error=>{
+        }).catch(error => {
         });
-     
-}
-cargarInfoCliente();
 
-function validacionCorreo(correo) {
-    var expReg= /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
-    var valido = expReg.test(correo);
-    if(valido){
-        return true;
-    }else{
-        console.log('no valido');
-        return false;
     }
-}
-var comercios=[];
-var restaurantes = [];
-function obtenerComercios(){
-    
-    axios({
-        method:'GET',
-        url:'../../backend/api/comercios.php',
-        responseType:'json'
-    }).then(res=>{
-        comercios=res.data;
-        console.log(comercios);
-    }).catch(error=>{
-        console.log(error);
-    });
-    return comercios;
-} obtenerComercios();
+    cargarInfoCliente();
 
 
-var ordenes = [
-];
+
+    function validacionCorreo(correo) {
+        var expReg = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+        var valido = expReg.test(correo);
+        if (valido) {
+            return true;
+        } else {
+            console.log('no valido');
+            return false;
+        }
+    }
+
+    var comercios = [];
+    var restaurantes = [];
+    function obtenerComercios() {
+
+        axios({
+            method: 'GET',
+            url: '../../backend/api/comercios.php',
+            responseType: 'json'
+        }).then(res => {
+            comercios = res.data;
+            console.log(comercios);
+        }).catch(error => {
+            console.log(error);
+        });
+        return comercios;
+    } obtenerComercios();
 
 
-//Temporal hasta que sepa como hacerlo
- function mostrarComida(){
-         document.getElementById('burgerKing').innerHTML = `
+    var ordenes = [
+    ];
+
+
+    //Temporal hasta que sepa como hacerlo
+    function mostrarComida() {
+        document.getElementById('burgerKing').innerHTML = `
      <img class="imagenBanner" src="../img/bannerbg.png" alt="">
                      <div>
                          <div class="col-12 centrar mt-1" style="justify-content: space-around;align-items:center ;">
@@ -254,7 +289,7 @@ var ordenes = [
                          <div>
                              <div class="lineaInferior"></div>
      `;
-         document.getElementById('pzHut').innerHTML = `
+        document.getElementById('pzHut').innerHTML = `
          <img class="imagenBanner" src="../img/pizzaBanner.jpg" alt="">
          <div>
              <div class="col-12 centrar mt-1" style="justify-content: space-around;align-items:center ;">
@@ -427,26 +462,26 @@ var ordenes = [
             </div>
         </div>
         `;
-       
- } 
 
- function mostrarComida2(){   
-   
-    axios({
-        method: 'GET',
-        url: '../../backend/api/comercios.php'+ `?id=${0}`,
-        responseType: 'json'
-    }).then(function(response){
-        var restaurante = response.restaurante.burguer_King[0].nombre;
-        console.log(restaurante);
-    }).catch(function(error){
-        console.log(error);
-    });
-}  mostrarComida2();
+    }
+
+    function mostrarComida2() {
+
+        axios({
+            method: 'GET',
+            url: '../../backend/api/comercios.php' + `?id=${0}`,
+            responseType: 'json'
+        }).then(function (response) {
+            var restaurante = response.restaurante.burguer_King[0].nombre;
+            console.log(restaurante);
+        }).catch(function (error) {
+            console.log(error);
+        });
+    } mostrarComida2();
 
 
- function ordenar() { 
-document.getElementById('ordenElementos').innerHTML = `
+    function ordenar() {
+        document.getElementById('ordenElementos').innerHTML = `
 <div>
 <div class="col-12 centrar mt-1">
     <h3 style="font-family: 'Comfortaa'; margin-bottom: 0;"><b> Nuevo</b></h3><br>
@@ -466,4 +501,5 @@ document.getElementById('ordenElementos').innerHTML = `
 </div>
 <div class="lineaInferior"></div>
 `;
-}
+    }
+
