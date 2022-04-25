@@ -4,7 +4,7 @@
         "empresas": [
             {
                 "nombreEmpresa": "Burger King",
-                "imagenBanner": "../img/bannerbg.jpg",
+                "imagenBanner": "../img/bannerbg.png",
                 "imagenLogo": "../img/bglogo.png",
                 "productos": [
                     {
