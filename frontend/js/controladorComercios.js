@@ -54,7 +54,7 @@ function mostrarComida2() {
                    </div>
                    <div style="margin-left: 16px;">
                        <h6>L. ${restaurante[0].productos[i].precio}<i class="fa-solid fa-circle-plus ml-1" class="modal fade" data-bs-toggle="modal"
-                       data-bs-target="#ordenElemento" onclick="ordenar()"></i></h6>
+                       data-bs-target="#ordenElemento" onclick="ordenComida()"></i></h6>
                    </div>
                    <div>
                        <div class="lineaInferior"></div>
@@ -615,16 +615,17 @@ function ordenComida() {
     axios({
 
         method: 'get',
-        url: '../backend/api/comercios.php',
+        url: '../../backend/api/comercios.php'+ `?id=${0}`,
         responseType: 'json'
 
     }).then(function (response) { 
-        for(let j = 0; j < response.data.empresa.length; j++){
+        for(let j = 0; j < restaurante.length; j++){
             if(response.data.empresa[j].nombreEmpresa == "Burger King"){
-                document.getElementById('burgerKing').innerHTML = `${restaurante[j].imagenLogo}`;
+                document.getElementById('burgerKing').innerHTML = `Hello world`;
             }
         }
         }).catch(function (error) {
         console.log(error);
     });
 }
+
