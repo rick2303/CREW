@@ -16,8 +16,8 @@
     <div>
         <div class="opcionesAdmin" data-bs-toggle="modal" data-bs-target="#administrarEmpresas"  >Administrar empresas</div>
         <div class="opcionesAdmin" data-bs-toggle="modal" data-bs-target="#modalAdministrarProductosDeLasEmpresas">Administrar productos de las empresas</div>
-        <div class="opcionesAdmin"  data-bs-toggle="modal" data-bs-target="#modalAdministrarMotoristas">Administrar motoristas</div>
-        <div class="opcionesAdmin" data-bs-toggle="modal" data-bs-target="#modalVerOrdenenes">Ver ordenes</div>
+        <div class="opcionesAdmin"  data-bs-toggle="modal" data-bs-target="#administrarMotoristas">Administrar motoristas</div>
+        <div class="opcionesAdmin" data-bs-toggle="modal" data-bs-target="#verOrdenes">Ver ordenes</div>
     </div>
     <div class="modal fade" id="administrarEmpresas" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel" style="display: none;" aria-hidden="true">
       <div class="modal-dialog modal-fullscreen">
@@ -40,22 +40,34 @@
            </div>
            <div class="container">
             <div class="row">
-
               <div class="col-3" >
                 <div class="row" id="comidas">
                   
-
-
-
-
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="row" id="bebidas">
+                  
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="row" id="farmacias">
+                  
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="row" id="supermercados">
+                  
                 </div>
 
-
-
               </div>
-              <div class="col-3">Bebidas</div>
-              <div class="col-3">Farmacias</div>
-              <div class="col-3">Super</div>
+              <div class="container" style="margin-top: 20%;">
+                <div class="row">
+                    <div class="col-4"> <button class="btnSolicitudesMotorista" data-bs-toggle="modal" data-bs-target="#añadirEmpresa">Añadir</button></div>
+                    <div class="col-4"> <button class="btnSolicitudesMotorista">Modificar</button></div>
+                    <div class="col-4"> <button class="btnSolicitudesMotorista">Eliminar</button></div>
+                </div>
+            </div>
             </div>
           </div>
                
@@ -66,6 +78,215 @@
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
           </div>
         </div>
+      </div>
+    </div>
+
+
+    <!--Modal para agregar empresa-->
+
+    <div class="modal fade" id="añadirEmpresa" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel" style="display: none;" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header" style="background-color: #C4C4C4;">
+            <h3 class="modal-title h4" id="exampleModalFullscreenLabel">
+                <i class="fa-solid fa-circle" style="font-size: 12px; margin-right: 7px;"></i>Solicitudes Motoristas</h3>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+           <p>Seleccione la empresa a relaizar opcion</p>
+            <div class="container" style="margin-bottom: 40px;">
+              <div class="row">
+
+                <div class="col-6">nombre empresa </div>
+                <div class="col-6"><input type="text"> </div>
+
+              </div>
+            </div>
+              <div class="container">
+                <div class="row">
+                  <div class="col-6">tipo de distribucion</div>
+                  <div class="col-6">
+                    <select name="categoriasEmpresas" id="categoriaActual" class="form-control mr-3" onchange="selecCategoria()">
+                      <option value="comida">comida</option>
+                  <option value="bebida">bebida</option>
+                  <option value="farmacias">farmacias</option>
+                  <option value="supermercados">supermercados</option>
+                </select>
+                  </div>
+                </div>
+            </div>
+            <div class="container" style="margin-top: 20%;">
+              <div class="row">
+                  <div class="col-12" style="margin-left: 50%;"> <button class="btnSolicitudesMotorista" data-bs-toggle="modal" data-bs-target="#añadirEmpresa" id="btnAgregarEmpresa" onclick="agregarEmpresa()">guardar</button></div>
+      
+              </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+
+    <!--
+
+      
+    -->
+    <div class="modal fade" id="verOrdenes" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel" style="display: none;" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header" style="background-color: #C4C4C4;">
+            <h3 class="modal-title h4" id="exampleModalFullscreenLabel">
+                <i class="fa-solid fa-circle" style="font-size: 12px; margin-right: 7px;"></i>Solicitudes Motoristas</h3>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+           <p>Seleccione la empresa a relaizar opcion</p>
+           <div class="container">
+            <div class="row" id="pedidosCantidadDisponibles">
+                
+
+
+
+            </div>
+            <div class="row" id="descripcionPedidosDisponibles">
+
+             
+              
+
+                
+
+
+
+          </div>
+        </div>
+
+
+             </div>
+           </div>
+
+          
+        </div>
+      </div>
+    
+<!-- para asignar a un motorista -->
+<div class="modal fade" id="asignarMotorista" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel" style="display: none;" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: #C4C4C4;">
+        <h3 class="modal-title h4" id="exampleModalFullscreenLabel">
+            <i class="fa-solid fa-circle" style="font-size: 12px; margin-right: 7px;"></i>Solicitudes Motoristas</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+       <p>Asignar motorista</p>
+       
+       <div class="container " id="asignarPedido">
+        
+         
+       </div>
+
+         
+          
+
+            
+
+
+
+      </div>
+    </div>
+
+
+         </div>
+       </div>
+
+      
+    </div>
+  </div>
+
+  <!--modal que dice que ha sido asignado con exito-->
+
+
+  <div class="modal fade show" id="asignadoConExito" tabindex="-1" aria-labelledby="exampleModalLabel" style="padding-right: 1px; display: none;" aria-modal="true" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+        
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="modal-bopy">
+          <h5 style="color: green" class="modal-title" id="exampleModalLabel">Sus datos han sido enviados correctamente</h5>
+          
+          </div>
+        <div class="modal-footer" id="cerrarRegistrar">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <!--modal para admistrar motoristas-->
+  
+  <div class="modal fade" id="administrarMotoristas" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: #C4C4C4;">
+          <h3 class="modal-title h4" id="exampleModalFullscreenLabel">
+              <i class="fa-solid fa-circle" style="font-size: 12px; margin-right: 7px;"></i>Solicitudes Motoristas</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+  <div class="container">
+    <div class="row">
+      <div class="col-6">Nombre motorista</div>
+      <div class="col-6">Veiculo</div>
+    </div>
+  </div>
+
+  <div class="container" style="margin-top: 40px;" id="infomotorista">
+     
+  </div>
+  <div class="container" style="margin-top: 20%;">
+    <div class="row">
+        <div class="col-12" style="margin-left: 50%;"> <button class="btnSolicitudesMotorista" data-bs-toggle="modal" data-bs-target="#gestionMotorista" >Ver Solicitudes </button></div>
+    </div>
+</div>
+        
+
+
+           </div>
+         </div>
+
+        
+      </div>
+    </div>
+
+
+     <!--modal para aceptar o denegar motorista-->
+  
+  <div class="modal fade" id="gestionMotorista" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: #C4C4C4;">
+          <h3 class="modal-title h4" id="exampleModalFullscreenLabel">
+              <i class="fa-solid fa-circle" style="font-size: 12px; margin-right: 7px;"></i>Solicitudes Motoristas</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-6">Nombre motorista</div>
+              <div class="col-6">Vehiculo</div>
+            </div>
+          </div>
+
+
+           </div>
+         </div>
+
+        
       </div>
     </div>
 

@@ -83,7 +83,7 @@
         "categoria": "bebidas",
         "empresas": [
             {
-                "nombresEmpresa": "Espresso Americano",
+                "nombreEmpresa": "Espresso Americano",
                 "imagenBanner": "../img/expressoBanner.jpg",
                 "imagenLogo": "../img/expressoLogo.png",
                 "productos": [

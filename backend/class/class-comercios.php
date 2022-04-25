@@ -16,15 +16,7 @@
             $this->empresas = $empresas;
         }
 
-        public static function obtenerComercios(){
-            $contenidoArchivo = file_get_contents("../data/comercios.json");
-            echo $contenidoArchivo;
-        }
-        public static function obtenerComercio($indice){
-            $contenidoArchivo = file_get_contents("../data/comercios.json");
-            $comercios = json_decode($contenidoArchivo, true);
-            echo json_encode($comercios[$indice]);
-        }
+        
       
         /**
          * Get the value of restaurantes
@@ -125,5 +117,40 @@
 
                 return $this;
         }
+
+
+        public static function obtenerComercios(){
+                $contenidoArchivo = file_get_contents("../data/comercios.json");
+                echo $contenidoArchivo;
+            }
+            public static function obtenerComercio($indice){
+                $contenidoArchivo = file_get_contents("../data/comercios.json");
+                $comercios = json_decode($contenidoArchivo, true);
+                echo json_encode($comercios[$indice]);
+            }
+
+           /*
+            public function nuevoComercio(){
+                $contenidoArhivo=file_get_contents('../data/comercios.json');
+                $comercios=json_decode($contenidoArhivo,true);
+
+                private $restaurantes;
+                private $bebidas;
+                private $supermercados;
+                private $farmacias;
+                private $empresas;
+                $comercios[]=array(
+                    "restaurantes"=>$this->nombre,
+                    "bebidas"=>$this->apellido, //["usuario]=
+                    "supermercados"=>$this->fechaNacimiento,
+                    "pais"=>$this->pais
+            
+            
+                );
+                $archivo= fopen("../data/usuarios.json","w");
+                fwrite($archivo,json_encode($usuario));
+                fclose($archivo); 
+            }
+           */ 
     }
 ?>
