@@ -6,14 +6,16 @@
             url: '../../backend/api/comercios.php' + `?id=${0}`,
             responseType: 'json'
         }).then(function (response) {
-           // var restaurante = response.data.restaurantes[0].burguer_king[0].nombre;
-            //console.log(restaurante);
-            restaurante = response.data.restaurantes[0];
-           
-            console.log(response.data.restaurantes[0]);
-            console.log(restaurante.burguer_king[0].nombreEmpresa);
+            var restaurante = response.data.empresas;
+            console.log(restaurante);
+            for(let i = 0; i < restaurante.length; i++){
+                //console.log(restaurante[i]);
+                console.log(restaurante[0].productos[i]);
+            }
+            // console.log(response.data.restaurantes[0]);
+            // console.log(restaurante.burguer_king[0].nombreEmpresa);
             document.getElementById('burgerKing').innerHTML += `
-               <img class="imagenBanner" src="../img/bannerbg.png" alt="">
+               <img class="" src="../img/bannerbg.png" alt="">
                <div>
                    <div class="col-12 centrar mt-1" style="justify-content: space-around;align-items:center ;">
                        <img class="logo-miniatura" src="${restaurante.burguer_king[0].imagenLogo} alt="">
