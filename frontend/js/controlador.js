@@ -101,7 +101,7 @@ function  agregaMotorista() {
         axios({
             method:'POST',
             
-            url:'../../backend/api/motoristas.php',
+            url:'../../backend/api/pendientesMotoristas.php',
           
             responseType:'json',
             data:motoristaInfo,
@@ -139,11 +139,7 @@ console.log("si esta funcionando");console.log(motoristas);
       
     
           
-<<<<<<< HEAD
            location.assign("../../frontend/motoristas/motoristaLogueado.html");
-=======
-           location.assign("http://localhost/CREWGITHUB/CREW/frontend/motoristas/motoristaLogueado.html");
->>>>>>> 2501e175061b36c1408d4ba719e23d11e8ef3841
          
            document.getElementById('usuarioLogin').value=null;
            document.getElementById('passwordLogin').value=null;

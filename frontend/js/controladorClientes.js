@@ -184,9 +184,7 @@ function agregaCliente() {
         return comercios;
     } obtenerComercios();
 
-function ordenes(){
-    
-}
+function ordenes(){}
 
 
 
