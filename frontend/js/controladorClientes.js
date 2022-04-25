@@ -25,8 +25,8 @@ function cargarClientes() {
 }
 
 cargarClientes();
-// var indiceClienteLogueado = window.localStorage;
-// var obteniendoIndice = window.localStorage;
+ var indiceClienteLogueado = window.localStorage;
+ var obteniendoIndice = window.localStorage;
 function agregaCliente() {
     const clienteInfo = {
         Nombre: document.getElementById('nombre').value,
@@ -82,33 +82,12 @@ function agregaCliente() {
     }
 }
 
-
-    function loginCliente() {
-        console.log("si esta funcionando"); console.log(clientes);
-
-        for (let i = 0; i < clientes.length; i++) {
-            if (clientes[i].correoElectronico == document.getElementById('usuarioLogin').value && clientes[i].contrasena == document.getElementById('passwordLogin').value) {
-                console.log('encontrado');
-                indiceClienteLogueado.setItem('indiceCliente', JSON.stringify(i));
-                location.assign("../../frontend/clientes/clienteLogueado.html");
-
-                document.getElementById('usuarioLogin').value = null;
-                document.getElementById('passwordLogin').value = null;
-                break;
-            } else {
-
-            }
-
-        }
-
-    }
-
     function loginCliente() {
         for (let i = 0; i < clientes.length; i++) {
             if (clientes[i].CorreoElectronico == document.getElementById('usuarioLogin').value && clientes[i].Password == document.getElementById('passwordLogin').value) {
                 console.log('encontrado');
                 localstorageLogueado.setItem('clientesLogueado', JSON.stringify(clientes[i]));
-                location.assign("http://localhost/crew/clienteLogueado.html");
+                location.assign("clienteLogueado.html");
                 document.getElementById('usuarioLogin').value = null;
                 document.getElementById('passwordLogin').value = null;
 

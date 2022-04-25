@@ -618,13 +618,43 @@ function ordenComida() {
         url: '../../backend/api/comercios.php'+ `?id=${0}`,
         responseType: 'json'
 
-    }).then(function (response) { 
-        for(let j = 0; j < restaurante.length; j++){
-            if(response.data.empresa[j].nombreEmpresa == "Burger King"){
-                document.getElementById('burgerKing').innerHTML = `Hello world`;
+    }).then(function (response) {
+        document.getElementById("ordenElementos").innerHTML = '';
+        var restaurant = response.data.empresas;
+        console.log(restaurant);
+        
+        for (let i = 0; i < response.data.empresas.length; i++) {
+            if (restaurant[i].nombreEmpresa == "Burger King") {
+
+                document.getElementById('ordenElementos').innerHTML = `
+                
+                <div>
+                    <div>
+                        <h6
+                            style="font-family: 'Comfortaa'; margin-bottom: 0; margin-left: 12px; margin-top: 10px;">
+                            <b>${restaurant[i].productos[i].nombre}</b>
+                        </h6>
+                    </div>
+                    <div class="col-12 centrar mt-1" style="justify-content: space-around;align-items:center ;">
+                        <div>
+                            <p style="margin-left: 12px;">${restaurant[i].productos[i].descripcion}</p>
+                        </div>
+                        <div class="col-6">
+                            <img class="imagenesMedianas" src="${restaurant[i].productos[i].imagen}" alt="">
+                        </div>
+                    </div>
+                    <div style="margin-left: 16px;">
+                        <h6>L. ${restaurant[i].productos[i].precio}<i class="fa-solid fa-circle-plus ml-1" class="modal fade" data-bs-toggle="modal"
+                        data-bs-target="#ordenElemento"></i></h6>
+                    </div>
+                    <div>
+                        <div class="lineaInferior"></div>
+                    </div>
+                </div>            
+`;
             }
         }
-        }).catch(function (error) {
+    }).catch(function (error) {
         console.log(error);
     });
 }
