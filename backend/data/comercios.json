@@ -30,7 +30,7 @@
             {
                 "nombreEmpresa": "mcDonalds",
                 "imagenBanner": "../img/mcBanner.jpg",
-                "imagenLogo": "../img/bglogo.png",
+                "imagenLogo": "../img/mclogo.png",
                 "productos": [
                     {
                         "nombre": "McMuffin de pollo",
@@ -84,8 +84,8 @@
         "empresas": [
             {
                 "nombreEmpresa": "Espresso Americano",
-                "imagenBanner": "../img/expressoBanner.jpg",
-                "imagenLogo": "../img/expressoLogo.png",
+                "imagenBanner": "../img/espressoBanner.jpg",
+                "imagenLogo": "../img/expressoLogo.jpg",
                 "productos": [
                     {
                         "nombre": "Granitas Frutales",
@@ -101,7 +101,7 @@
                     },
                     {
                         "nombre": "Cheseecake",
-                        "imagen": "../img/cheseecake.png",
+                        "imagen": "../img/chessecake.png",
                         "descripcion": "Porcion de un delicioso pastel a base de queso crema sobre una corteza de galleta cubierto con una crema ácida y glas de arandano y frutas.",
                         "precio": 75.00
                     }
@@ -135,11 +135,11 @@
             {
                 "nombreEmpresa": "Smothie Store",
                 "imagenBanner": "../img/smothieBanner.jpg",
-                "imagenLogo": "../img/smothieLogo.png",
+                "imagenLogo": "../img/smothieLogo.jpg",
                 "productos": [
                     {
                         "nombre": "Mix licuado de Sandia",
-                        "imagen": "../img/licuadorSandia.jpg",
+                        "imagen": "../img/licuadoSandia.jpg",
                         "descripcion": "Refrescante combinacion de sandia, banano, y jugo de naranja",
                         "precio": 65.00
                     },
@@ -160,12 +160,12 @@
         ]
     },
     {
-        "categoria": "supermercados",
+        "categoria": "Supermercados",
         "empresas": [
             {
                 "nombreEmpresa": "La Colonia",
-                "imagenBanner": "../img/coloniaLogo.jpg",
-                "imagenLogo": "../img/coloniaLogo2.png",
+                "imagenBanner": "../img/coloniaLogo.png",
+                "imagenLogo": "../img/coloniaLogo2.jfif",
                 "productos": [
                     {
                         "nombre": "Mantequilla",
@@ -188,13 +188,13 @@
                 "productos": [
                     {
                         "nombre": "Cereal Crunch",
-                        "imagen": "../img/cerealCrunch.jpg",
+                        "imagen": "../img/cerealCrunch.png",
                         "descripcion": "CRUNCH Cereal Caja 330g",
                         "precio": 71.00
                     },
                     {
                         "nombre": "Gaseosa Tropical",
-                        "imagen": "../img/gaseosaTropical.jpg",
+                        "imagen": "../img/gaseosaTropical1.jpg",
                         "descripcion": "Gaseosa Tropical De Banana - 3000 ml",
                         "precio": 45.80
                     }
@@ -203,11 +203,11 @@
         ]
     },
     {
-        "categoria": "Supermercados",
+        "categoria": "Farmacias",
         "empresas": [
             {
                 "nombreEmpresa": "Farmacia Kielsa",
-                "imagenBanner": "../img/kielsaBanner.jpg",
+                "imagenBanner": "../img/kielsaBanner.png",
                 "imagenLogo": "../img/kielsaLogo2.png",
                 "productos": [
                     {
@@ -227,7 +227,7 @@
             {
                 "nombreEmpresa": "Farmacia Siman",
                 "imagenBanner": "../img/simanBanner.jpg",
-                "imagenLogo": "../img/simanBanner.png",
+                "imagenLogo": "../img/simanBanner.jpg",
                 "productos": [
                     {
                         "nombre": "Calmol Gotas x30 ml",
@@ -237,7 +237,7 @@
                     },
                     {
                         "nombre": "Dolo-Neuorobion",
-                        "imagen": "../img/doloNeuorobion.png",
+                        "imagen": "../img/doloNeurobion.png",
                         "descripcion": "Caja de 10 tabletas dolo-neurobion",
                         "precio": 132.50
                     }
@@ -245,7 +245,7 @@
             },
             {
                 "nombreEmpresa": "Farmacia del Ahorro",
-                "imagenBanner": "../img/ahorroLogo.jpg",
+                "imagenBanner": "../img/ahorroLogo.png",
                 "imagenLogo": "../img/ahorroLogo2.png",
                 "productos": [
                     {
