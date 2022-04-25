@@ -1,1 +1,56 @@
-[{"nombre":"Juan Perez","correoElectronico":"jperez@gmail.com","verOrden":[{"producto":"Hut pack","cantidad":1,"precio":339}],"contrasena":"12345"},{"nombre":"Maria Rivera","correoElectronico":"riveraMaria3@gmail.com","verOrden":[{"producto":"Mix licuado de Sandia","cantidad":2,"precio":65}],"contrasena":"54321"},{"nombre":"Andre Gonzalez","correoElectronico":"andreGonzales@gmail.com","verOrden":[],"contrasena":"Gonzales123"},{"nombre":"Jose Aguilar","correoElectronico":"Aguilar32@gmail.com","verOrden":[],"contrasena":"joseAguilar"},{"nombre":"Marcio Perez","correoElectronico":"marcio_perez@gmail.com","verOrden":[],"contrasena":"abdul123"},{"nombre":"Jorge Rodriguez","correoElectronico":"jrodriguez@gmail.com","verOrden":[],"contrasena":"Rodriguez08"},{"nombre":"Jorge Saybe","correoElectronico":"sarJorge@gmail.com","verOrden":[],"contrasena":"jorgSAybe"}]
+[
+    {
+        "nombre": "Juan Perez",
+        "correoElectronico": "jperez@gmail.com",
+        "verOrden": [
+            {
+                "producto": "Hut pack",
+                "cantidad": 1,
+                "precio": 339
+            }
+        ],
+        "contrasena": "12345"
+    },
+    {
+        "nombre": "Maria Rivera",
+        "correoElectronico": "riveraMaria3@gmail.com",
+        "verOrden": [
+            {
+                "producto": "Mix licuado de Sandia",
+                "cantidad": 2,
+                "precio": 65
+            }
+        ],
+        "contrasena": "54321"
+    },
+    {
+        "nombre": "Andre Gonzalez",
+        "correoElectronico": "andreGonzales@gmail.com",
+        "verOrden": [],
+        "contrasena": "Gonzales123"
+    },
+    {
+        "nombre": "Jose Aguilar",
+        "correoElectronico": "Aguilar32@gmail.com",
+        "verOrden": [],
+        "contrasena": "joseAguilar"
+    },
+    {
+        "nombre": "Marcio Perez",
+        "correoElectronico": "marcio_perez@gmail.com",
+        "verOrden": [],
+        "contrasena": "abdul123"
+    },
+    {
+        "nombre": "Jorge Rodriguez",
+        "correoElectronico": "jrodriguez@gmail.com",
+        "verOrden": [],
+        "contrasena": "Rodriguez08"
+    },
+    {
+        "nombre": "Jorge Saybe",
+        "correoElectronico": "sarJorge@gmail.com",
+        "verOrden": [],
+        "contrasena": "jorgSAybe"
+    }
+]

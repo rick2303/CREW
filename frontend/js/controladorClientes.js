@@ -106,13 +106,7 @@ var indiceComercio = JSON.parse(obteniendoIndice.getItem('indiceComercio'));
 
 var clienteLogueado;
 
-function inicio() {
-    document.getElementById('perfilFoto').innerHTML=`
-    <div style="padding: 20px; " ><img style="height: 70px; border-radius: 8rem" src="../img/fotoperfil.jpg" alt=""></div>
-    <div  style="padding: 20px; font-weight:bold;">${clienteLogueado.nombre}</div>  
-           `;
-    
-}
+
 
 function cargarInfoCliente() {
         axios({
@@ -130,7 +124,13 @@ function cargarInfoCliente() {
      
 }
 cargarInfoCliente();
-
+function inicio() {
+    document.getElementById('perfilFoto').innerHTML=`
+    <div style="padding: 20px; " ><img style="height: 70px; border-radius: 8rem" src="../img/fotoperfil.jpg" alt=""></div>
+    <div  style="padding: 20px; font-weight:bold;">${clienteLogueado.nombre}</div>  
+           `;
+    
+} 
 function validacionCorreo(correo) {
     var expReg= /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
     var valido = expReg.test(correo);
