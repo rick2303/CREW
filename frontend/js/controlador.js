@@ -101,7 +101,7 @@ function  agregaMotorista() {
         axios({
             method:'POST',
             
-            url:'../../backend/api/motoristas.php',
+            url:'../../backend/api/pendientesMotoristas.php',
           
             responseType:'json',
             data:motoristaInfo,

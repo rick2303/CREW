@@ -208,6 +208,18 @@ public static function obtenerMotoristaPendiente($indice){//nos ayuda a usarlo s
 
 }
 
+public static function eliminarMotoristaPendiente($indice){
+
+    $contenidoArhivo=file_get_contents('../data/pendientesMotoristas.json');
+    $motoristaPendientes=json_decode($contenidoArhivo,true);
+    array_splice($motoristaPendientes,$indice,1);
+    $archivo= fopen("../data/pendientesMotoristas.json","w");
+    fwrite($archivo,json_encode($motoristaPendientes));
+    fclose($archivo);
+
+
+}
+
 }
 
 

@@ -5,6 +5,7 @@ var bebidas;
 var pedidosDisponibles;
 var motoristas;
 var pedidoAsignado;
+var infoMotoristasPendientes;
 function obtenerEmpresas(){
 
     axios({
@@ -258,21 +259,6 @@ function renderizarAdministrarMotoristas() {
 
 
     });
-
-    
-
-    
-
- 
-    
-
-
-   
-    
-    
-
-    
-    
 }renderizarAdministrarMotoristas();
 
 function asignarElPedido(indice) {
@@ -324,5 +310,93 @@ function asignarElPedido(indice) {
         
     
         
+        
+    }
+    //funcion para obtener motoristas a aceptar
+
+    function motoristasPendientes() {
+        axios({
+            method:'GET',
+            
+            url:'../../backend/api/pendientesMotoristas.php',
+          
+            responseType:'json',
+           
+          
+        }).then(res=>{    
+            console.log("motoristasPendientes",res.data)
+            infoMotoristasPendientes=res.data;
+            renderizarAdministrarMotoristasPendientes();
+        }).catch(error=>{  
+        });
+        
+    }motoristasPendientes();
+    function renderizarAdministrarMotoristasPendientes() {
+      
+         
+            
+            document.getElementById("infoMotoristaPendiente").innerHTML=``;
+            for (let i = 0; i < infoMotoristasPendientes.length; i++) {
+                
+                document.getElementById("infoMotoristaPendiente").innerHTML+=`
+                <div class="row" style="margin-bottom: 40px;">
+                <div class="col-3">${infoMotoristasPendientes[i].nombre}</div>
+                <div class="col-3">moto</div>
+                <div class="col-3"><button onclick="aceptarMotorista(${i})">aceptar</button></div>
+                <div class="col-3"><button onclick="rechazarMotorista(${i})">denegar</button></div>
+              </div>
+              rechazarMotorista
+                `}
+          
+           
+           
+      
+    }
+    function aceptarMotorista(indice) {
+        axios({
+            method:'POST',
+            
+            url:'../../backend/api/motoristas.php',
+          
+            responseType:'json',
+            data:infoMotoristasPendientes[indice],
+          
+        }).then(res=>{    
+            
+        }).catch(error=>{  
+        });
+
+        axios({
+            method:'Delete',
+            url:'../../backend/api/pendientesMotoristas.php'+`?id=${indice}`,
+            responseType:'json'
+        }).then(res=>{
+         console.log("eliminado")
+            motoristasPendientes();
+    
+        }).catch(error=>{
+            console.log(error);
+    
+    
+        });
+        
+    }
+
+    function rechazarMotorista(indice) {
+       
+
+        axios({
+            method:'Delete',
+            url:'../../backend/api/pendientesMotoristas.php'+`?id=${indice}`,
+            responseType:'json'
+        }).then(res=>{
+         console.log("eliminado")
+            motoristasPendientes();
+    
+        }).catch(error=>{
+            console.log(error);
+    
+    
+        });
         
     }
