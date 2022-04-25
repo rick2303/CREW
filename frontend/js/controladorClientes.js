@@ -158,8 +158,19 @@ function obtenerComercios(){
     return comercios;
 } obtenerComercios();
 
-function ordenes(){}
 
+function ordenes(){
+    axios({
+        method:'GET',
+        url:'../../backend/api/clientes.php'+ `?id=${indiceCliente}`,
+        responseType:'json'
+    }).then(res=>{
+        console.log(res.data.clienteLogueado.verOrden);
+    }).catch(error=>{
+        console.error(error);
+    });
+}
+ordenes();
 
 
 

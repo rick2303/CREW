@@ -12,7 +12,7 @@ function mostrarComida2() {
     }).then(function (response) {
         document.getElementById("burgerKing").innerHTML = '';
         restaurante = response.data.empresas;
-        console.log(restaurante);
+        //console.log(restaurante);
         
         for (let j = 0; j < restaurante.length; j++) {
             if (restaurante[j].nombreEmpresa == "Burger King") {
@@ -175,7 +175,7 @@ function mostrarBebidas() {
         url: '../../backend/api/comercios.php' + `?id=${1}`,
         responseType: 'json'
     }).then(function (response) {
-        document.getElementById("espressoA").innerHTML = '';
+        //document.getElementById("espressoA").innerHTML = '';
         var bebida = response.data.empresas;
         console.log(bebida);
         for (let j = 0; j < bebida.length; j++) {
@@ -340,7 +340,7 @@ function mostrarFarmacia() {
     }).then(function (response) {
         document.getElementById("kielsaFarm").innerHTML = '';
         var farmacia = response.data.empresas;
-        console.log(farmacia);
+        //console.log(farmacia);
         for (let j = 0; j < farmacia.length; j++) {
             if (farmacia[j].nombreEmpresa == "Farmacia Kielsa") {
                 document.getElementById('kielsaFarm').innerHTML += `
@@ -621,36 +621,83 @@ function ordenComida() {
     }).then(function (response) {
         document.getElementById("ordenElementos").innerHTML = '';
         var restaurant = response.data.empresas;
-        console.log(restaurant);
+       // console.log(restaurant);
         
         for (let i = 0; i < response.data.empresas.length; i++) {
-            if (restaurant[i].nombreEmpresa == "Burger King") {
+            if (restaurant[i].nombreEmpresa == "Burger King" && i==0) {
 
                 document.getElementById('ordenElementos').innerHTML = `
-                
-                <div>
-                    <div>
-                        <h6
+                <div class="entregaContainer col-12">
+          <img class="logo-miniatura" src="${restaurant[i].imagenLogo}" alt="" style="display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: center; align-items: stretch; align-content: stretch;"></div>
+        <div class="col-12">
+          <div class="pedido col-12">
+            <h4 style="text-align: center; font-size: 27px;">${restaurant[i].nombreEmpresa}</h4>
+          </div><div class="lineaInferior"></div>
+        </div>
+                <div class="entregaContainer col-12">
+                    <div >
+                        <h6 class="mt-4"
                             style="font-family: 'Comfortaa'; margin-bottom: 0; margin-left: 12px; margin-top: 10px;">
                             <b>${restaurant[i].productos[i].nombre}</b>
                         </h6>
+                        
                     </div>
-                    <div class="col-12 centrar mt-1" style="justify-content: space-around;align-items:center ;">
-                        <div>
-                            <p style="margin-left: 12px;">${restaurant[i].productos[i].descripcion}</p>
-                        </div>
-                        <div class="col-6">
-                            <img class="imagenesMedianas" src="${restaurant[i].productos[i].imagen}" alt="">
-                        </div>
+                    <p class="mt-2"style="margin-left: 12px;">${restaurant[i].productos[i].descripcion}</p>
+                    <div class="col-12 centrar mt-5" style="justify-content: space-around;align-items:center ;">
+                            
+                            <img style="width: 18rem" src="${restaurant[i].productos[i].imagen}" alt="">
                     </div>
-                    <div style="margin-left: 16px;">
-                        <h6>L. ${restaurant[i].productos[i].precio}<i class="fa-solid fa-circle-plus ml-1" class="modal fade" data-bs-toggle="modal"
-                        data-bs-target="#ordenElemento"></i></h6>
+                </div>    
+                <div class="entregaContainer col-12">
+                <div style ="display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space=around; align-items: baseline; align-content: stretch;" ><i class="fa-solid fa-circle-minus ml-1 fa-2x" onclick="contador--;myFunction()"></i><p id="totalPedir"></p><i class="fa-solid fa-circle-plus ml-1 fa-2x" onclick="contador++;myFunction()" ></i></div>
+                </div>
+                <div class="mt-5" style="display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: flex-start; align-items: flex-end; align-content: stretch;">
+                        <h2>L. ${restaurant[i].productos[i].precio}</i></h2>
                     </div>
+                    <div class=" modal-footer" id="footerComida">
+                    <button type="button" class="btn-pagar" >
+                        Pagar </button>
+                </div>
                     <div>
                         <div class="lineaInferior"></div>
+                    </div>        
+`;
+            }else if(restaurant[i].nombreEmpresa == "Pizza Hut" && i==1){
+                document.getElementById('ordenElementos').innerHTML = `
+                <div class="entregaContainer col-12">
+          <img class="logo-miniatura" src="${restaurant[i].imagenLogo}" alt="" style="display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: center; align-items: stretch; align-content: stretch;"></div>
+        <div class="col-12">
+          <div class="pedido col-12">
+            <h4 style="text-align: center; font-size: 27px;">${restaurant[i].nombreEmpresa}</h4>
+          </div><div class="lineaInferior"></div>
+        </div>
+                <div class="entregaContainer col-12">
+                    <div >
+                        <h6 class="mt-4"
+                            style="font-family: 'Comfortaa'; margin-bottom: 0; margin-left: 12px; margin-top: 10px;">
+                            <b>${restaurant[i].productos[i].nombre}</b>
+                        </h6>
+                        
                     </div>
-                </div>            
+                    <p class="mt-2"style="margin-left: 12px;">${restaurant[i].productos[i].descripcion}</p>
+                    <div class="col-12 centrar mt-5" style="justify-content: space-around;align-items:center ;">
+                            
+                            <img style="width: 18rem" src="${restaurant[i].productos[i].imagen}" alt="">
+                    </div>
+                </div>    
+                <div class="entregaContainer col-12">
+                <div style ="display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space=around; align-items: baseline; align-content: stretch;" ><i class="fa-solid fa-circle-minus ml-1 fa-2x" onclick="contador--;myFunction()"></i><p id="totalPedir"></p><i class="fa-solid fa-circle-plus ml-1 fa-2x" onclick="contador++;myFunction()" ></i></div>
+                </div>
+                <div class="mt-5" style="display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: flex-start; align-items: flex-end; align-content: stretch;">
+                        <h2>L. ${restaurant[i].productos[i].precio}</i></h2>
+                    </div>
+                    <div class=" modal-footer" id="footerComida">
+                    <button type="button" class="btn-pagar" >
+                        Pagar </button>
+                </div>
+                    <div>
+                        <div class="lineaInferior"></div>
+                    </div>        
 `;
             }
         }
@@ -659,3 +706,12 @@ function ordenComida() {
     });
 }
 
+var contador = 0;
+var pedirCantidad = 0;
+function myFunction() {
+    var x = 0;
+    x = x + contador;
+    document.getElementById("totalPedir").innerHTML = x;
+    pedirCantidad = x;
+
+}
