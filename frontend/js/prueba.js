@@ -6,7 +6,7 @@
     var indiceMotorista=JSON.parse(obteniendoIndice.getItem('indiceMotorista'));
     var motoristaLogueado;
     var pedidosDisponibles;
-    var historalPedidosAUX=[];
+    var historalPedidosAUX;
     
     console.log(indiceMotorista);
     //obteniendo info de motoristas
@@ -32,6 +32,11 @@
               
 
                 }
+              
+                
+                historalPedidosAUX=motoristaLogueado.historalPedidos;
+                renderizarHistorial();
+                
 
 
 
@@ -138,7 +143,7 @@ cargarPedidosDisponibles();
             <div class="col-12"  onclick="tomarIndicePedidosDisponibles(${i})">
             
             <div class="estiloPedidoDetalle  estiloParaCadaPedidoDisponible" style="margin-bottom: 10px; margin-top: 10px;"  >
-                        <div ><img src=" " alt=""></div>
+                        <div ><img src="../img/Rectangle 75.png" alt=""></div>
                         <div style="margin-left: 10px;">
                             <p style="margin-bottom: 0rem;">${pedidosDisponibles[i].empresa}</p>
                             <p style="margin-bottom: 0rem;"> ${pedidosDisponibles[i].descipcion}</p>
@@ -173,14 +178,14 @@ cargarPedidosDisponibles();
         myModalInfoPedidoSeleccionado.show();
     document.getElementById('detallePedido').innerHTML =`
     <div class="estiloPedidoDetalle  estiloParaCadaPedidoDisponible" style="margin-bottom: 30px; margin-top: 40px;"  >
-                        <div ><img src="img/Rectangle 75.png" alt=""></div>
+                        <div ><img src="../img/Rectangle 75.png" alt=""></div>
                         <div style="margin-left: 10px;" >
                             <p style="margin-bottom: 0rem;">${pedidosDisponibles[indice].descipcion}</p>
                             <p style="margin-bottom: 0rem;"> ${pedidosDisponibles[indice].empresa}</p>
                         
                         </div>
                         <div style="margin-left:20px;" >
-                            <p style="margin-bottom: 0rem;"> ${pedidosDisponibles[indice].precio}</p>
+                            <p style="margin-bottom: 0rem;"> ${pedidosDisponibles[indice].precio}.lps</p>
                          
                         
                         </div>
@@ -226,6 +231,9 @@ cargarPedidosDisponibles();
     var modalPediosDisponibles = new bootstrap.Modal(document.getElementById('modalPediosDisponibles'), {
         keyboard: false
     })
+    var modalFactura= new bootstrap.Modal(document.getElementById('factura'), {
+        keyboard: false
+    })
     function btnTomarPedido() {
     //modificando motorista
     
@@ -240,6 +248,34 @@ cargarPedidosDisponibles();
     
     
         };
+        var ISV;
+        var comosionMotorista=30;
+        var comosionEMpresa=20;
+        
+        ISV=(pedidosDisponibles[indice].precio)*(0.15)
+        var Total=comosionMotorista+comosionEMpresa+ISV+((pedidosDisponibles[indice].precio)*(pedidosDisponibles[indice].cantidad))
+        document.getElementById("Precio-producto").innerHTML=`
+        <div class="col-6">Precio producto</div>
+            <div class="col-6">${pedidosDisponibles[indice].precio}.lps</div>
+        `;
+
+        document.getElementById("ISV").innerHTML=`
+        <div class="col-6">ISV</div>
+            <div class="col-6">${ISV}.lps</div>
+        `;
+      
+            document.getElementById("Cantidad").innerHTML=`
+            <div class="col-6">Cantidad</div>
+            <div class="col-6">${pedidosDisponibles[indice].cantidad}</div>
+        `;
+
+        document.getElementById("Total").innerHTML=`
+        <div class="col-6">TOTAL</div>
+            <div class="col-6">${Total}.lps</div>
+    `;
+
+
+        modalFactura.show();
         
 
         axios({
@@ -279,18 +315,19 @@ cargarPedidosDisponibles();
     }
 
     function renderizarPedidoActivo() {
+       
         console.log("el renderizado de los pedidos activos si funciona",motoristaLogueado.pedidosActivos.empresa)
         document.getElementById('estilosmodalPediosActivos').innerHTML=`
         
         <div class="estiloPedidoDetalle  estiloParaCadaPedidoDisponible" style="margin-bottom: 30px; margin-top: 40px;"  >
-                            <div ><img src="img/Rectangle 75.png" alt=""></div>
+                            <div ><img src="../img/Rectangle 75.png" alt=""></div>
                             <div style="margin-left: 10px;" >
                                 <p style="margin-bottom: 0rem;">${motoristaLogueado.pedidosActivos.empresa}</p>
                                 <p style="margin-bottom: 0rem;"> ${motoristaLogueado.pedidosActivos.descipcion}</p>
                             
                             </div>
                             <div style="margin-left:20px;" >
-                                <p style="margin-bottom: 0rem;">  ${motoristaLogueado.pedidosActivos.precio}</p>
+                                <p style="margin-bottom: 0rem;">  ${motoristaLogueado.pedidosActivos.precio}.lps</p>
                              
                             
                             </div>
@@ -315,11 +352,12 @@ cargarPedidosDisponibles();
     
     function btnPedidoEntregado() {
    
-
-
+        
+        document.getElementById('estilosmodalPediosActivos').innerHTML=``;
     historalPedidosAUX.push(motoristaLogueado.pedidosActivos);
    
-
+   
+   
 
     
     //modificando y agregando el pedido entregado al historial
@@ -346,7 +384,7 @@ cargarPedidosDisponibles();
         }).then(res=>{
             cargarInfoMotorista();
             existenciaPedidoActivo();
-            
+            renderizarHistorial();
         }).catch(error=>{
            
     
@@ -362,5 +400,32 @@ cargarPedidosDisponibles();
         modalPediosDisponibles.hide();
     
     }
-   
-    
+
+    function renderizarHistorial() {
+            console.log("si funciona el renderizado de hostial",historalPedidosAUX)
+    for (let i = 0; i < historalPedidosAUX.length; i++) {
+        document.getElementById('detallePedidoHistorial').innerHTML=``;
+        document.getElementById('detallePedidoHistorial').innerHTML+=`
+  
+        <div class="col-12"  ">
+        
+        <div class="estiloPedidoDetalle  estiloParaCadaPedidoDisponible" style="margin-bottom: 10px; margin-top: 10px;"  >
+                    <div ><img src="../img/Rectangle 75.png" alt=""></div>
+                    <div style="margin-left: 10px;">
+                        <p style="margin-bottom: 0rem;">${historalPedidosAUX[i].empresa}</p>
+                        <p style="margin-bottom: 0rem;"> ${historalPedidosAUX[i].descipcion}</p>
+                    
+                    </div>
+                  
+                </div> 
+      
+        `
+    }
+        
+    } 
+    function cerrarMotoristaLogueado() {
+        location.assign("../../frontend/motoristas/indexMotorista.html");
+        
+    }
+
+  
