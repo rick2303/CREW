@@ -25,8 +25,8 @@ function cargarClientes() {
 }
 
 cargarClientes();
-var indiceClienteLogueado = window.localStorage;
-var obteniendoIndice = window.localStorage;
+// var indiceClienteLogueado = window.localStorage;
+// var obteniendoIndice = window.localStorage;
 function agregaCliente() {
     const clienteInfo = {
         Nombre: document.getElementById('nombre').value,
@@ -81,15 +81,6 @@ function agregaCliente() {
         }
     }
 }
-
-    // var localstorage = window.localStorage;
-    // var localstorageLogueado = window.localStorage;
-    // if (localstorage.getItem('clientes') == null) {
-    //     localstorage.setItem('clientes', JSON.stringify(clientes));
-    // } else {
-    //     clientes = JSON.parse(localstorage.getItem('clientes'))
-    // }
-
 
 
     function loginCliente() {
@@ -200,26 +191,5 @@ function agregaCliente() {
 
 
 
-    function ordenar() {
-        document.getElementById('ordenElementos').innerHTML = `
-<div>
-<div class="col-12 centrar mt-1">
-    <h3 style="font-family: 'Comfortaa'; margin-bottom: 0;"><b> Nuevo</b></h3><br>
-</div>
-<div>
-    <br>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, perferendis?</p>
-    <p>Lorem ipsum dolor sit.</p>
-</div>
-</div>
-<div class="lineaInferior"></div>
-<div class="col-6" style="margin-top: 2rem;">
-<p>Total</p>
-</div>
-<div class="col-6">
-    <p>L. 0.00</p>
-</div>
-<div class="lineaInferior"></div>
-`;
-    }
+    
 

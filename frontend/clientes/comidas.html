@@ -176,21 +176,23 @@
  aria-labelledby="staticBackdropLabel" aria-hidden="true">
  <div class="modal-dialog modal-fullscreen-md-down">
      <div class="modal-content">
-         <div id="encabezado" class="modal-header" style="justify-content: center;">
-             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                   <div style="display: flex;justify-content: space-around;align-items:center ;">
-                 <h2 style="color: white;"></h2></div>
-             </div>
-             <div class="modal-body" id="ordenElementos">
-            
-                 <div class=" modal-footer" style="justify-content: flex-end!important; margin-top: 4rem;">
-                 <button type="button" class="btn-pagar" >
-                     Pagar </button>
-             </div>
-             </div>
-             
+         <div class="modal-header"  style="display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-between; align-items: stretch; align-content: stretch;">
+            <div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>         
+            </div>
+            <div>
+                <button class="btn-verOrden" id="visualizacionOrden" class="btn-utilidad" class="modal fade" data-bs-toggle="modal"
+                data-bs-target="#orden">VER ORDEN</button>
+            </div>
+
          </div>
-         
+         <div class="modal-body" id="ordenElementos">
+            
+            <div class=" modal-footer">
+            <button type="button" class="btn-pagar" >
+                Pagar </button>
+        </div>
+        </div>
      </div>
  </div>
 </div>
