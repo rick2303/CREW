@@ -31,10 +31,8 @@ function obtenerEmpresas(){
 
 function renderizarEmpresas() {
  
-    //renderizarmocidas
-console.log("ver tamanio comidas",comidas.restaurantes[0]);
 
-
+    
 
 
 

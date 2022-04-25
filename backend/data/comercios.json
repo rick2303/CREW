@@ -1,8 +1,11 @@
+
+
+
 [
     {
         "restaurantes": [
             {
-                "burguer_king": [
+                "1": [
                     {
                         "nombreEmpresa": "BurgerKing"
                     },
@@ -28,7 +31,7 @@
                 
             },
             {
-                "mcDonalds": [
+                "restaurante1": [
                     {
                         "nombreEmpresa": "mcDonalds"
                     },
@@ -53,7 +56,7 @@
                 ]
             },
             {
-                "pizzaHut": [
+                "restaurante2": [
                     {
                         "nombreEmpresa": "Pizza Hut"
                     },
@@ -83,7 +86,7 @@
     {
         "bebidas": [
             {
-                "expressoAmericano": [
+                "bebidas0": [
                     {
                         "nombreEmpresa": "Espresso Americano"
                     },
@@ -107,7 +110,7 @@
                     }
                 ],
 
-                "buhosLiqourStore" : [
+                "bebidas1" : [
                     {
                         "nombreEmpresa": "Buhos Liqour Store"
                     },
@@ -130,7 +133,7 @@
                         "precio": 950.00
                     }
                 ],
-                "smothieStore": [
+                "bebidas2": [
                     {
                         "nombreEmpresa": "Smothie Store"
                     },
@@ -159,7 +162,7 @@
     {
         "supermercados": [
             {
-                "laColonia":[
+                "supermercado0":[
                     {
                         "nombreEmpresa": "La Colonia"
                     },
@@ -176,7 +179,7 @@
                         "precio":  136.90
                     }
                 ],
-                "supermecadoPaiz": [
+                "supermercado1": [
                     {
                         "nombreEmpresa": "Supermercado Paiz"
                     },
@@ -200,7 +203,7 @@
     {
         "farmacias": [
             {
-                "farmaciaKielsa":[
+                "farmacia0":[
                     {
                         "nombreEmpresa": "Farmacia Kielsa"
                     },
@@ -217,7 +220,7 @@
                         "precio":  175.00
                     }
                 ],
-                "farmaciaSiman": [
+                "farmacia1": [
                     {
                         "nombreEmpresa": "Farmacia Siman"
                     },
@@ -234,7 +237,7 @@
                         "precio":  132.50
                     } 
                 ],
-                "farmaciaDelAhorro": [
+                "farmacia2": [
                     {
                         "nombreEmpresa": "Farmacia del Ahorro"
                     },
