@@ -6,7 +6,7 @@
             {
                 "producto": "Hut pack",
                 "cantidad": 1,
-                "precio": 339.00
+                "precio": 339
             }
         ],
         "contrasena": "12345"
@@ -14,12 +14,13 @@
     {
         "nombre": "Maria Rivera",
         "correoElectronico": "riveraMaria3@gmail.com",
-        "verOrden": [{
-            "producto": "Mix licuado de Sandia",
-            "cantidad": 2,
-            "precio": 65.00
-        }
-    ],
+        "verOrden": [
+            {
+                "producto": "Mix licuado de Sandia",
+                "cantidad": 2,
+                "precio": 65
+            }
+        ],
         "contrasena": "54321"
     },
     {

@@ -53,7 +53,7 @@ function  agregaMotorista() {
         correoElectronico:document.getElementById('correo').value,
         contrasena:document.getElementById('password').value,
         numeroDeTelefono:document.getElementById('numero_Telefonico').value,
-        historalPedidos :[],
+        historalPedidos :null,
         pedidosActivos :null
     };
      //comprobando usuario repetido
@@ -101,7 +101,7 @@ function  agregaMotorista() {
         axios({
             method:'POST',
             
-            url:'../../backend/api/motoristas.php',
+            url:'../../backend/api/pendientesMotoristas.php',
           
             responseType:'json',
             data:motoristaInfo,
@@ -139,11 +139,7 @@ console.log("si esta funcionando");console.log(motoristas);
       
     
           
-<<<<<<< HEAD
            location.assign("../../frontend/motoristas/motoristaLogueado.html");
-=======
-           location.assign("http://localhost/CREWGITHUB/CREW/frontend/motoristas/motoristaLogueado.html");
->>>>>>> 2501e175061b36c1408d4ba719e23d11e8ef3841
          
            document.getElementById('usuarioLogin').value=null;
            document.getElementById('passwordLogin').value=null;
@@ -151,7 +147,7 @@ console.log("si esta funcionando");console.log(motoristas);
 
            break;
        }else{
-
+        modalUsuarioNoEncontrado.show();
         console.log('no encontrado')
        }
         
@@ -159,3 +155,7 @@ console.log("si esta funcionando");console.log(motoristas);
 
     
 }
+
+var modalUsuarioNoEncontrado = new bootstrap.Modal(document.getElementById('usuarioNoEncontrado'), {
+    keyboard: false
+})

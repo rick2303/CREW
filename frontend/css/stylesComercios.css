@@ -137,3 +137,17 @@ body{
 .lineaInferior{
     border-bottom: 1px solid black;
 }
+
+.entregando {
+    margin-top: 20px;
+    width: 11rem;
+}
+
+.entregaContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+}
