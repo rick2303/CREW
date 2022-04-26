@@ -53,7 +53,7 @@ function  agregaMotorista() {
         correoElectronico:document.getElementById('correo').value,
         contrasena:document.getElementById('password').value,
         numeroDeTelefono:document.getElementById('numero_Telefonico').value,
-        historalPedidos :[],
+        historalPedidos :null,
         pedidosActivos :null
     };
      //comprobando usuario repetido
@@ -147,7 +147,7 @@ console.log("si esta funcionando");console.log(motoristas);
 
            break;
        }else{
-
+        modalUsuarioNoEncontrado.show();
         console.log('no encontrado')
        }
         
@@ -155,3 +155,7 @@ console.log("si esta funcionando");console.log(motoristas);
 
     
 }
+
+var modalUsuarioNoEncontrado = new bootstrap.Modal(document.getElementById('usuarioNoEncontrado'), {
+    keyboard: false
+})

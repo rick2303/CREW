@@ -345,7 +345,7 @@ function asignarElPedido(indice) {
                 <div class="col-3"><button onclick="aceptarMotorista(${i})">aceptar</button></div>
                 <div class="col-3"><button onclick="rechazarMotorista(${i})">denegar</button></div>
               </div>
-              rechazarMotorista
+             
                 `}
           
            
@@ -400,3 +400,5 @@ function asignarElPedido(indice) {
         });
         
     }
+  
+        
