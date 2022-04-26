@@ -102,7 +102,7 @@ function mostrarComida2() {
                    </div>
                    <div style="margin-left: 16px;">
                        <h6>L. ${restaurante[1].productos[i].precio}<i class="fa-solid fa-circle-plus ml-1" class="modal fade" data-bs-toggle="modal"
-                       data-bs-target="#ordenElemento" onclick="ordenar()"></i></h6>
+                       data-bs-target="#ordenElemento" onclick="ordenComida()"></i></h6>
                    </div>
                    <div>
                        <div class="lineaInferior"></div>
@@ -218,7 +218,7 @@ function mostrarBebidas() {
                    </div>
                    <div style="margin-left: 16px;">
                        <h6>L. ${bebida[0].productos[i].precio}<i class="fa-solid fa-circle-plus ml-1" class="modal fade" data-bs-toggle="modal"
-                       data-bs-target="#ordenElemento" onclick="ordenar()"></i></h6>
+                       data-bs-target="#ordenElemento" onclick="ordenComida()"></i></h6>
                    </div>
                    <div>
                        <div class="lineaInferior"></div>
@@ -266,7 +266,7 @@ function mostrarBebidas() {
                    </div>
                    <div style="margin-left: 16px;">
                        <h6>L. ${bebida[1].productos[i].precio}<i class="fa-solid fa-circle-plus ml-1" class="modal fade" data-bs-toggle="modal"
-                       data-bs-target="#ordenElemento" onclick="ordenar()"></i></h6>
+                       data-bs-target="#ordenElemento" onclick="ordenComida()"></i></h6>
                    </div>
                    <div>
                        <div class="lineaInferior"></div>
@@ -314,7 +314,7 @@ function mostrarBebidas() {
                        </div>
                        <div style="margin-left: 16px;">
                            <h6>L. ${bebida[2].productos[i].precio}<i class="fa-solid fa-circle-plus ml-1" class="modal fade" data-bs-toggle="modal"
-                           data-bs-target="#ordenElemento" onclick="ordenar()"></i></h6>
+                           data-bs-target="#ordenElemento" onclick="ordenComida()"></i></h6>
                        </div>
                        <div>
                            <div class="lineaInferior"></div>
@@ -381,7 +381,7 @@ function mostrarFarmacia() {
                    </div>
                    <div style="margin-left: 16px;">
                        <h6>L. ${farmacia[0].productos[i].precio}<i class="fa-solid fa-circle-plus ml-1" class="modal fade" data-bs-toggle="modal"
-                       data-bs-target="#ordenElemento" onclick="ordenar()"></i></h6>
+                       data-bs-target="#ordenElemento" onclick="ordenComida()"></i></h6>
                    </div>
                    <div>
                        <div class="lineaInferior"></div>
@@ -429,7 +429,7 @@ function mostrarFarmacia() {
                    </div>
                    <div style="margin-left: 16px;">
                        <h6>L. ${farmacia[1].productos[i].precio}<i class="fa-solid fa-circle-plus ml-1" class="modal fade" data-bs-toggle="modal"
-                       data-bs-target="#ordenElemento" onclick="ordenar()"></i></h6>
+                       data-bs-target="#ordenElemento" onclick="ordenComida()"></i></h6>
                    </div>
                    <div>
                        <div class="lineaInferior"></div>
@@ -477,7 +477,7 @@ function mostrarFarmacia() {
                        </div>
                        <div style="margin-left: 16px;">
                            <h6>L. ${farmacia[2].productos[i].precio}<i class="fa-solid fa-circle-plus ml-1" class="modal fade" data-bs-toggle="modal"
-                           data-bs-target="#ordenElemento" onclick="ordenar()"></i></h6>
+                           data-bs-target="#ordenElemento" onclick="ordenComida()"></i></h6>
                        </div>
                        <div>
                            <div class="lineaInferior"></div>
@@ -545,7 +545,7 @@ function llamarSupermercado() {
                    </div>
                    <div style="margin-left: 16px;">
                        <h6>L. ${supermercado[0].productos[i].precio}<i class="fa-solid fa-circle-plus ml-1" class="modal fade" data-bs-toggle="modal"
-                       data-bs-target="#ordenElemento" onclick="ordenar()"></i></h6>
+                       data-bs-target="#ordenElemento" onclick="ordenComida()"></i></h6>
                    </div>
                    <div>
                        <div class="lineaInferior"></div>
@@ -593,7 +593,7 @@ function llamarSupermercado() {
                    </div>
                    <div style="margin-left: 16px;">
                        <h6>L. ${supermercado[1].productos[i].precio}<i class="fa-solid fa-circle-plus ml-1" class="modal fade" data-bs-toggle="modal"
-                       data-bs-target="#ordenElemento" onclick="ordenar()"></i></h6>
+                       data-bs-target="#ordenElemento" onclick="ordenComida()"></i></h6>
                    </div>
                    <div>
                        <div class="lineaInferior"></div>
@@ -655,45 +655,7 @@ function ordenComida() {
                         <h2>L. ${restaurant[i].productos[i].precio}</i></h2>
                     </div>
                     <div class=" modal-footer" id="footerComida">
-                    <button type="button" class="btn-pagar" >
-                        Pagar </button>
-                </div>
-                    <div>
-                        <div class="lineaInferior"></div>
-                    </div>        
-`;
-            }else if(restaurant[i].nombreEmpresa == "Pizza Hut" && i==1){
-                document.getElementById('ordenElementos').innerHTML = `
-                <div class="entregaContainer col-12">
-          <img class="logo-miniatura" src="${restaurant[i].imagenLogo}" alt="" style="display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: center; align-items: stretch; align-content: stretch;"></div>
-        <div class="col-12">
-          <div class="pedido col-12">
-            <h4 style="text-align: center; font-size: 27px;">${restaurant[i].nombreEmpresa}</h4>
-          </div><div class="lineaInferior"></div>
-        </div>
-                <div class="entregaContainer col-12">
-                    <div >
-                        <h6 class="mt-4"
-                            style="font-family: 'Comfortaa'; margin-bottom: 0; margin-left: 12px; margin-top: 10px;">
-                            <b>${restaurant[i].productos[i].nombre}</b>
-                        </h6>
-                        
-                    </div>
-                    <p class="mt-2"style="margin-left: 12px;">${restaurant[i].productos[i].descripcion}</p>
-                    <div class="col-12 centrar mt-5" style="justify-content: space-around;align-items:center ;">
-                            
-                            <img style="width: 18rem" src="${restaurant[i].productos[i].imagen}" alt="">
-                    </div>
-                </div>    
-                <div class="entregaContainer col-12">
-                <div style ="display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space=around; align-items: baseline; align-content: stretch;" ><i class="fa-solid fa-circle-minus ml-1 fa-2x" onclick="contador--;myFunction()"></i><p id="totalPedir"></p><i class="fa-solid fa-circle-plus ml-1 fa-2x" onclick="contador++;myFunction()" ></i></div>
-                </div>
-                <div class="mt-5" style="display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: flex-start; align-items: flex-end; align-content: stretch;">
-                        <h2>L. ${restaurant[i].productos[i].precio}</i></h2>
-                    </div>
-                    <div class=" modal-footer" id="footerComida">
-                    <button type="button" class="btn-pagar" >
-                        Pagar </button>
+                     <button type="button" class="btn-pagar" onclick="agregarProducto()">Pagar</button>
                 </div>
                     <div>
                         <div class="lineaInferior"></div>
@@ -714,4 +676,8 @@ function myFunction() {
     document.getElementById("totalPedir").innerHTML = x;
     pedirCantidad = x;
 
+}
+
+function agregarProducto(pedirCantidad){
+    console.log("Se ha agregado el producto");
 }

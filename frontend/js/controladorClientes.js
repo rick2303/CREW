@@ -17,7 +17,7 @@ function cargarClientes() {
         responseType:'json',
     }).then(res=>{    
         clientes=res.data;
-        console.log(clientes)
+        //console.log(clientes)
     }).catch(error=>{
         console.log(error);
     });
@@ -151,7 +151,7 @@ function obtenerComercios(){
         responseType:'json'
     }).then(res=>{
         comercios=res.data;
-        console.log(comercios);
+        //console.log(comercios);
     }).catch(error=>{
         console.log(error);
     });
@@ -159,19 +159,45 @@ function obtenerComercios(){
 } obtenerComercios();
 
 
-function ordenes(){
+function verOrdenes(){
     axios({
         method:'GET',
         url:'../../backend/api/clientes.php'+ `?id=${indiceCliente}`,
         responseType:'json'
     }).then(res=>{
-        console.log(res.data.clienteLogueado.verOrden);
+        var ordenes=res.data.verOrden;
+        console.log(ordenes);
+        for(let i = 0; i<ordenes.length; i++){
+            document.getElementById('carritoCompras').innerHTML = '';
+            document.getElementById('carritoCompras').innerHTML=`
+        <div>
+                            <div class="col-12 centrar mt-1">
+                                <h3 style="font-family: 'Comfortaa'; margin-bottom: 0;"><b> Detalles</b></h3><br>
+                            </div>
+                            <div>
+                                <br>
+                                <b>${res.data.verOrden[i].producto}</b>
+                                <p>Cantidad: ${res.data.verOrden[i].cantidad}</p>
+                            </div>
+                        </div>
+                        <div class="lineaInferior"></div>
+                        <div class="col-6" style="margin-top: 2rem;">
+                            <p>Total:</p>
+                        </div>
+                            <div class="col-6">
+                                <p>L. ${res.data.verOrden[i].precio}</p>
+                            </div>
+                            <div class="lineaInferior"></div>
+                        <div class=" modal-footer" style="justify-content: flex-end!important; margin-top: 4rem;">
+                       
+                           <a  href = "estadoEntrega.html" > <button type="button" class="btn-pagar" >Pagar</button></a>
+                    </div>
+        `;
+        }
     }).catch(error=>{
         console.error(error);
     });
 }
-ordenes();
-
 
 
     

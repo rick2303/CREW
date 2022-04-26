@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comida-Crew</title>
+    <link rel="icon" href="../img/logo.png">
     <link rel="stylesheet" href="../css/stylesComercios.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -64,7 +65,7 @@
                     <div style="display: flex; justify-content: space-evenly; ">
                         <!--llamando a modal ver orden-->
                         <button class="btn-verOrden" id="visualizacionOrden" class="btn-utilidad" class="modal fade" data-bs-toggle="modal"
-                        data-bs-target="#orden">VER ORDEN</button>
+                        data-bs-target="#orden" onclick="verOrdenes()">VER ORDEN</button>
                     </div>
                 </div>
                 <div class="modal-body" id="burgerKing">
@@ -138,29 +139,7 @@
                           <div style="display: flex;justify-content: space-around;align-items:center ;">
                         <h2 style="color: white;">Carrito de compras</h2></div>
                     </div>
-                    <div class="modal-body">
-                        <div>
-                            <div class="col-12 centrar mt-1">
-                                <h3 style="font-family: 'Comfortaa'; margin-bottom: 0;"><b> Detalles</b></h3><br>
-                            </div>
-                            <div>
-                                <br>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, perferendis?</p>
-                                <p>Lorem ipsum dolor sit.</p>
-                            </div>
-                        </div>
-                        <div class="lineaInferior"></div>
-                        <div class="col-6" style="margin-top: 2rem;">
-                            <p>Total</p>
-                        </div>
-                            <div class="col-6">
-                                <p>L. 0.00</p>
-                            </div>
-                            <div class="lineaInferior"></div>
-                        <div class=" modal-footer" style="justify-content: flex-end!important; margin-top: 4rem;">
-                        <button type="button" class="btn-pagar" >
-                            Pagar </button>
-                    </div>
+                    <div class="modal-body" id="carritoCompras">
                     </div>
                     
                 </div>
@@ -197,6 +176,7 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
     <script src="../js/controladorComercios.js"></script>
+    <script src="../js/controladorClientes.js"></script>
 
 </body>
 
